@@ -7,12 +7,18 @@
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts",
-        "pre-commit": "lint-staged"
+        "lint:write": "eslint --debug src/ --fix"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run prettier:write"
+            "pre-commit": "lint-staged"
         }
+    },
+    "lint-staged": {
+        "*.(ts)": [
+            "npm run lint:write",
+            "git add"
+        ]
     },
     "repository": {
         "type": "git",
