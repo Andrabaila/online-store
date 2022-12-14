@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.footer__item {
+  font-size: 2rem;
+}
+
+.footer__item_github {
+  background-image: url('../../assets/icons/github.svg');
+  @include size(3.5rem);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__item_rs {
+  background-image: url('../../assets/icons/rs_school_js.svg');
+  background-color: $color-light;
+  @include size(7rem, 3.5rem);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.2rem;
+  border: 2px solid;
+}
