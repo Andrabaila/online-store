@@ -4,10 +4,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
     width: 100%;
     padding: 2rem;
+
     background-color: rgba(69, 179, 252, 0.702);
-    backdrop-filter: opacity(60%);
 }
 
 .sum-total {
@@ -18,7 +19,9 @@
 .cart {
     width: 40px;
     height: 40px;
+
     background: url(../icons/cart.svg) center center no-repeat;
+
     font-size: 16px;
     color: #f0f8ff;
 }
@@ -27,6 +30,8 @@
     width: 45%;
     height: 45%;
     border-radius: 50%;
+
     background-color: #4889e5;
+
     text-align: center;
 }

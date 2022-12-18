@@ -1,52 +1,56 @@
 .nav {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .nav__list {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  gap: 3rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    list-style-type: none;
 }
 
 .nav__item {
-  width: 135px;
-  padding: 1rem;
-  border: 2px solid $color-gray;
-  border-radius: 5px;
-  text-decoration: none;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 140%;
-  color: $color-gray_light;
-  cursor: pointer;
-  text-align: center;
+    width: 135px;
+    padding: 1rem;
+    border: 2px solid $color-gray;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    color: $color-gray_light;
+    text-decoration: none;
+    text-align: center;
+    line-height: 140%;
 }
 
 .nav__item:hover {
-  color: $color-gradient;
-  border-color: $color-gradient;
+    border-color: $color-gradient;
+
+    color: $color-gradient;
 }
 
 .nav__item_active {
-  background: linear-gradient(113.96deg, $color-additional 1.49%, $color-primary 101.44%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  cursor: default;
-  border-color: $color-gradient;
+    border-color: $color-gradient;
+
+    background: linear-gradient(113.96deg, $color-additional 1.49%, $color-primary 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: default;
+
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 400px) {
-
-  .nav__list {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
+    .nav__list {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
 }
