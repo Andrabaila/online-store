@@ -9,7 +9,7 @@ export function getHeader() {
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
     cartTotal.classList.add('sum-total');
-    cartTotal.textContent = 'Cart total: $ 0';
+    cartTotal.textContent = 'Cart total: $0';
 
     const cart: HTMLDivElement = header.appendChild(document.createElement('div'));
     cart.classList.add('cart');
