@@ -6,7 +6,7 @@
     gap: 20px;
     width: 100%;
     padding: 2rem;
-    background-color: #46b3fcb3;
+    background-color: #45b3fcb3;
     backdrop-filter: opacity(60%);
 }
 
@@ -19,15 +19,14 @@
     width: 40px;
     height: 40px;
     background: url(../icons/cart.svg) center center no-repeat;
-    font-size: 18px;
-    color: #2a1267;
+    font-size: 16px;
+    color: #f0f8ff;
 }
 
 .products-in-cart {
-    width: 55%;
-    height: 55%;
-    margin: 10% auto;
+    width: 45%;
+    height: 45%;
     border-radius: 50%;
-    background-color: rgb(194, 218, 240);
+    background-color: #4889e5;
     text-align: center;
 }
