@@ -1,15 +1,33 @@
 .header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 3rem;
-}
-
-.header__wrapper {
-    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 20px;
+    width: 100%;
+    padding: 2rem;
+    background-color: #46b3fcb3;
+    backdrop-filter: opacity(60%);
+}
+
+.sum-total {
+    font-size: 24px;
+    color: #2a1267;
+}
+
+.cart {
+    width: 40px;
+    height: 40px;
+    background: url(../icons/cart.svg) center center no-repeat;
+    font-size: 18px;
+    color: #2a1267;
+}
+
+.products-in-cart {
+    width: 55%;
+    height: 55%;
+    margin: 10% auto;
+    border-radius: 50%;
+    background-color: rgb(194, 218, 240);
+    text-align: center;
 }

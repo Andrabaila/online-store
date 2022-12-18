@@ -1,18 +1,23 @@
 body {
-  position: relative;
-  @extend %column;
-  align-items: center;
-  justify-content: space-between;
-  background: $color-dark;
-  color: $color-gray_light;
-  height: 100%;
+    position: relative;
+    @extend %column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        315.75deg,
+        rgba(219, 241, 251, 0.7) 30.06%,
+        #b8c6e5 100.95%,
+        rgba(87, 75, 216, 0.7) 106.36%
+    );
+    color: $color-gray_light;
+    height: 100%;
 }
 
 .shadow {
-  display: none;
+    display: none;
 }
 
-  .shadow_active {
+.shadow_active {
     display: block;
     position: fixed;
     top: 0;
@@ -21,4 +26,4 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.219);
-  }
+}

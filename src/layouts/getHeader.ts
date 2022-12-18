@@ -8,15 +8,13 @@ export function getHeader() {
     logo.textContent = 'Online Store';
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
-    cartTotal.classList.add('cart-total');
-    const cartTotalText: HTMLSpanElement = cartTotal.appendChild(document.createElement('span'));
-    cartTotalText.textContent = 'Cart total: ';
-    cartTotal.textContent = '';
+    cartTotal.classList.add('sum-total');
+    cartTotal.textContent = 'Cart total: $ 0';
 
     const cart: HTMLDivElement = header.appendChild(document.createElement('div'));
     cart.classList.add('cart');
 
     const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');
-    productsInCart.textContent = '';
+    productsInCart.textContent = '0';
 }

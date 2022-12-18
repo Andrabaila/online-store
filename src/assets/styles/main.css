@@ -146,7 +146,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: space-between;
-  background: #000000;
+  background: linear-gradient(315.75deg, rgba(219, 241, 251, 0.7) 30.06%, #b8c6e5 100.95%, rgba(87, 75, 216, 0.7) 106.36%);
   color: #F1F3F2;
   height: 100%;
 }
@@ -270,19 +270,38 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 3rem;
-}
-
-.header__wrapper {
-  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 20px;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(70, 179, 252, 0.7019607843);
+  -webkit-backdrop-filter: opacity(60%);
+          backdrop-filter: opacity(60%);
+}
+
+.sum-total {
+  font-size: 24px;
+  color: #2a1267;
+}
+
+.cart {
+  width: 40px;
+  height: 40px;
+  background: url(../icons/cart.svg) center center no-repeat;
+  font-size: 18px;
+  color: #2a1267;
+}
+
+.products-in-cart {
+  width: 55%;
+  height: 55%;
+  margin: 10% auto;
+  border-radius: 50%;
+  background-color: rgb(194, 218, 240);
+  text-align: center;
 }
 
 .footer {
@@ -341,6 +360,7 @@ body {
 }
 
 .logo {
-  width: 285px;
-  color: #FE9013;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d0991;
 }/*# sourceMappingURL=main.css.map */

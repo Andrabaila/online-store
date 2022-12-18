@@ -1,1 +1,3 @@
-console.log('Hello everyone!');
+import { getMainPage } from './pages/getMainPage';
+
+getMainPage();
