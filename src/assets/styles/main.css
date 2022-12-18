@@ -277,7 +277,7 @@ body {
   gap: 20px;
   width: 100%;
   padding: 2rem;
-  background-color: rgba(69, 179, 252, 0.7019607843);
+  background-color: rgba(69, 179, 252, 0.702);
   -webkit-backdrop-filter: opacity(60%);
           backdrop-filter: opacity(60%);
 }
