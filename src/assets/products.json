@@ -1,0 +1,517 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "BABY BOOM",
+            "description": "children's hypoallergenic SHAMPOO with chamomile and silk proteins 250 ml",
+            "price": 4.86,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/1fd/fsral3wqebj9mvqhmtki9fjm2ujxdd80.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/1fd/fsral3wqebj9mvqhmtki9fjm2ujxdd80.jpg",
+                "https://belita.by/upload/medialibrary/9b1/9b160a1ab642fb11f95b1c837dd9dcea.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "KOSMO BOY Iron Man",
+            "description": "SPA CHALLENGE baby shampoo 250 ml",
+            "price": 3.49,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/c77/m6exnufvrq0z9t08zovn4gdeqomhzajy.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/c77/m6exnufvrq0z9t08zovn4gdeqomhzajy.png",
+                "https://belita.by/upload/medialibrary/f2c/f2c7e9223ffb0a74932c56613782b750.png",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Sea stories",
+            "description": "Children's hair shampoo Belita Kids.For boys 3-7 years old 300 ml",
+            "price": 4.55,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/ad3/855prqxksv521zq6wjcnd008szvdp5a0.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/ad3/855prqxksv521zq6wjcnd008szvdp5a0.jpg",
+                "https://belita.by/upload/medialibrary/ae9/ae9b99dc376157148d6144b827b32116.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "MONSTER-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.47,
+            "discountPercentage": 17.91,
+            "rating": 4.3,
+            "stock": 123,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/4a2/4a2b7ccfa45f5ab7f16cf2fe885c8637.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/4a2/4a2b7ccfa45f5ab7f16cf2fe885c8637.jpg",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "PANDA-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.47,
+            "discountPercentage": 10.58,
+            "rating": 4.09,
+            "stock": 32,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/c31/c31c38ddfdf841d6b40958edd976e86a.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/c31/c31c38ddfdf841d6b40958edd976e86a.jpg",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "ECOSHAMPOO",
+            "description": "ECOSHAMPOO FOR CHILDREN WITHOUT TEARS from 3 years old 260 ml",
+            "price": 6.02,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/4b0/4b0a0afd74ad0c4c7adfd7013ff8d54a.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/4b0/4b0a0afd74ad0c4c7adfd7013ff8d54a.jpg",
+                "https://belita.by/upload/medialibrary/5b8/5b8b7c3e85cca8584280663cb6069c9c.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "ECOSHAMPOO-BATH",
+            "description": "CHILDREN WITHOUT TEARS from the first days of life 260 ml",
+            "price": 6.07,
+            "discountPercentage": 4.15,
+            "rating": 4.25,
+            "stock": 50,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/c70/c70b63eb43d019be325d9998de21717b.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/c70/c70b63eb43d019be325d9998de21717b.jpg",
+                "https://belita.by/upload/medialibrary/5b8/5b8b7c3e85cca8584280663cb6069c9c.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Flying patrol shampoo",
+            "description": "Children's hair shampoo 275 ml",
+            "price": 3.76,
+            "discountPercentage": 10.23,
+            "rating": 4.43,
+            "stock": 68,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/41d/41d23aad871019c0b13773187567b250.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/41d/41d23aad871019c0b13773187567b250.jpg",
+                "https://belita-shop.by/upload/medialibrary/c21/c21b39c17c14880ac8311df77f30fec9.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Shampoo lapushka",
+            "description": "Baby shampoo 300 ml",
+            "price": 3.82,
+            "discountPercentage": 11.83,
+            "rating": 4.54,
+            "stock": 96,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/b44/b4441ae2403e8af164141c62eda73f88.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/b44/b4441ae2403e8af164141c62eda73f88.jpg",
+                "https://belita-shop.by/upload/medialibrary/611/61118c26c31f76ba4aab792fa9a8853b.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "BABY BOOM",
+            "description": "2in1 baby shampoo and foam for washing and bathing with string and cotton extract 250 ml",
+            "price": 4.85,
+            "discountPercentage": 6.18,
+            "rating": 4.43,
+            "stock": 89,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/35d/bm23yvgs1wkibavs817575cvhr2ix9za.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/35d/bm23yvgs1wkibavs817575cvhr2ix9za.jpg",
+                "https://belita.by/upload/medialibrary/9b1/9b160a1ab642fb11f95b1c837dd9dcea.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Shampoo for hair Robolandia Belita Boys",
+            "description": "For boys 7-10 years old 300 ml",
+            "price": 3.54,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/b11/b13lrmau0l0yp8x6tlhf27rox5s0vr65.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/b11/b13lrmau0l0yp8x6tlhf27rox5s0vr65.jpg",
+                "https://belita.by/upload/medialibrary/d63/d63b13b2b74585848b136ea70dce3a2e.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Shampoo for hair Smooth and obedient Belita Girls",
+            "description": "For girls 7-10 years old 300 ml",
+            "price": 3.75,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/df9/ee66oqv33ycxjgppgmmqcsygfs34x11r.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/df9/ee66oqv33ycxjgppgmmqcsygfs34x11r.jpg",
+                "https://belita.by/upload/medialibrary/8bc/8bceac78d788c057d93bd7b7d765ee4f.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 13,
+            "title": "PONY-Bubble",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.87,
+            "discountPercentage": 8.14,
+            "rating": 4.59,
+            "stock": 61,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/ce3/ytfwnn6321un80e6fhipow1pqc5l7m4b.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/ce3/ytfwnn6321un80e6fhipow1pqc5l7m4b.png",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Magic Star",
+            "description": "Shampoo-conditioner EASY COMBING 250 ml",
+            "price": 3.84,
+            "discountPercentage": 15.6,
+            "rating": 4.21,
+            "stock": 114,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/6fc/2cq5ow2z67d99dss62fxqviow4n0co9h.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/6fc/2cq5ow2z67d99dss62fxqviow4n0co9h.png",
+                "https://belita-shop.by/upload/medialibrary/4e8/unqp6xl4icp1f29gm7kf2qv1a7hudadu.png",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Princess dreams",
+            "description": "Children's shampoo for easy combing of hair. For girls 3-7 years old 300 ml",
+            "price": 3.5,
+            "discountPercentage": 10.99,
+            "rating": 4.7,
+            "stock": 105,
+            "brand": "Belita",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/557/1qx7to9a00iua4j0b2rswulvqpdmmzjd.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/557/1qx7to9a00iua4j0b2rswulvqpdmmzjd.jpg",
+                "https://belita-shop.by/upload/medialibrary/874/cj4d7xkim39l05flajpdft2smoy2j7s5.jpg",
+                "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/0e8ccc3f38bacd943b170704869dbdc7.w2280.h2280.jpg"
+            ]
+        },
+        {
+            "id": 16,
+            "title": "ROBO-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.42,
+            "discountPercentage": 13.31,
+            "rating": 4.83,
+            "stock": 110,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/d72/d72fbc0f7fefdc3abc551b888c8a7a6f.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/d72/d72fbc0f7fefdc3abc551b888c8a7a6f.jpg",
+                "https://belita-shop.by/upload/medialibrary/809/809704d9c99ddf4292592982c3828451.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Shampoo FASHIONABLE SECURITY",
+            "description": "Baby shampoo with caring balm 300 ml",
+            "price": 4.32,
+            "discountPercentage": 4.09,
+            "rating": 4.52,
+            "stock": 78,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/ee6/ee6d9d192a47094107b1b132f4747468.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/ee6/ee6d9d192a47094107b1b132f4747468.jpg",
+                "https://belita-shop.by/upload/medialibrary/825/825718d347796544e72a2347b75cd9e1.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 18,
+            "title": "SILK AND SHINE CURLS",
+            "description": "SHAMPOO SILK AND SHINE CURLS for hair 300 ml",
+            "price": 4.21,
+            "discountPercentage": 13.1,
+            "rating": 4.56,
+            "stock": 88,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/025/025a535ce5378c636fa62b843f221991.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/025/025a535ce5378c636fa62b843f221991.jpg",
+                "https://belita-shop.by/upload/medialibrary/d9d/d9dce56069085ba23c7af2c2d7e36761.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 19,
+            "title": "SUPER BOY",
+            "description": "Hair shampoo 275 ml",
+            "price": 3.24,
+            "discountPercentage": 10.68,
+            "rating": 4.42,
+            "stock": 54,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/b5d/b5df90b8e4ad14aafafafef329f4f019.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/b5d/b5df90b8e4ad14aafafafef329f4f019.jpg",
+                "https://belita-shop.by/upload/medialibrary/f13/f1331c888ce4c7401cae975bc5b34308.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 20,
+            "title": "Shampoo mom and baby",
+            "description": "Shampoo for children with chamomile and calendula 300 ml",
+            "price": 4.36,
+            "discountPercentage": 16.99,
+            "rating": 4.06,
+            "stock": 140,
+            "brand": "Vitex",
+            "category": "shampoos",
+            "thumbnail": "https://belita-shop.by/upload/iblock/347/347d553c496c2a34f2098df937f068b2.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/347/347d553c496c2a34f2098df937f068b2.jpg",
+                "https://belita-shop.by/upload/medialibrary/2bb/2bbe253647fc40ff2f7af6ee71aa5713.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 21,
+            "title": "MONSTER-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.47,
+            "discountPercentage": 17.91,
+            "rating": 4.3,
+            "stock": 123,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/4a2/4a2b7ccfa45f5ab7f16cf2fe885c8637.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/4a2/4a2b7ccfa45f5ab7f16cf2fe885c8637.jpg",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 22,
+            "title": "PANDA-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.47,
+            "discountPercentage": 10.58,
+            "rating": 4.09,
+            "stock": 32,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/c31/c31c38ddfdf841d6b40958edd976e86a.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/c31/c31c38ddfdf841d6b40958edd976e86a.jpg",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 23,
+            "title": "BABY BOOM",
+            "description": "2in1 baby shampoo and foam for washing and bathing with string and cotton extract 250 ml",
+            "price": 4.85,
+            "discountPercentage": 6.18,
+            "rating": 4.43,
+            "stock": 89,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/35d/bm23yvgs1wkibavs817575cvhr2ix9za.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/35d/bm23yvgs1wkibavs817575cvhr2ix9za.jpg",
+                "https://belita.by/upload/medialibrary/9b1/9b160a1ab642fb11f95b1c837dd9dcea.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 24,
+            "title": "PONY-Bubble",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.87,
+            "discountPercentage": 8.14,
+            "rating": 4.59,
+            "stock": 61,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/ce3/ytfwnn6321un80e6fhipow1pqc5l7m4b.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/ce3/ytfwnn6321un80e6fhipow1pqc5l7m4b.png",
+                "https://belita.by/upload/medialibrary/495/49579a7cb1bd87abb9cd4deef3ba547d.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 25,
+            "title": "ROBO-BUBBLE",
+            "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
+            "price": 3.42,
+            "discountPercentage": 13.31,
+            "rating": 4.83,
+            "stock": 110,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/d72/d72fbc0f7fefdc3abc551b888c8a7a6f.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/d72/d72fbc0f7fefdc3abc551b888c8a7a6f.jpg",
+                "https://belita-shop.by/upload/medialibrary/809/809704d9c99ddf4292592982c3828451.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 26,
+            "title": "Magic Star",
+            "description": "Baby Shower Gel with Shimmering Glitter 250 ml",
+            "price": 3.8,
+            "discountPercentage": 17.86,
+            "rating": 4.08,
+            "stock": 131,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/a9c/eym7zppiwq6n2fdj7zht2es70r14arqj.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/a9c/eym7zppiwq6n2fdj7zht2es70r14arqj.png",
+                "https://belita-shop.by/upload/medialibrary/4e8/unqp6xl4icp1f29gm7kf2qv1a7hudadu.png",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 27,
+            "title": "SUPER BOY",
+            "description": "Shower gel 275 ml",
+            "price": 2.46,
+            "discountPercentage": 15.58,
+            "rating": 4.41,
+            "stock": 17,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/cd0/cd0ab68b5c4e312722331ae6a813fa3e.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/cd0/cd0ab68b5c4e312722331ae6a813fa3e.jpg",
+                "https://belita-shop.by/upload/medialibrary/f13/f1331c888ce4c7401cae975bc5b34308.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 28,
+            "title": "FLIGHT PATROL",
+            "description": "Baby gel-foam 2 in 1 for shower and bath 275 ml",
+            "price": 3.36,
+            "discountPercentage": 16.49,
+            "rating": 4.82,
+            "stock": 54,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/4a7/4a7a8ee37e20f6ce784086b5a62ac38b.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/4a7/4a7a8ee37e20f6ce784086b5a62ac38b.jpg",
+                "https://belita-shop.by/upload/medialibrary/c21/c21b39c17c14880ac8311df77f30fec9.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 29,
+            "title": "KOSMO BOY Iron Man",
+            "description": "Baby shower gel METEOR SHOWER 250 ml",
+            "price": 3.69,
+            "discountPercentage": 15.34,
+            "rating": 4.44,
+            "stock": 7,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/1fa/ira266pflrqcj9nuq28krprqmcieaq4h.png",
+            "images": [
+                "https://belita-shop.by/upload/iblock/1fa/ira266pflrqcj9nuq28krprqmcieaq4h.png",
+                "https://belita-shop.by/upload/medialibrary/45c/aikz4ipk2iozfojar8b7bhy5gb4y0z81.png",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        },
+        {
+            "id": 30,
+            "title": "AROMA-GEL SOFT CARE AND CLEANSING",
+            "description": "AROMA-GEL for shower and bath 300 ml",
+            "price": 4.01,
+            "discountPercentage": 2.92,
+            "rating": 4.92,
+            "stock": 54,
+            "brand": "Vitex",
+            "category": "shower gels",
+            "thumbnail": "https://belita-shop.by/upload/iblock/bef/befa3b6d879950ad08cbaedc7a8f0f98.jpg",
+            "images": [
+                "https://belita-shop.by/upload/iblock/bef/befa3b6d879950ad08cbaedc7a8f0f98.jpg",
+                "https://belita-shop.by/upload/medialibrary/d9d/d9dce56069085ba23c7af2c2d7e36761.jpg",
+                "https://sofishop.by/upload/iblock/1a0/1a044f1830504ddc0802d150c44eec67.jpeg"
+            ]
+        }
+    ],
+    "total": 30,
+    "skip": 0,
+    "limit": 30
+}
