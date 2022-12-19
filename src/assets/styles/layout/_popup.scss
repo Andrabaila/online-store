@@ -1,53 +1,50 @@
 .popup {
-  position: absolute;
-  left: -100%;
+    position: absolute;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    border-radius: 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 50%;
-  padding: 30px;
+    background: $color-gray;
 
-  font-size: 30px;
-  background: $color-gray;
-  border-radius: 10px;
+    font-size: 30px;
 
-  transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .popup_active {
-  left: auto;
-  z-index: 1000;
+    left: auto;
+    z-index: 1000;
 }
 
 .popup__content {
-  text-align: center;
-
+    text-align: center;
 }
 
 .popup__close {
-  position: absolute;
-  right: 30px;
-  top: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
 
-  @include size(28px);
-  background-image: url('../../assets/icons/x_icon_close.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+    @include size(28px);
+    background-image: url('../../assets/icons/x_icon_close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-  &:hover {
-    transform: scale(1.2);
-  }
-
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
-@media(max-width: 767px) {
-
-  .popup {
-    width: 90%;
-    height: 70%;
-  }
+@media (max-width: 767px) {
+    .popup {
+        width: 90%;
+        height: 70%;
+    }
 }
