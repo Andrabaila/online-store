@@ -1,14 +1,13 @@
-import { drawCategoryFilter } from './drawCategoryFilter';
-import { drawBrandFilter } from './drawBrandFilter';
-import { drawPriceFilter } from './drawPriceFilter';
-import { drawStockFilter } from './drawStockFilter';
+import { drawCheckedFilter } from './drawCheckedFilter';
+import { drawRangeFilter } from './drawRangeFilter';
+import { CHECKED_NAMES, RANGE_NAMES, CATEGORIES, BRANDS, PRICE_LIMITS, STOCK_LIMITS } from '../constants/constants';
 
 export function getFilters(parent: HTMLDivElement) {
-    drawCategoryFilter(parent);
+    drawCheckedFilter(parent, CHECKED_NAMES[0], CATEGORIES);
 
-    drawBrandFilter(parent);
+    drawCheckedFilter(parent, CHECKED_NAMES[1], BRANDS);
 
-    drawPriceFilter(parent);
+    drawRangeFilter(parent, RANGE_NAMES[0], PRICE_LIMITS);
 
-    drawStockFilter(parent);
+    drawRangeFilter(parent, RANGE_NAMES[1], STOCK_LIMITS);
 }

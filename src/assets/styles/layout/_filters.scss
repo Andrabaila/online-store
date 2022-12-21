@@ -54,24 +54,21 @@
     cursor: pointer;
 }
 
-.price-limits,
-.stock-limits {
+.limits {
     display: flex;
     justify-content: space-between;
 
     width: 80%;
 }
 
-.price-controls,
-.stock-controls {
+.controls {
     position: relative;
 
     width: 100%;
     min-height: 70px;
 }
 
-.price-range,
-.stock-range {
+.range {
     position: absolute;
     left: 5%;
 
@@ -86,8 +83,7 @@
     pointer-events: none;
 }
 
-.price-range::-webkit-slider-thumb,
-.stock-range::-webkit-slider-thumb {
+.range::-webkit-slider-thumb {
     width: 1.7rem;
     height: 1.7rem;
     border-radius: 50%;
@@ -100,18 +96,15 @@
     pointer-events: all;
 }
 
-.price-range::-webkit-slider-thumb:hover,
-.stock-range::-webkit-slider-thumb:hover {
+.range::-webkit-slider-thumb:hover {
     background: $color-gray_light;
 }
 
-.price-range::-webkit-slider-thumb:active,
-.stock-range::-webkit-slider-thumb:active {
+.range::-webkit-slider-thumb:active {
     box-shadow: inset 0 0 3px $color-blue, 0 0 9px $color-blue;
 }
 
-.price-range-to,
-.stock-range-to {
+.range-to {
     z-index: 1;
 
     height: 0;
