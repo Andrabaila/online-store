@@ -269,6 +269,16 @@ body {
   padding: 0 3rem;
 }
 
+.main_cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -343,6 +353,11 @@ body {
     flex-direction: column;
   }
 }
+.cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .button {
   padding: 1rem;
   border: 1px solid #f1f3f2;
