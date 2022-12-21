@@ -1,18 +1,17 @@
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  height: 100%;
-  user-select: none;
-  width: 100%;
-  font-family: "Roboto";
-  font-size: 10px;
-  color: $color-gray_light;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100%;
+    user-select: none;
+    width: 100%;
+    font-size: 10px;
+    color: $color-gray_light;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body,
@@ -20,16 +19,16 @@ div,
 p,
 ul,
 li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: $color-gray_light;
+    text-decoration: none;
+    color: $color-gray_light;
 }
 
 a:visited {
-  text-decoration: none;
-  color: $color-gray_light;
+    text-decoration: none;
+    color: $color-gray_light;
 }

@@ -12,10 +12,12 @@ export function getStartMain() {
 
     const resetBtn: HTMLButtonElement = resetCopyBtnBlock.appendChild(document.createElement('button'));
     resetBtn.classList.add('reset-button');
+    resetBtn.classList.add('button');
     resetBtn.textContent = 'Reset filters';
 
     const copyFiltersBtn: HTMLButtonElement = resetCopyBtnBlock.appendChild(document.createElement('button'));
     copyFiltersBtn.classList.add('copy-filters-button');
+    copyFiltersBtn.classList.add('button');
     copyFiltersBtn.textContent = 'Copy filters';
 
     getFilters(filters);
