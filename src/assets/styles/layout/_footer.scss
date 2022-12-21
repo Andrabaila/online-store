@@ -26,11 +26,9 @@
 }
 
 .footer__item_rs {
-    border-radius: 0.2rem;
-    border: 2px solid;
-    background-image: url('../../assets/icons/rs_school_js.svg');
-    background-color: $color-light;
-    @include size(7rem, 3.5rem);
+    width: 70px;
+    height: 35px;
+    background-image: url('https://rs.school/images/rs_school_js.svg');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;

@@ -34,12 +34,12 @@ li {
 
 a {
   text-decoration: none;
-  color: #e8e9e9;
+  color: #f1f3f2;
 }
 
 a:visited {
   text-decoration: none;
-  color: #e8e9e9;
+  color: #f1f3f2;
 }
 
 /* roboto-100 - latin_cyrillic */
@@ -387,12 +387,9 @@ body {
 }
 
 .footer__item_rs {
-  border-radius: 0.2rem;
-  border: 2px solid;
-  background-image: url("../../assets/icons/rs_school_js.svg");
-  background-color: #ffffff;
-  width: 7rem;
-  height: 3.5rem;
+  width: 70px;
+  height: 35px;
+  background-image: url("https://rs.school/images/rs_school_js.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
