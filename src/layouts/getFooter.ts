@@ -1,6 +1,5 @@
 export function getFooter() {
     if (document.querySelector('.footer')) return;
-
     const body = document.querySelector('body');
     const footer = document.createElement('footer');
     footer.classList.add('footer');
