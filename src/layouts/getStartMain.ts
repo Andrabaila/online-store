@@ -1,4 +1,6 @@
 import { getFilters } from './getFilters';
+import { getProductsOptions } from './getProductsOptions';
+import { getProductsList } from './getProductsList';
 
 export function getStartMain() {
     const main: HTMLElement = document.body.appendChild(document.createElement('main'));
@@ -22,6 +24,9 @@ export function getStartMain() {
 
     getFilters(filters);
 
-    const products: HTMLDivElement = main.appendChild(document.createElement('div'));
-    products.classList.add('products');
+    const productsAndOptions: HTMLDivElement = main.appendChild(document.createElement('div'));
+    productsAndOptions.classList.add('products-and-options');
+
+    getProductsOptions(productsAndOptions);
+    getProductsList(productsAndOptions);
 }

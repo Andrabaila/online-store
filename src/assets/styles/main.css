@@ -145,7 +145,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(315.75deg, rgba(219, 241, 251, 0.7) 30.06%, #b8c6e5 100.95%, rgba(87, 75, 216, 0.7) 106.36%);
+  background: linear-gradient(270.75deg, rgba(219, 241, 251, 0.7) 30.06%, rgba(69, 179, 252, 0.702) 100.95%, #3b3bfb 106.36%);
   color: #e8e9e9;
   font-family: "Geometria-Medium", Helvetica, Arial, sans-serif;
 }
@@ -315,9 +315,34 @@ body {
   padding: 0 3rem;
 }
 
-.products {
+.products-and-options {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  border: 2px solid #e8e9e9;
+}
+
+.main__item_options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main__item_product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main__item_product {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  height: 40rem;
+  border: 1px solid #e8e9e9;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.main__item_product:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -340,7 +365,7 @@ body {
   height: 40px;
   background: url(../icons/cart.svg) center center no-repeat;
   font-size: 16px;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 .products-in-cart {
@@ -373,7 +398,7 @@ body {
 
 .footer__item {
   font-size: 2rem;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 .footer__item_github-link {

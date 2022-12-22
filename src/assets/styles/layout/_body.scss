@@ -5,12 +5,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background: linear-gradient(
-        315.75deg,
-        rgba(219, 241, 251, 0.7) 30.06%,
-        #b8c6e5 100.95%,
-        rgba(87, 75, 216, 0.7) 106.36%
-    );
+    background: linear-gradient(270.75deg, rgba(219, 241, 251, 0.7) 30.06%, $color-primary 100.95%, #3b3bfb 106.36%);
 
     color: $color-gray_light;
 
