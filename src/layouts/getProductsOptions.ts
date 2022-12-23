@@ -1,5 +1,6 @@
-import { OPTIONS_TEXT, SORT_OPTIONS, SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
+import { SORT_OPTIONS, SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
 import { changeCellsSize } from './changeCellsSize';
+import { OptionsText } from '../data/types';
 
 export function getProductsOptions(parent: HTMLDivElement) {
     const options = parent.appendChild(document.createElement('div'));
@@ -15,12 +16,12 @@ export function getProductsOptions(parent: HTMLDivElement) {
 
     const found: HTMLParagraphElement = options.appendChild(document.createElement('p'));
     found.classList.add('main__item_options-found');
-    found.textContent = OPTIONS_TEXT[0];
+    found.textContent = OptionsText.found;
 
     const searchField: HTMLInputElement = options.appendChild(document.createElement('input'));
     searchField.classList.add('main__item_options-search');
     searchField.type = 'search';
-    searchField.placeholder = OPTIONS_TEXT[1];
+    searchField.placeholder = OptionsText.search;
 
     const views: HTMLDivElement = options.appendChild(document.createElement('div'));
     views.classList.add('main__item_options-views');
