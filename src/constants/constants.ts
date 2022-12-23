@@ -13,3 +13,4 @@ export const OPTIONS_TEXT = ['Found: 30', 'Search product'];
 export const SORT_OPTIONS = ['Sort by:', 'Price ASC', 'Price DESC', 'In stock ASC', 'In stock DESC'];
 export const SMALL_VIEW_CELLS = 16;
 export const LARGE_VIEW_CELLS = 4;
+export const ERROR_MESSAGE = 'Error with fetch request!';
