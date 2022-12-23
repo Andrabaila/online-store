@@ -9,7 +9,9 @@ export function getCartPage() {
     const header = document.querySelector('header');
     const main = document.querySelector('main');
 
-    if (main) main.remove();
+    if (main) {
+        main.remove();
+    }
 
     const newMain = document.createElement('main');
     newMain.classList.add('main', 'main_cart');

@@ -1,7 +1,9 @@
 import { getCartPage } from '../pages/getCartPage';
 
 export function getHeader() {
-    if (document.querySelector('header')) return;
+    if (document.querySelector('header')) {
+        return;
+    }
     const header: HTMLElement = document.body.appendChild(document.createElement('header'));
     header.classList.add('header');
 

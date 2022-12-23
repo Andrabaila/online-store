@@ -1,7 +1,9 @@
 import { UI } from '../data/UI';
 
 export function getFooter() {
-    if (document.querySelector('footer')) return;
+    if (document.querySelector('footer')) {
+        return;
+    }
 
     const body = document.querySelector('body');
     const footer = document.createElement('footer');
