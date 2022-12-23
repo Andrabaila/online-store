@@ -1,4 +1,4 @@
-export function changeView(this: HTMLDivElement, event: MouseEvent) {
+export function changeCellsSize(this: HTMLDivElement, event: MouseEvent) {
     const small = document.querySelector('.main__item_options-small');
     const smallCells = document.querySelectorAll('.main__item_options-small-cell');
     const large = document.querySelector('.main__item_options-large');

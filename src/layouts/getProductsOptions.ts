@@ -1,5 +1,5 @@
 import { OPTIONS_TEXT, SORT_OPTIONS, SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
-import { changeView } from './changeView';
+import { changeCellsSize } from './changeCellsSize';
 
 export function getProductsOptions(parent: HTMLDivElement) {
     const options = parent.appendChild(document.createElement('div'));
@@ -31,12 +31,12 @@ export function getProductsOptions(parent: HTMLDivElement) {
     for (let i = 0; i < SMALL_VIEW_CELLS; i += 1) {
         smallView.appendChild(document.createElement('div')).classList.add('main__item_options-small-cell');
     }
-    smallView.addEventListener('click', changeView);
+    smallView.addEventListener('click', changeCellsSize);
 
     const largeView: HTMLDivElement = views.appendChild(document.createElement('div'));
     largeView.classList.add('main__item_options-large');
     for (let i = 0; i < LARGE_VIEW_CELLS; i += 1) {
         largeView.appendChild(document.createElement('div')).classList.add('main__item_options-large-cell');
     }
-    largeView.addEventListener('click', changeView);
+    largeView.addEventListener('click', changeCellsSize);
 }
