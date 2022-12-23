@@ -428,7 +428,7 @@ body {
   height: 40rem;
   border: 1px solid #e8e9e9;
   border-radius: 2px;
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -542,6 +542,12 @@ body {
   color: #e8e9e9;
   text-decoration: none;
   line-height: 140%;
+}
+
+.button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4889e5), to(#2a1267));
+  background: gradient(top, #4889e5, #2a1267);
+  box-shadow: inset 1px 1px 0 #e8e9e9;
 }
 
 .logo {

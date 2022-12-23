@@ -13,3 +13,9 @@
     text-decoration: none;
     line-height: 140%;
 }
+
+.button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from($color-blue), to($color-dark_blue));
+    background: gradient(top, $color-blue, $color-dark_blue);
+    box-shadow: inset 1px 1px 0 $color-gray_light;
+}

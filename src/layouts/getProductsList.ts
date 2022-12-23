@@ -20,7 +20,7 @@ export async function getProductsList(parent: HTMLDivElement) {
         const childElements = <HTMLDivElement[]>Object.values(productList.childNodes);
         for (let i = 0; i < childElements.length; i += 1) {
             childElements[i].style.background = `url(${goods[i].thumbnail}) right -3rem center no-repeat #ffffff`;
-            childElements[i].style.backgroundSize = 'contain';
+            childElements[i].style.backgroundSize = '80% auto';
 
             const name = childElements[i].appendChild(document.createElement('p'));
             name.classList.add('main__item_product-name');
@@ -31,16 +31,16 @@ export async function getProductsList(parent: HTMLDivElement) {
             description.textContent = `${goods[i].description}`;
 
             const discount = childElements[i].appendChild(document.createElement('p'));
-            discount.innerHTML = `Discount: <br><b>${goods[i].discountPercentage}</b>`;
+            discount.innerHTML = `Discount: <b>${goods[i].discountPercentage}</b>`;
 
             const rating = childElements[i].appendChild(document.createElement('p'));
-            rating.innerHTML = `Rating: <br><b>${goods[i].rating}</b>`;
+            rating.innerHTML = `Rating: <b>${goods[i].rating}</b>`;
 
             const stock = childElements[i].appendChild(document.createElement('p'));
-            stock.innerHTML = `In stock: <br><b>${goods[i].stock}</b>`;
+            stock.innerHTML = `In stock: <b>${goods[i].stock}</b>`;
 
             const brand = childElements[i].appendChild(document.createElement('p'));
-            brand.innerHTML = `Brand: <br><b>${goods[i].brand}</b>`;
+            brand.innerHTML = `Brand: <b>${goods[i].brand}</b>`;
 
             const category = childElements[i].appendChild(document.createElement('p'));
             category.innerHTML = `Category: <br><b>${goods[i].category}</b>`;
