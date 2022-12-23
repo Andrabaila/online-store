@@ -10,7 +10,8 @@ export async function getProductsList(parent: HTMLDivElement) {
     productList.classList.add('main__item_product-list');
 
     try {
-        for (let i = 0; i < data['products'].length; i += 1) {
+        const goods = data['products'];
+        for (let i = 0; i < goods.length; i += 1) {
             const productItem = productList.appendChild(document.createElement('div'));
             productItem.classList.add('main__item_product');
             productItem.addEventListener('click', showProduct);
@@ -18,35 +19,35 @@ export async function getProductsList(parent: HTMLDivElement) {
 
         const childElements = <HTMLDivElement[]>Object.values(productList.childNodes);
         for (let i = 0; i < childElements.length; i += 1) {
-            childElements[i].style.background = `url(${data['products'][i].thumbnail}) right center no-repeat #ffffff`;
+            childElements[i].style.background = `url(${goods[i].thumbnail}) right center no-repeat #ffffff`;
             childElements[i].style.backgroundSize = 'contain';
 
             const name = childElements[i].appendChild(document.createElement('p'));
             name.classList.add('main__item_product-name');
-            name.textContent = `${data['products'][i].title.toUpperCase()}`;
+            name.textContent = `${goods[i].title.toUpperCase()}`;
 
             const description = childElements[i].appendChild(document.createElement('p'));
             description.classList.add('main__item_product-description');
-            description.textContent = `${data['products'][i].description}`;
+            description.textContent = `${goods[i].description}`;
 
             const discount = childElements[i].appendChild(document.createElement('p'));
-            discount.innerHTML = `Discount: <br><b>${data['products'][i].discountPercentage}</b>`;
+            discount.innerHTML = `Discount: <br><b>${goods[i].discountPercentage}</b>`;
 
             const rating = childElements[i].appendChild(document.createElement('p'));
-            rating.innerHTML = `Rating: <br><b>${data['products'][i].rating}</b>`;
+            rating.innerHTML = `Rating: <br><b>${goods[i].rating}</b>`;
 
             const stock = childElements[i].appendChild(document.createElement('p'));
-            stock.innerHTML = `In stock: <br><b>${data['products'][i].stock}</b>`;
+            stock.innerHTML = `In stock: <br><b>${goods[i].stock}</b>`;
 
             const brand = childElements[i].appendChild(document.createElement('p'));
-            brand.innerHTML = `Brand: <br><b>${data['products'][i].brand}</b>`;
+            brand.innerHTML = `Brand: <br><b>${goods[i].brand}</b>`;
 
             const category = childElements[i].appendChild(document.createElement('p'));
-            category.innerHTML = `Category: <br><b>${data['products'][i].category}</b>`;
+            category.innerHTML = `Category: <br><b>${goods[i].category}</b>`;
 
             const price = childElements[i].appendChild(document.createElement('p'));
             price.classList.add('main__item_product-price');
-            price.textContent = `$${data['products'][i].price}`;
+            price.textContent = `$${goods[i].price}`;
 
             const btn = childElements[i].appendChild(document.createElement('button'));
             btn.classList.add('main__item_product-add-button');
