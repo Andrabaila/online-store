@@ -1,0 +1,30 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.8rem;
+}
+
+.summary__item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.promo__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo__title {
+    width: fit-content;
+}

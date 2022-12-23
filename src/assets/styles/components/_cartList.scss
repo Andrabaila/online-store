@@ -1,0 +1,28 @@
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: $color-text;
+}
+
+.cart-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cart-list__body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-list__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-list__text {
+    font-size: $font-size-text;
+}

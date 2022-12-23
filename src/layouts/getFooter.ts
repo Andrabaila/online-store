@@ -1,5 +1,10 @@
+import { UI } from '../data/UI';
+
 export function getFooter() {
-    if (document.querySelector('.footer')) return;
+    if (document.querySelector('footer')) {
+        return;
+    }
+
     const body = document.querySelector('body');
     const footer = document.createElement('footer');
     footer.classList.add('footer');
@@ -12,16 +17,16 @@ export function getFooter() {
     const githubLink1 = document.createElement('a');
     githubLink1.classList.add('footer__item', 'footer__item_github-link');
     githubLink1.href = 'https://github.com/Andrabaila';
-    githubLink1.textContent = 'Yury Andrabaila';
+    githubLink1.textContent = UI.footerText1;
 
     const githubLink2 = document.createElement('a');
     githubLink2.classList.add('footer__item', 'footer__item_github-link');
     githubLink2.href = 'https://github.com/Katsiaryna-Andrabaila';
-    githubLink2.textContent = 'Katsiaryna Andrabaila';
+    githubLink2.textContent = UI.footerText2;
 
     const creationDate = document.createElement('span');
     creationDate.classList.add('footer__item');
-    creationDate.textContent = '2023';
+    creationDate.textContent = UI.footerText3;
 
     const rsSchoolLink = document.createElement('a');
     rsSchoolLink.classList.add('footer__item', 'footer__item_rsschool-link');
