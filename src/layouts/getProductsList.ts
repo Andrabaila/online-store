@@ -19,7 +19,7 @@ export async function getProductsList(parent: HTMLDivElement) {
 
         const childElements = <HTMLDivElement[]>Object.values(productList.childNodes);
         for (let i = 0; i < childElements.length; i += 1) {
-            childElements[i].style.background = `url(${goods[i].thumbnail}) right center no-repeat #ffffff`;
+            childElements[i].style.background = `url(${goods[i].thumbnail}) right -3rem center no-repeat #ffffff`;
             childElements[i].style.backgroundSize = 'contain';
 
             const name = childElements[i].appendChild(document.createElement('p'));
