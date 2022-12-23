@@ -1,4 +1,7 @@
+import { getCartPage } from '../pages/getCartPage';
+
 export function getHeader() {
+    if (document.querySelector('header')) return;
     const header: HTMLElement = document.body.appendChild(document.createElement('header'));
     header.classList.add('header');
 
@@ -13,6 +16,7 @@ export function getHeader() {
 
     const cart: HTMLDivElement = header.appendChild(document.createElement('div'));
     cart.classList.add('cart');
+    cart.addEventListener('click', getCartPage);
 
     const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');

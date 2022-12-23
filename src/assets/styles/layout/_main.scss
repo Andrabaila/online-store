@@ -10,9 +10,11 @@
 .main_cart {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
     padding: 2rem;
     width: 100%;
+
+    color: $color-text;
 }

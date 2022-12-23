@@ -1,4 +1,6 @@
-/* colors *********************************************************************/ /* functions ******************************************************************/ /* placeholders ***************************************************************/
+/* colors *********************************************************************/
+/* font-sizes *****************************************************************/
+/* functions ******************************************************************/ /* placeholders ***************************************************************/
 body {
   display: flex;
   flex-direction: column;
@@ -15,7 +17,7 @@ html {
   width: 100%;
   font-family: "Roboto";
   font-size: 10px;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 *,
@@ -35,12 +37,12 @@ li {
 
 a {
   text-decoration: none;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 a:visited {
   text-decoration: none;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 /* roboto-100 - latin_cyrillic */
@@ -148,7 +150,7 @@ body {
   justify-content: space-between;
   height: 100%;
   background: linear-gradient(315.75deg, rgba(219, 241, 251, 0.7) 30.06%, #b8c6e5 100.95%, rgba(87, 75, 216, 0.7) 106.36%);
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 .shadow {
@@ -234,7 +236,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
-  color: #f1f3f2;
+  color: #e8e9e9;
   text-decoration: none;
   text-align: center;
   line-height: 140%;
@@ -272,11 +274,12 @@ body {
 .main_cart {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
   width: 100%;
+  color: #2a1267;
 }
 
 .header {
@@ -299,7 +302,8 @@ body {
   height: 40px;
   background: url(../icons/cart.svg) center center no-repeat;
   font-size: 16px;
-  color: #f1f3f2;
+  color: #e8e9e9;
+  cursor: pointer;
 }
 
 .products-in-cart {
@@ -332,7 +336,7 @@ body {
 
 .footer__item {
   font-size: 2rem;
-  color: #f1f3f2;
+  color: #e8e9e9;
 }
 
 .footer__item_github-link {
@@ -353,28 +357,131 @@ body {
     flex-direction: column;
   }
 }
-.cart-list {
-  display: flex;
-  flex-direction: column;
-}
-
 .button {
   padding: 1rem;
-  border: 1px solid #f1f3f2;
+  border: 1px solid #e8e9e9;
   border-radius: 5px;
-  background-color: rgba(69, 179, 252, 0.702);
+  background-color: #4889e5;
   cursor: pointer;
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 2rem;
-  color: #f1f3f2;
+  font-size: 1.8rem;
+  color: #e8e9e9;
   text-decoration: none;
   line-height: 140%;
+}
+
+.button_cart {
+  display: block;
+  width: 100%;
+}
+
+.button_input-count {
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.8rem;
+  padding: 0;
+}
+
+.button_promo {
+  width: 100%;
 }
 
 .logo {
   font-size: 32px;
   font-weight: 700;
   color: #2d0991;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2a1267;
+}
+
+.cart-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cart-list__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-list__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-list__text {
+  font-size: 1.8rem;
+}
+
+h3 {
+  margin: 15px;
+  background: linear-gradient(to right, #2a1267, #94dcf9 100%);
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  background-repeat: repeat-x;
+  font-size: 2rem;
+  color: #2a1267;
+  font-weight: 700;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+
+.summary__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.promo__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.input-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.input-count__field {
+  padding: 3px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
 }/*# sourceMappingURL=main.css.map */

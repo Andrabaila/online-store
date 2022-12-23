@@ -6,14 +6,14 @@ import { getCartSummary } from '../layouts/getCartSummary';
 export function getCartPage() {
     getHeader();
 
-    const body = document.querySelector('body');
+    const header = document.querySelector('header');
     const main = document.querySelector('main');
 
     if (main) main.remove();
 
     const newMain = document.createElement('main');
     newMain.classList.add('main', 'main_cart');
-    body?.append(newMain);
+    if (header) header.after(newMain);
 
     getCartProductList();
     getCartSummary();
