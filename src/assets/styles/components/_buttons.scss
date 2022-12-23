@@ -13,3 +13,18 @@
     text-decoration: none;
     line-height: 140%;
 }
+
+.button_cart {
+    display: block;
+    width: 100%;
+}
+
+.button_input-count {
+    @include size(3rem);
+    line-height: 2.8rem;
+    padding: 0;
+}
+
+.button_promo {
+    width: 100%;
+}
