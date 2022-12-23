@@ -1,0 +1,12 @@
+h3 {
+    margin: 15px;
+
+    background: linear-gradient(to right, $color-text, #94dcf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 2px;
+    background-repeat: repeat-x;
+
+    font-size: $font-size-title3;
+    color: $color-text;
+    font-weight: 700;
+}

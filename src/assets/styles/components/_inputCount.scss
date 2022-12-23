@@ -1,0 +1,14 @@
+.input-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    padding: 1rem;
+
+    font-size: 1.8rem;
+}
+
+.input-count__field {
+    padding: 3px;
+}

@@ -19,3 +19,18 @@
     background: gradient(top, $color-blue, $color-dark_blue);
     box-shadow: inset 1px 1px 0 $color-gray_light;
 }
+
+.button_cart {
+    display: block;
+    width: 100%;
+}
+
+.button_input-count {
+    @include size(3rem);
+    line-height: 2.8rem;
+    padding: 0;
+}
+
+.button_promo {
+    width: 100%;
+}
