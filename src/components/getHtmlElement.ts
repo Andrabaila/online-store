@@ -1,13 +1,11 @@
-import { AppendPoint } from '../data/types';
+export function getHtmlElement({ parent = '', parentNode = <Element>{}, tag = 'div', style = [''], content = '' }) {
+    let parentContainer: Element;
 
-export function getHtmlElement(parent: AppendPoint, tag: string, style: string[], content?: string) {
-    let parentContainer: AppendPoint;
-
-    if (typeof parent === 'string') {
+    if (parent) {
         const parentArray = document.querySelectorAll(parent);
         parentContainer = parentArray[parentArray.length - 1];
     } else {
-        parentContainer = parent;
+        parentContainer = parentNode;
     }
 
     const newElement = document.createElement(tag);
