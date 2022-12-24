@@ -7,7 +7,6 @@ export async function getProductsList(parent: HTMLDivElement) {
     const productList: HTMLDivElement = parent.appendChild(document.createElement('div'));
     productList.classList.add('main__item_product-list');
 
-    console.log(data);
     for (let i = 0; i < data.length; i += 1) {
         const productItem: HTMLDivElement = productList.appendChild(document.createElement('div'));
         productItem.classList.add('main__item_product');
