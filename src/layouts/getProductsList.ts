@@ -1,5 +1,7 @@
 import { getProducts } from '../API/getProducts';
-import { showProduct } from './showProduct';
+import { showProduct } from '../pages/showProduct';
+import { addToCart } from '../features/addToCart';
+import { UI } from '../data/UI';
 
 export async function getProductsList(parent: HTMLDivElement) {
     const data = await getProducts();
@@ -48,6 +50,7 @@ export async function getProductsList(parent: HTMLDivElement) {
         const btn = childElements[i].appendChild(document.createElement('button'));
         btn.classList.add('main__item_product-add-button');
         btn.classList.add('button');
-        btn.textContent = 'Add to cart';
+        btn.textContent = UI.addButtonText;
+        btn.addEventListener('click', addToCart);
     }
 }

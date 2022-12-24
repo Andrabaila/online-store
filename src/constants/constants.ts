@@ -1,7 +1,7 @@
-import { getMinPrice } from '../layouts/getMinPrice';
-import { getMaxPrice } from '../layouts/getMaxPrice';
-import { getMinStock } from '../layouts/getMinStock';
-import { getMaxStock } from '../layouts/getMaxStock';
+import { getMinPrice } from '../components/getMinPrice';
+import { getMaxPrice } from '../components/getMaxPrice';
+import { getMinStock } from '../components/getMinStock';
+import { getMaxStock } from '../components/getMaxStock';
 
 export const CHECKED_NAMES = ['Categories', 'Brands'];
 export const RANGE_NAMES = ['Price', 'In stock'];

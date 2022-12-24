@@ -1,5 +1,5 @@
 .button {
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid $color-gray_light;
     border-radius: 5px;
 
@@ -8,7 +8,7 @@
 
     font-style: normal;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: $font-size-text_small;
     color: $color-gray_light;
     text-decoration: none;
     line-height: 140%;

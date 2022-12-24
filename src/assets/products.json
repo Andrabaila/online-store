@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "title": "BABY BOOM",
+            "title": "BABY BOOM hypoallergenic SHAMPOO",
             "description": "children's hypoallergenic SHAMPOO with chamomile and silk proteins 250 ml",
             "price": 4.86,
             "discountPercentage": 12.96,
@@ -19,7 +19,7 @@
         },
         {
             "id": 2,
-            "title": "KOSMO BOY Iron Man",
+            "title": "KOSMO BOY Iron Man shampoo",
             "description": "SPA CHALLENGE baby shampoo 250 ml",
             "price": 3.49,
             "discountPercentage": 17.94,
@@ -53,7 +53,7 @@
         },
         {
             "id": 4,
-            "title": "MONSTER-BUBBLE",
+            "title": "MONSTER-BUBBLE SHAMPOO",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.47,
             "discountPercentage": 17.91,
@@ -70,7 +70,7 @@
         },
         {
             "id": 5,
-            "title": "PANDA-BUBBLE",
+            "title": "PANDA-BUBBLE SHAMPOO",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.47,
             "discountPercentage": 10.58,
@@ -155,7 +155,7 @@
         },
         {
             "id": 10,
-            "title": "BABY BOOM",
+            "title": "BABY BOOM shampoo",
             "description": "2in1 baby shampoo and foam for washing and bathing with string and cotton extract 250 ml",
             "price": 4.85,
             "discountPercentage": 6.18,
@@ -206,7 +206,7 @@
         },
         {
             "id": 13,
-            "title": "PONY-Bubble",
+            "title": "PONY-Bubble SHAMPOO",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.87,
             "discountPercentage": 8.14,
@@ -257,7 +257,7 @@
         },
         {
             "id": 16,
-            "title": "ROBO-BUBBLE",
+            "title": "ROBO-BUBBLE SHAMPOO",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.42,
             "discountPercentage": 13.31,
@@ -342,7 +342,7 @@
         },
         {
             "id": 21,
-            "title": "MONSTER-BUBBLE",
+            "title": "MONSTER-BUBBLE SHOWER GEL",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.47,
             "discountPercentage": 17.91,
@@ -359,7 +359,7 @@
         },
         {
             "id": 22,
-            "title": "PANDA-BUBBLE",
+            "title": "PANDA-BUBBLE SHOWER GE",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.47,
             "discountPercentage": 10.58,
@@ -376,7 +376,7 @@
         },
         {
             "id": 23,
-            "title": "BABY BOOM",
+            "title": "BABY BOOM foam",
             "description": "2in1 baby shampoo and foam for washing and bathing with string and cotton extract 250 ml",
             "price": 4.85,
             "discountPercentage": 6.18,
@@ -393,7 +393,7 @@
         },
         {
             "id": 24,
-            "title": "PONY-Bubble",
+            "title": "PONY-Bubble SHOWER GEL",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.87,
             "discountPercentage": 8.14,
@@ -410,7 +410,7 @@
         },
         {
             "id": 25,
-            "title": "ROBO-BUBBLE",
+            "title": "ROBO-BUBBLE SHOWER GEL",
             "description": "2in1 BABY SHAMPOO and SHOWER GEL 250 ml",
             "price": 3.42,
             "discountPercentage": 13.31,
@@ -478,7 +478,7 @@
         },
         {
             "id": 29,
-            "title": "KOSMO BOY Iron Man",
+            "title": "KOSMO BOY Iron Man shower gel",
             "description": "Baby shower gel METEOR SHOWER 250 ml",
             "price": 3.69,
             "discountPercentage": 15.34,

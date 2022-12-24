@@ -1,0 +1,25 @@
+.product-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-block__info {
+    display: flex;
+}
+
+.product-block__photos {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    width: 10rem;
+    height: 10rem;
+
+    margin: 0.5rem;
+}
+
+.product-block__purchase {
+    display: flex;
+    flex-direction: column;
+}

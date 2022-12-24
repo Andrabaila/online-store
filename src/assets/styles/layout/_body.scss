@@ -1,14 +1,14 @@
 body {
     position: relative;
-
     @extend %column;
     align-items: center;
     justify-content: space-between;
 
+    min-height: 100%;
+
     background: linear-gradient(270.75deg, rgba(219, 241, 251, 0.7) 30.06%, $color-primary 100.95%, #3b3bfb 106.36%);
 
     color: $color-gray_light;
-
     font-family: 'Geometria-Medium', Helvetica, Arial, sans-serif;
 }
 
