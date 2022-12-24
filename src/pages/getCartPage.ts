@@ -2,6 +2,7 @@ import { getHeader } from '../layouts/getHeader';
 import { getFooter } from '../layouts/getFooter';
 import { getCartProductList } from '../layouts/getCartProductList';
 import { getCartSummary } from '../layouts/getCartSummary';
+import { getCheckoutPage } from './getCheckoutPage';
 
 export function getCartPage() {
     getHeader();
@@ -20,4 +21,5 @@ export function getCartPage() {
     getCartProductList();
     getCartSummary();
     getFooter();
+    getCheckoutPage();
 }

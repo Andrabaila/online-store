@@ -11,8 +11,11 @@
     flex-direction: column;
 
     padding: 0.5rem;
+}
 
 .main_cart {
+    position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,6 +29,6 @@
 
 .products {
     padding: 2rem;
-    
+
     border: 2px solid $color-gray_light;
 }
