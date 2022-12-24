@@ -1,6 +1,6 @@
 import { UI } from '../data/UI';
 import { getHtmlElement } from '../components/getHtmlElement';
-import { showCheckout } from './showCheckout';
+import { toggleCheckout } from './toggleCheckout';
 
 export function getCartSummary() {
     const summary = getHtmlElement({ parent: 'main', tag: 'div', style: ['summary'] });
@@ -74,5 +74,5 @@ export function getCartSummary() {
         content: UI.cartSummaryText4,
     });
 
-    buyButton.addEventListener('click', showCheckout);
+    buyButton.addEventListener('click', toggleCheckout);
 }
