@@ -2,26 +2,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 
     width: 100%;
     padding: 2rem;
 
-    background-color: rgba(69, 179, 252, 0.702);
+    background-color: $color-primary;
 }
 
 .sum-total {
-    font-size: 24px;
-    color: #2a1267;
+    font-size: 2.4rem;
+    color: $color-additional;
 }
 
 .cart {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
 
     background: url(../icons/cart.svg) center center no-repeat;
 
-    font-size: 16px;
+    font-size: 1.6rem;
     color: $color-gray_light;
 
     cursor: pointer;
@@ -32,7 +32,7 @@
     height: 45%;
     border-radius: 50%;
 
-    background-color: #4889e5;
+    background-color: $color-blue;
 
     text-align: center;
 }
