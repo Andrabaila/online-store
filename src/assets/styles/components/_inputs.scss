@@ -1,0 +1,24 @@
+.input {
+    border: 1px solid $color-gray_light;
+    border-radius: 5px;
+
+    background-color: $color-blue;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $color-text;
+}
+
+.input::-webkit-input-placeholder {
+    font-size: 1.5rem;
+    color: rgba(229, 232, 234, 0.702);
+}
+
+.input:focus {
+    border: 1px solid #ffffff;
+
+    background-color: $color-primary;
+
+    outline: none;
+}

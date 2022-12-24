@@ -15,6 +15,7 @@ export function getHtmlElement({ parent = '', parentNode = <Element>{}, tag = 'd
     }
 
     if (content) newElement.textContent = content;
+
     parentContainer.append(newElement);
     return newElement;
 }
