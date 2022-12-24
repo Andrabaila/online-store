@@ -1,13 +1,13 @@
 import { getHtmlElement } from '../components/getHtmlElement';
 import { UI } from '../data/UI';
-import { hideCheckout } from '../layouts/hideCheckout';
+import { toggleCheckout } from '../layouts/toggleCheckout';
 
 export function getCheckoutPage() {
     const shadow = getHtmlElement({ parent: 'body', style: ['shadow'] });
-    shadow.addEventListener('click', hideCheckout);
+    shadow.addEventListener('click', toggleCheckout);
     getHtmlElement({ parent: 'main', style: ['checkout'] });
     const xButton = getHtmlElement({ parent: '.checkout', style: ['button', 'button_x'], content: 'x' });
-    xButton.addEventListener('click', hideCheckout);
+    xButton.addEventListener('click', toggleCheckout);
     getHtmlElement({ parent: '.checkout', tag: 'h3', style: ['checkout__title'], content: UI.checkoutTitle1 });
     const input1 = <HTMLInputElement>(
         getHtmlElement({ parent: '.checkout', tag: 'input', style: ['input', 'checkout__input'] })
