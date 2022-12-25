@@ -1,5 +1,5 @@
 import { getProducts } from '../API/getProducts';
-import { showProduct } from '../pages/showProduct';
+import { getProductPage } from '../pages/getProductPage';
 import { addToCart } from '../features/addToCart';
 import { UI } from '../data/UI';
 
@@ -12,13 +12,13 @@ export async function getProductsList(parent: HTMLDivElement) {
     for (let i = 0; i < data.length; i += 1) {
         const productItem: HTMLDivElement = productList.appendChild(document.createElement('div'));
         productItem.classList.add('main__item_product');
-        productItem.addEventListener('click', showProduct);
+        productItem.addEventListener('click', getProductPage);
     }
 
     const childElements = <HTMLDivElement[]>Object.values(productList.childNodes);
     for (let i = 0; i < childElements.length; i += 1) {
         childElements[i].style.background = `url(${data[i].thumbnail}) right -3rem center no-repeat #ffffff`;
-        childElements[i].style.backgroundSize = '80% auto';
+        childElements[i].style.backgroundSize = '70% auto';
 
         const name = childElements[i].appendChild(document.createElement('p'));
         name.classList.add('main__item_product-name');

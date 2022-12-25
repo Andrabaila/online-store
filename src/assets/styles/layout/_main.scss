@@ -35,3 +35,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.main__bread-crumbs {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 2rem;
+    padding: 0 2rem;
+
+    font-size: $font-size-title3;
+    color: $color-blue;
+}
+
+.main_product__link {
+    font-size: $font-size-title3;
+    color: $color-blue;
+}

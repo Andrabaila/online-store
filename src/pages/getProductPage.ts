@@ -1,9 +1,9 @@
 import { getHeader } from '../layouts/getHeader';
 import { getProducts } from '../API/getProducts';
-import { drawProductDescription } from '../layouts/drawProductDescription';
+import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
 
-export async function showProduct(this: HTMLDivElement) {
+export async function getProductPage(this: HTMLDivElement) {
     const data = await getProducts();
     const products = document.querySelectorAll('.main__item_product');
     let targetProduct = {};
@@ -33,15 +33,16 @@ export async function showProduct(this: HTMLDivElement) {
     breadCrumbs.classList.add('main__bread-crumbs');
 
     const mainPageLink = breadCrumbs.appendChild(document.createElement('a'));
-    mainPageLink.textContent = 'Store';
+    mainPageLink.classList.add('main_product__link');
+    mainPageLink.textContent = 'Store'.toUpperCase();
     mainPageLink.href = '../index.html';
 
     if (targetData !== undefined) {
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';
-        breadCrumbs.appendChild(document.createElement('span')).textContent = targetData.category;
+        breadCrumbs.appendChild(document.createElement('span')).textContent = targetData.category.toUpperCase();
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';
         breadCrumbs.appendChild(document.createElement('span')).textContent = targetData.title.toUpperCase();
-        drawProductDescription(main, targetData);
+        getProductDescription(main, targetData);
     }
     getFooter();
 }

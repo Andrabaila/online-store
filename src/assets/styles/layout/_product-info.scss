@@ -1,25 +1,108 @@
 .product-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    min-height: 39rem;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid $color-gray_light;
+    border-radius: 0.5rem;
+}
+
+.product-block__title {
+    background: linear-gradient(to right, $color-dark_blue, #94dcf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 2px;
+    background-repeat: repeat-x;
+    margin: 15px;
+
+    font-size: $font-size-title3;
+    font-weight: 700;
+    text-align: center;
+    color: $color-dark_blue;
 }
 
 .product-block__info {
     display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .product-block__photos {
     display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+
+    margin: 1rem;
 }
 
 .photo {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    border-radius: 0.5rem;
 
     margin: 0.5rem;
+
+    cursor: pointer;
+}
+
+.photo:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.active-photo {
+    max-width: 30vh;
+    border-radius: 0.5rem;
+}
+
+.product-block__details {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    align-content: center;
+}
+
+.details__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color-gray_light;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
+    background-color: $color-primary;
+
+    font-size: $font-size-text;
+    font-weight: 400;
+    text-align: center;
+    color: $color-blue;
 }
 
 .product-block__purchase {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    min-width: 20rem;
+}
+
+.product-block__purchase_price {
+    border-radius: 20%;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(135, 205, 251, 0.702);
+
+    background-color: rgba(135, 205, 251, 0.702);
+
+    font-size: $font-size-title1;
+    font-weight: 700;
+    color: $color-blue;
 }
