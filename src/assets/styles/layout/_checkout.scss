@@ -42,7 +42,8 @@
     }
 }
 
-.checkout__input {
+.checkout__input-container {
+    display: flex;
     width: 50%;
     height: $font-size-text * 1.5;
 
@@ -76,6 +77,18 @@
 .card-data__input {
     width: 100%;
     margin-left: 2px;
+}
+
+.checkout__message {
+    @include size($font-size-text * 1.5);
+
+    text-align: center;
+    color: $color-mistake;
+    line-height: $font-size-text * 1.5;
+}
+
+.checkout__message_valid {
+    color: $color-active;
 }
 
 @media (max-width: 1200px) {

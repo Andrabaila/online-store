@@ -22,3 +22,27 @@
 
     outline: none;
 }
+
+.input_valid {
+    border: 1px solid $color-active;
+}
+
+.input_valid:focus {
+    color: $color-text;
+}
+
+.input_invalid {
+    position: relative;
+
+    border: 1px solid $color-mistake;
+
+    color: $color-mistake;
+}
+
+.input_invalid:focus {
+    color: $color-text;
+}
+
+.input_checkout {
+    flex-grow: 9;
+}
