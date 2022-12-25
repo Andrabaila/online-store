@@ -604,7 +604,8 @@ body {
   transform: scale(1.2);
 }
 
-.checkout__input {
+.checkout__input-container {
+  display: flex;
   width: 50%;
   height: 2.7rem;
   font-size: 1.8rem;
@@ -636,6 +637,18 @@ body {
 .card-data__input {
   width: 100%;
   margin-left: 2px;
+}
+
+.checkout__message {
+  width: 2.7rem;
+  height: 2.7rem;
+  text-align: center;
+  color: #d31414;
+  line-height: 2.7rem;
+}
+
+.checkout__message_valid {
+  color: #4b9200;
 }
 
 @media (max-width: 767px) {
@@ -819,4 +832,26 @@ h3 {
   border: 1px solid #ffffff;
   background-color: rgba(69, 179, 252, 0.702);
   outline: none;
+}
+
+.input_valid {
+  border: 1px solid #4b9200;
+}
+
+.input_valid:focus {
+  color: #2a1267;
+}
+
+.input_invalid {
+  position: relative;
+  border: 1px solid #d31414;
+  color: #d31414;
+}
+
+.input_invalid:focus {
+  color: #2a1267;
+}
+
+.input_checkout {
+  flex-grow: 9;
 }/*# sourceMappingURL=main.css.map */

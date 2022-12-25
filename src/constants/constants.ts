@@ -13,3 +13,6 @@ export const SORT_OPTIONS = ['Sort by:', 'Price ASC', 'Price DESC', 'In stock AS
 export const SMALL_VIEW_CELLS = 16;
 export const LARGE_VIEW_CELLS = 4;
 export const ERROR_MESSAGE = 'Error with fetch request!';
+export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+export const PHONE_CHARS = '+0123456789';
+export const EMAIL_REG_EXP = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
