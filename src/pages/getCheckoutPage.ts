@@ -5,6 +5,9 @@ import { validateName } from '../features/validateName';
 import { validatePhone } from '../features/validatePhone';
 import { validateAddress } from '../features/validateAddress';
 import { validateEmail } from '../features/validateEmail';
+import { validateCardNumber } from '../features/validateCardNumber';
+import { validateCardDate } from '../features/validateCardDate';
+import { validateCardCode } from '../features/validateCardCode';
 
 export function getCheckoutPage() {
     const shadow = getHtmlElement({ parent: 'body', style: ['shadow'] });
@@ -47,16 +50,22 @@ export function getCheckoutPage() {
     getHtmlElement({ parent: '.checkout__input-container', style: ['checkout__message'] });
 
     getHtmlElement({ parent: '.checkout', tag: 'h3', style: ['checkout__title'], content: UI.checkoutTitle2 });
+
     getHtmlElement({ parent: '.checkout', style: ['card-data'] });
+    getHtmlElement({ parent: '.card-data', style: ['checkout__input-container_wide'] });
     const input5 = <HTMLInputElement>getHtmlElement({
-        parent: '.card-data',
+        parent: '.checkout__input-container_wide',
         tag: 'input',
-        style: ['input', 'checkout__input', 'checkout__input_wide'],
+        style: ['input', 'input_checkout'],
     });
     input5.placeholder = UI.checkoutPlaceholder5;
+    input5.addEventListener('change', validateCardNumber);
+    getHtmlElement({ parent: '.checkout__input-container_wide', style: ['checkout__message'] });
+
     getHtmlElement({ parent: '.card-data', style: ['card-data__container'] });
+    getHtmlElement({ parent: '.card-data__container', style: ['checkout__input-container'] });
     getHtmlElement({
-        parent: '.card-data__container',
+        parent: '.checkout__input-container',
         tag: 'label',
         style: ['card-data__label'],
         content: UI.checkoutLabel1,
@@ -64,11 +73,15 @@ export function getCheckoutPage() {
     const input6 = <HTMLInputElement>getHtmlElement({
         parent: '.card-data__label',
         tag: 'input',
-        style: ['input', 'checkout__input', 'card-data__input'],
+        style: ['input', 'card-data__input'],
     });
     input6.placeholder = UI.checkoutPlaceholder6;
+    input6.addEventListener('change', validateCardDate);
+    getHtmlElement({ parent: '.card-data__label', style: ['checkout__message'] });
+
+    getHtmlElement({ parent: '.card-data__container', style: ['checkout__input-container'] });
     getHtmlElement({
-        parent: '.card-data__container',
+        parent: '.checkout__input-container',
         tag: 'label',
         style: ['card-data__label'],
         content: UI.checkoutLabel2,
@@ -76,9 +89,12 @@ export function getCheckoutPage() {
     const input7 = <HTMLInputElement>getHtmlElement({
         parent: '.card-data__label',
         tag: 'input',
-        style: ['input', 'checkout__input', 'card-data__input'],
+        style: ['input', 'card-data__input'],
     });
     input7.placeholder = UI.checkoutPlaceholder7;
+    input7.addEventListener('change', validateCardCode);
+    getHtmlElement({ parent: '.card-data__label', style: ['checkout__message'] });
+
     getHtmlElement({
         parent: '.checkout',
         tag: 'button',
