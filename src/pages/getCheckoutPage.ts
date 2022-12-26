@@ -8,6 +8,8 @@ import { validateEmail } from '../features/validateEmail';
 import { validateCardNumber } from '../features/validateCardNumber';
 import { validateCardDate } from '../features/validateCardDate';
 import { validateCardCode } from '../features/validateCardCode';
+import { showCardLogo } from '../features/showCardLogo';
+import { autoFill } from '../features/autoFill';
 
 export function getCheckoutPage() {
     const shadow = getHtmlElement({ parent: 'body', style: ['shadow'] });
@@ -53,6 +55,8 @@ export function getCheckoutPage() {
 
     getHtmlElement({ parent: '.checkout', style: ['card-data'] });
     getHtmlElement({ parent: '.card-data', style: ['checkout__input-container_wide'] });
+    getHtmlElement({ parent: '.checkout__input-container_wide', style: ['checkout__card-logo'] });
+
     const input5 = <HTMLInputElement>getHtmlElement({
         parent: '.checkout__input-container_wide',
         tag: 'input',
@@ -60,6 +64,7 @@ export function getCheckoutPage() {
     });
     input5.placeholder = UI.checkoutPlaceholder5;
     input5.addEventListener('change', validateCardNumber);
+    input5.addEventListener('keyup', showCardLogo);
     getHtmlElement({ parent: '.checkout__input-container_wide', style: ['checkout__message'] });
 
     getHtmlElement({ parent: '.card-data', style: ['card-data__container'] });
@@ -77,6 +82,7 @@ export function getCheckoutPage() {
     });
     input6.placeholder = UI.checkoutPlaceholder6;
     input6.addEventListener('change', validateCardDate);
+    input6.addEventListener('keyup', autoFill);
     getHtmlElement({ parent: '.card-data__label', style: ['checkout__message'] });
 
     getHtmlElement({ parent: '.card-data__container', style: ['checkout__input-container'] });
