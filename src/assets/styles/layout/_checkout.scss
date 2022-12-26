@@ -42,15 +42,12 @@
     }
 }
 
-.checkout__input {
+.checkout__input-container {
+    display: flex;
     width: 50%;
     height: $font-size-text * 1.5;
 
     font-size: $font-size-text;
-}
-
-.checkout__input_wide {
-    width: 100%;
 }
 
 .card-data {
@@ -58,6 +55,10 @@
     flex-direction: column;
     gap: 1rem;
     width: 50%;
+}
+
+.checkout__input_wide {
+    width: 100%;
 }
 
 .card-data__container {
@@ -78,9 +79,73 @@
     margin-left: 2px;
 }
 
+.checkout__message {
+    @include size($font-size-text * 1.5);
+
+    text-align: center;
+    color: $color-mistake;
+    line-height: $font-size-text * 1.5;
+}
+
+.checkout__message_valid {
+    color: $color-active;
+}
+
+@media (max-width: 1200px) {
+    .checkout__input {
+        width: 70%;
+    }
+
+    .card-data {
+        width: 70%;
+    }
+
+    .checkout__input_wide {
+        width: 100%;
+    }
+
+    .card-data__input {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     .checkout {
+        left: 15%;
+
+        width: 70%;
+    }
+}
+
+@media (max-width: 550px) {
+    .checkout {
+        left: 5%;
+
         width: 90%;
-        height: 70%;
+    }
+}
+
+@media (max-width: 450px) {
+    .checkout__input {
+        width: 90%;
+    }
+
+    .card-data {
+        width: 90%;
+    }
+
+    .checkout__input_wide {
+        width: 100%;
+    }
+
+    .card-data__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .card-data__container {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
