@@ -22,6 +22,10 @@ export const UI: { readonly [x: string]: string } = {
     promoText1: 'Enter promo code',
     promoText2: 'Promo for test: "RS", "EPM"',
 
+    addButtonText: 'Add to cart',
+    removeButtonText: 'Remove from cart',
+    buyNowButtonText: 'Buy now',
+
     //checkout--------------------------------------
     checkoutTitle1: 'Personal details',
     checkoutPlaceholder1: 'Name',
