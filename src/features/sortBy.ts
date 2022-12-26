@@ -1,6 +1,6 @@
 import { Product } from '../data/types';
 import { getProducts } from '../API/getProducts';
-import { SORT_OPTIONS } from '../constants/constants';
+import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 
@@ -13,14 +13,18 @@ export async function sortBy(this: HTMLSelectElement) {
         dataList.push(data[Number(id) - 1]);
     }
 
-    if (this.value === SORT_OPTIONS[1]) {
-        dataList.sort((a, b) => (a.price > b.price ? 1 : -1));
-    } else if (this.value === SORT_OPTIONS[2]) {
-        dataList.sort((a, b) => (a.price < b.price ? 1 : -1));
-    } else if (this.value === SORT_OPTIONS[3]) {
-        dataList.sort((a, b) => (a.stock > b.stock ? 1 : -1));
-    } else if (this.value === SORT_OPTIONS[4]) {
-        dataList.sort((a, b) => (a.stock < b.stock ? 1 : -1));
+    switch (this.value) {
+        case SortOptions.priceAsc:
+            dataList.sort((a, b) => (a.price > b.price ? 1 : -1));
+            break;
+        case SortOptions.priceDesc:
+            dataList.sort((a, b) => (a.price < b.price ? 1 : -1));
+            break;
+        case SortOptions.stockAsc:
+            dataList.sort((a, b) => (a.stock > b.stock ? 1 : -1));
+            break;
+        case SortOptions.stockDesc:
+            dataList.sort((a, b) => (a.stock < b.stock ? 1 : -1));
     }
 
     const parent = document.querySelector('.main__item_product-list');
