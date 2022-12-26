@@ -29,3 +29,11 @@ export interface ProductsData {
 export interface RegularExpressions {
     [index: string]: RegExp;
 }
+
+export enum SortOptions {
+    sortBy = 'Sort by:',
+    priceAsc = 'Price ASC',
+    priceDesc = 'Price DESC',
+    stockAsc = 'In stock ASC',
+    stockDesc = 'In stock DESC',
+}

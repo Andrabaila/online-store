@@ -379,6 +379,10 @@ body {
   color: #e8e9e9;
 }
 
+.sort-option {
+  cursor: pointer;
+}
+
 .main__item_options-found {
   font-size: 1.8rem;
   color: #2a1267;
@@ -577,6 +581,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.main__item_product-id {
+  display: none;
+}
+
 .main__item_product-name,
 .main__item_product-price {
   text-align: center;
@@ -670,6 +678,7 @@ body {
 }
 .button {
   padding: 0.5rem;
+
 }
 .shadow {
   display: none;
@@ -851,6 +860,7 @@ body {
 }
 .button {
   padding: 1rem;
+
   border: 1px solid #e8e9e9;
   border-radius: 5px;
   background-color: #4889e5;
@@ -889,6 +899,7 @@ body {
 .product-block__purchase_buy-button {
   width: 100%;
 }
+
 .button_x {
   position: absolute;
   right: 15px;
