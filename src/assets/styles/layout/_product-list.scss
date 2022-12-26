@@ -46,6 +46,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.main__item_product-id {
+    display: none;
+}
+
 .main__item_product-name,
 .main__item_product-price {
     text-align: center;

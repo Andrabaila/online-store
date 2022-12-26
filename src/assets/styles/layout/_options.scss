@@ -20,6 +20,10 @@
     color: $color-gray_light;
 }
 
+.sort-option {
+    cursor: pointer;
+}
+
 .main__item_options-found {
     font-size: 1.8rem;
     color: $color-additional;
