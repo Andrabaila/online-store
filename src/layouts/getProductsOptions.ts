@@ -1,4 +1,6 @@
-import { SORT_OPTIONS, SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
+import { SortOptions } from '../data/types';
+import { SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
+import { sortBy } from '../features/sortBy';
 import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
@@ -8,11 +10,17 @@ export function getProductsOptions(parent: HTMLDivElement) {
 
     const sortField: HTMLSelectElement = options.appendChild(document.createElement('select'));
     sortField.classList.add('main__item_options-sort');
+    sortField.addEventListener('change', sortBy);
 
-    for (let i = 0; i < SORT_OPTIONS.length; i += 1) {
-        sortField.appendChild(document.createElement('option')).textContent = SORT_OPTIONS[i];
+    const sortOptions = Object.values(SortOptions);
+    for (let i = 0; i < sortOptions.length; i += 1) {
+        const sortOption: HTMLOptionElement = sortField.appendChild(document.createElement('option'));
+        sortOption.classList.add('sort-option');
+        sortOption.textContent = sortOptions[i];
     }
-    (<HTMLOptionElement>sortField.firstChild).setAttribute('disabled', 'disabled');
+    if (sortField.firstChild instanceof HTMLOptionElement) {
+        sortField.firstChild.setAttribute('disabled', 'disabled');
+    }
 
     const found: HTMLParagraphElement = options.appendChild(document.createElement('p'));
     found.classList.add('main__item_options-found');
