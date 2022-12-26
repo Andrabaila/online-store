@@ -2,6 +2,7 @@ import { getHeader } from '../layouts/getHeader';
 import { getProducts } from '../API/getProducts';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
+//import { Product } from '../data/types';
 
 export async function getProductPage(this: HTMLDivElement) {
     const data = await getProducts();
@@ -37,7 +38,7 @@ export async function getProductPage(this: HTMLDivElement) {
     mainPageLink.textContent = 'Store'.toUpperCase();
     mainPageLink.href = '../index.html';
 
-    if (targetData !== undefined) {
+    if (targetData) {
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';
         breadCrumbs.appendChild(document.createElement('span')).textContent = targetData.category.toUpperCase();
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';
