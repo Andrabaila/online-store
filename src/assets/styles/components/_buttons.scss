@@ -39,3 +39,26 @@
 .product-block__purchase_buy-button {
     width: 100%;
 }
+
+.button_x {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    display: block;
+    @include size(30px);
+
+    padding: 2px;
+
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.button_x:hover {
+    padding: 3px 0 0 3px;
+}
+
+.button_checkout {
+    width: 50%;
+}
