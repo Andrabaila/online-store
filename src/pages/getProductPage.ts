@@ -16,7 +16,8 @@ export async function getProductPage(this: HTMLDivElement) {
     let targetData;
     if (targetProduct instanceof HTMLDivElement) {
         for (let i = 0; i < data.length; i++) {
-            if (targetProduct.childNodes[1].textContent === data[i].title.toUpperCase()) {
+            const productTitle = targetProduct.childNodes[1];
+            if (productTitle.textContent === data[i].title.toUpperCase()) {
                 targetData = data[i];
             }
         }
