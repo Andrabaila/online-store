@@ -1,8 +1,7 @@
-import { CARD_NUMBER_REG_EXP } from '../constants/constants';
+import { REGULAR_EXPRESSIONS } from '../constants/constants';
 
-export function validateCardNumber(this: HTMLInputElement, ev: Event): boolean | undefined {
+export function validateInput(this: HTMLInputElement, ev: Event) {
     const target: EventTarget | null = ev.target;
-
     if (target instanceof HTMLInputElement) {
         target.classList.add('input_invalid');
         const message: ChildNode | null = target.nextSibling;
@@ -10,9 +9,13 @@ export function validateCardNumber(this: HTMLInputElement, ev: Event): boolean |
             message.classList.remove('checkout__message_valid');
             message.textContent = '!';
         }
-        const cardNumber = target.value;
-        if (cardNumber.length === 0 || !CARD_NUMBER_REG_EXP.test(cardNumber)) {
-            return false;
+        const inputContent = target.value;
+        const inputName = target.name;
+
+        const regularExpression = REGULAR_EXPRESSIONS[inputName];
+
+        if (inputContent.length === 0 || !regularExpression.test(inputContent)) {
+            return;
         }
         if (message instanceof HTMLDivElement) {
             message.textContent = String.fromCharCode(10003);
@@ -20,7 +23,5 @@ export function validateCardNumber(this: HTMLInputElement, ev: Event): boolean |
         }
         target.classList.remove('input_invalid');
         target.classList.add('input_valid');
-
-        return true;
     }
 }

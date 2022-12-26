@@ -25,3 +25,7 @@ export interface ProductsData {
     skip: number;
     total: number;
 }
+
+export interface RegularExpressions {
+    [index: string]: RegExp;
+}

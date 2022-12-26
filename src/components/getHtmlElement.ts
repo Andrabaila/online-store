@@ -1,4 +1,11 @@
-export function getHtmlElement({ parent = '', parentNode = <Element>{}, tag = 'div', style = [''], content = '' }) {
+export function getHtmlElement({
+    parent = '',
+    parentNode = <Element>{},
+    tag = 'div',
+    style = [''],
+    content = '',
+    name = '',
+}) {
     let parentContainer: Element;
 
     if (parent) {
@@ -14,7 +21,13 @@ export function getHtmlElement({ parent = '', parentNode = <Element>{}, tag = 'd
         newElement.classList.add(style[i]);
     }
 
-    if (content) newElement.textContent = content;
+    if (content) {
+        newElement.textContent = content;
+    }
+
+    if (name && newElement instanceof HTMLInputElement) {
+        newElement.name = name;
+    }
 
     parentContainer.append(newElement);
     return newElement;
