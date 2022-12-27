@@ -2,7 +2,6 @@ import { getHeader } from '../layouts/getHeader';
 import { getProducts } from '../API/getProducts';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
-//import { Product } from '../data/types';
 
 export async function getProductPage(this: HTMLDivElement) {
     const data = await getProducts();
@@ -17,7 +16,8 @@ export async function getProductPage(this: HTMLDivElement) {
     let targetData;
     if (targetProduct instanceof HTMLDivElement) {
         for (let i = 0; i < data.length; i++) {
-            if (targetProduct.firstChild?.textContent === data[i].title.toUpperCase()) {
+            const productTitle = targetProduct.childNodes[1];
+            if (productTitle.textContent === data[i].title.toUpperCase()) {
                 targetData = data[i];
             }
         }
