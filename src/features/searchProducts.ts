@@ -1,4 +1,5 @@
 import { getProducts } from '../API/getProducts';
+import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 import { Product, OptionsText, NotInformative } from '../data/types';
@@ -24,7 +25,7 @@ export async function searchProducts(dataList: Product[]) {
             for (let j = NotInformative.id; j < dataValuesArray[i].length - NotInformative.photos; j++) {
                 const checkedItem = dataValuesArray[i][j].toString().toLowerCase();
                 if (checkedItem.indexOf(value.toLowerCase()) > -1) {
-                    const id = dataValuesArray[i][0];
+                    const id = dataValuesArray[i][ID_INDEX];
                     resultList.push(data[Number(id) - 1]);
                 }
             }

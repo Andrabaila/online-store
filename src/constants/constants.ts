@@ -15,3 +15,4 @@ export const ERROR_MESSAGE = 'Error with fetch request!';
 export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
 export const PHONE_CHARS = '+0123456789';
 export const EMAIL_REG_EXP = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+export const ID_INDEX = 0;
