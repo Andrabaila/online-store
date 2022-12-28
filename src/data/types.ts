@@ -1,5 +1,5 @@
 export enum OptionsText {
-    found = 'Found: 30',
+    found = 'Found: ',
     search = 'Search product',
 }
 
@@ -32,4 +32,9 @@ export enum SortOptions {
     priceDesc = 'Price DESC',
     stockAsc = 'In stock ASC',
     stockDesc = 'In stock DESC',
+}
+
+export enum NotInformative {
+    id = 1,
+    photos = 2,
 }

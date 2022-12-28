@@ -27,6 +27,6 @@ export function getStartMain() {
     const productsAndOptions: HTMLDivElement = main.appendChild(document.createElement('div'));
     productsAndOptions.classList.add('products-and-options');
 
-    getProductsOptions(productsAndOptions);
     getProductsList(productsAndOptions);
+    getProductsOptions(productsAndOptions);
 }

@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
 
+    width: 100%;
     min-height: 39rem;
-    margin: 2rem;
     padding: 1rem;
     border: 2px solid $color-gray_light;
     border-radius: 0.5rem;
@@ -39,8 +39,6 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
-    margin: 1rem;
 }
 
 .photo {

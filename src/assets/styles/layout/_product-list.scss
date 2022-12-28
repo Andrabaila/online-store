@@ -4,7 +4,7 @@
     grid-column-gap: 0.2rem;
     grid-row-gap: 0.2rem;
 
-    padding: 1rem 0;
+    padding: 0.7rem 0;
 }
 
 .double-column-list {
@@ -65,4 +65,8 @@
     margin-top: 1rem;
 
     font-size: 1.5rem;
+}
+
+.amount {
+    display: none;
 }

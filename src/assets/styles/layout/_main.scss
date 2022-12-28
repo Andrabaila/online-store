@@ -1,6 +1,8 @@
 .main {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: start;
+    flex-grow: 5;
 
     width: 100%;
     padding: 0 3rem;
@@ -8,7 +10,8 @@
 
 .products-and-options {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
 
     padding: 0.5rem;
 }
@@ -36,12 +39,15 @@
 .main_product {
     display: flex;
     flex-direction: column;
+
+    width: 100%;
 }
 
 .main__bread-crumbs {
     display: flex;
     justify-content: space-between;
 
+    width: 80%;
     margin: 2rem;
     padding: 0 2rem;
 
@@ -52,4 +58,13 @@
 .main_product__link {
     font-size: $font-size-title3;
     color: $color-blue;
+}
+
+.main__not-found {
+    margin: 4rem 0 0 6rem;
+
+    font-size: $font-size-title3;
+    text-align: right;
+    text-shadow: 1px 1px 1px $color-text, 0 0 1em #0000ff, 0 0 0.2em #0000ff;
+    color: $color-text;
 }

@@ -1,17 +1,12 @@
-import { Product } from '../data/types';
 import { getProducts } from '../API/getProducts';
+import { getLinkedData } from './getLinkedData';
 import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 
 export async function sortBy(this: HTMLSelectElement) {
-    const productList = document.querySelectorAll('.main__item_product');
-    const dataList: Product[] = [];
     const data = await getProducts();
-    for (let i = 0; i < productList.length; i++) {
-        const id = productList[i].childNodes[0].textContent;
-        dataList.push(data[Number(id) - 1]);
-    }
+    const dataList = getLinkedData(data);
 
     switch (this.value) {
         case SortOptions.priceAsc:
