@@ -1,4 +1,7 @@
 export function showNotFound(parent: HTMLDivElement) {
-    parent.textContent = 'No products found';
-    parent.classList.add('main__not-found');
+    const notFound = document.createElement('p');
+    parent.prepend(notFound);
+
+    notFound.textContent = 'No products found';
+    notFound.classList.add('main__not-found');
 }

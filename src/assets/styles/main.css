@@ -365,11 +365,8 @@ body {
 }
 
 .main__not-found {
-  margin: 4rem 0 0 6rem;
-  font-size: 2rem;
-  text-align: right;
-  text-shadow: 1px 1px 1px #2a1267, 0 0 1em #0000ff, 0 0 0.2em #0000ff;
-  color: #2a1267;
+  grid-area: 1/3/1/4;
+  text-align: center;
 }
 
 .main__item_options {
@@ -423,6 +420,10 @@ body {
   height: 2rem;
   background: url(../icons/close.svg);
   cursor: pointer;
+}
+
+.search-close:hover {
+  transform: scale(1.2);
 }
 
 .main__item_options-views {
@@ -567,9 +568,10 @@ body {
 .main__item_product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 0.2rem;
-  grid-row-gap: 0.2rem;
+  gap: 0.2rem;
   padding: 0.7rem 0;
+  font-size: 2rem;
+  color: #2a1267;
 }
 
 .double-column-list {

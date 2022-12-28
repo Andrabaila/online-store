@@ -36,6 +36,7 @@ export async function searchProducts(dataList: Product[]) {
     const found = document.querySelector('.main__item_options-found');
     if (parent instanceof HTMLDivElement) {
         parent.innerHTML = '';
+        parent.classList.remove('main__not-found');
         if (resultSet) {
             for (let i = 0; i < resultSet.length; i += 1) {
                 const productItem: HTMLDivElement = parent.appendChild(document.createElement('div'));

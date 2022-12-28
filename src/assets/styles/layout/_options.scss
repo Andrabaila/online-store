@@ -58,6 +58,10 @@
     cursor: pointer;
 }
 
+.search-close:hover {
+    transform: scale(1.2);
+}
+
 .main__item_options-views {
     display: flex;
     gap: 1rem;
