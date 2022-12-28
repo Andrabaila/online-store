@@ -1,10 +1,21 @@
-import { SortOptions } from '../data/types';
+import { getProducts } from '../API/getProducts';
+import { getLinkedData } from '../features/getLinkedData';
+import { Product, SortOptions } from '../data/types';
 import { SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
 import { sortBy } from '../features/sortBy';
+import { searchProducts } from '../features/searchProducts';
+import { clearSearch } from '../features/clearSearch';
 import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
-export function getProductsOptions(parent: HTMLDivElement) {
+export async function getProductsOptions(parent: HTMLDivElement) {
+    const data = await getProducts();
+    const dataList = getLinkedData(data);
+    const initialList: Product[] = [];
+    for (let i = 0; i < dataList.length; i++) {
+        initialList.push(dataList[i]);
+    }
+
     const options = parent.appendChild(document.createElement('div'));
     options.classList.add('main__item_options');
 
@@ -24,12 +35,20 @@ export function getProductsOptions(parent: HTMLDivElement) {
 
     const found: HTMLParagraphElement = options.appendChild(document.createElement('p'));
     found.classList.add('main__item_options-found');
-    found.textContent = OptionsText.found;
+    found.textContent = `${OptionsText.found}${dataList.length}`;
 
-    const searchField: HTMLInputElement = options.appendChild(document.createElement('input'));
-    searchField.classList.add('main__item_options-search');
+    const searchWrapper: HTMLDivElement = options.appendChild(document.createElement('div'));
+    searchWrapper.classList.add('main__item_options-search');
+
+    const searchField: HTMLInputElement = searchWrapper.appendChild(document.createElement('input'));
+    searchField.classList.add('search-input');
     searchField.type = 'search';
     searchField.placeholder = OptionsText.search;
+    searchField.addEventListener('input', () => searchProducts(dataList));
+
+    const searchClose: HTMLDivElement = searchWrapper.appendChild(document.createElement('div'));
+    searchClose.classList.add('search-close');
+    searchClose.addEventListener('click', () => clearSearch(dataList));
 
     const views: HTMLDivElement = options.appendChild(document.createElement('div'));
     views.classList.add('main__item_options-views');

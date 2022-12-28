@@ -216,7 +216,6 @@ body {
 .filters {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .reset-copy {
@@ -314,13 +313,16 @@ body {
 .main {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  align-items: start;
+  flex-grow: 5;
   width: 100%;
   padding: 0 3rem;
 }
 
 .products-and-options {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   padding: 0.5rem;
 }
 
@@ -344,11 +346,13 @@ body {
 .main_product {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .main__bread-crumbs {
   display: flex;
   justify-content: space-between;
+  width: 80%;
   margin: 2rem;
   padding: 0 2rem;
   font-size: 2rem;
@@ -360,6 +364,11 @@ body {
   color: #4889e5;
 }
 
+.main__not-found {
+  grid-area: 1/3/1/4;
+  text-align: center;
+}
+
 .main__item_options {
   display: flex;
   justify-content: space-between;
@@ -368,7 +377,7 @@ body {
 }
 
 .main__item_options-sort,
-.main__item_options-search {
+.search-input {
   border: 1px solid #e8e9e9;
   border-radius: 5px;
   background-color: #4889e5;
@@ -388,15 +397,33 @@ body {
   color: #2a1267;
 }
 
-.main__item_options-search::-webkit-input-placeholder {
+.main__item_options-search {
+  position: relative;
+}
+
+.search-input::-webkit-input-placeholder {
   font-size: 1.5rem;
   color: rgba(229, 232, 234, 0.702);
 }
 
-.main__item_options-search:focus {
+.search-input:focus {
   border: 1px solid #ffffff;
   background-color: rgba(69, 179, 252, 0.702);
   outline: none;
+}
+
+.search-close {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  background: url(../icons/close.svg);
+  cursor: pointer;
+}
+
+.search-close:hover {
+  transform: scale(1.2);
 }
 
 .main__item_options-views {
@@ -445,8 +472,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   min-height: 39rem;
-  margin: 2rem;
   padding: 1rem;
   border: 2px solid #e8e9e9;
   border-radius: 0.5rem;
@@ -480,7 +507,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin: 1rem;
 }
 
 .photo {
@@ -542,9 +568,10 @@ body {
 .main__item_product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 0.2rem;
-  grid-row-gap: 0.2rem;
-  padding: 1rem 0;
+  gap: 0.2rem;
+  padding: 0.7rem 0;
+  font-size: 2rem;
+  color: #2a1267;
 }
 
 .double-column-list {
@@ -599,6 +626,10 @@ body {
 .main__item_product-price {
   margin-top: 1rem;
   font-size: 1.5rem;
+}
+
+.amount {
+  display: none;
 }
 
 .header {

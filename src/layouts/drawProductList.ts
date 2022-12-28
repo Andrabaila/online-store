@@ -4,7 +4,8 @@ import { UI } from '../data/UI';
 
 export function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
-    for (let i = 0; i < childElements.length; i += 1) {
+    for (let i = 0; i < data.length; i += 1) {
+        childElements[i].innerHTML = '';
         childElements[i].style.background = `url(${data[i].thumbnail}) right -3rem center no-repeat #ffffff`;
         childElements[i].style.backgroundSize = '70% auto';
 
