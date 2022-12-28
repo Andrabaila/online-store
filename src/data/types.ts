@@ -26,6 +26,10 @@ export interface ProductsData {
     total: number;
 }
 
+export interface RegularExpressions {
+    [index: string]: RegExp;
+}
+
 export enum SortOptions {
     sortBy = 'Sort by:',
     priceAsc = 'Price ASC',

@@ -60,7 +60,8 @@
 }
 
 .button_checkout {
-    width: 50%;
+    width: calc(50% - 2.7rem);
+    margin-right: 2.7rem;
 }
 
 @media (max-width: 1200px) {
