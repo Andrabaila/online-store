@@ -50,6 +50,15 @@
     font-size: $font-size-text;
 }
 
+.checkout__input-container_wide {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+
+    font-size: $font-size-text;
+}
+
 .card-data {
     display: flex;
     flex-direction: column;
@@ -57,8 +66,34 @@
     width: 50%;
 }
 
-.checkout__input_wide {
-    width: 100%;
+.checkout__card-logo {
+    position: absolute;
+    left: -55px;
+
+    @include size(50px, $font-size-text * 1.5);
+
+    border-radius: 6px;
+}
+
+.checkout__card-logo_visa {
+    background: url('https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.checkout__card-logo_master {
+    background: url('https://www.mastercard.hu/content/dam/public/mastercardcom/eu/hu/images/mc-logo-52.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.checkout__card-logo_union {
+    background: url('https://m.unionpayintl.com/imp_file/global/wap/en/static/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 .card-data__container {
@@ -76,11 +111,13 @@
 
 .card-data__input {
     width: 100%;
+    height: 100%;
     margin-left: 2px;
 }
 
 .checkout__message {
     @include size($font-size-text * 1.5);
+    flex-shrink: 0;
 
     text-align: center;
     color: $color-mistake;
@@ -98,10 +135,6 @@
 
     .card-data {
         width: 70%;
-    }
-
-    .checkout__input_wide {
-        width: 100%;
     }
 
     .card-data__input {
