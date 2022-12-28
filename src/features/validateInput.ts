@@ -1,6 +1,7 @@
-export function validateAddress(this: HTMLInputElement, ev: Event): boolean | undefined {
-    const target: EventTarget | null = ev.target;
+import { REGULAR_EXPRESSIONS } from '../constants/constants';
 
+export function validateInput(this: HTMLInputElement, ev: Event) {
+    const target: EventTarget | null = ev.target;
     if (target instanceof HTMLInputElement) {
         target.classList.add('input_invalid');
         const message: ChildNode | null = target.nextSibling;
@@ -8,10 +9,13 @@ export function validateAddress(this: HTMLInputElement, ev: Event): boolean | un
             message.classList.remove('checkout__message_valid');
             message.textContent = '!';
         }
-        const name = target.value;
-        const nameArr = name.split(' ');
-        if (nameArr.length < 3) {
-            return false;
+        const inputContent = target.value;
+        const inputName = target.name;
+
+        const regularExpression = REGULAR_EXPRESSIONS[inputName];
+
+        if (inputContent.length === 0 || !regularExpression.test(inputContent)) {
+            return;
         }
         if (message instanceof HTMLDivElement) {
             message.textContent = String.fromCharCode(10003);
@@ -19,6 +23,5 @@ export function validateAddress(this: HTMLInputElement, ev: Event): boolean | un
         }
         target.classList.remove('input_invalid');
         target.classList.add('input_valid');
-        return true;
     }
 }
