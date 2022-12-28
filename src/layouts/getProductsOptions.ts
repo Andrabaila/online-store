@@ -4,7 +4,7 @@ import { Product, SortOptions } from '../data/types';
 import { SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
 import { sortBy } from '../features/sortBy';
 import { searchProducts } from '../features/searchProducts';
-import { removeSearch } from '../features/removeSearch';
+import { clearSearch } from '../features/clearSearch';
 import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
@@ -48,7 +48,7 @@ export async function getProductsOptions(parent: HTMLDivElement) {
 
     const searchClose: HTMLDivElement = searchWrapper.appendChild(document.createElement('div'));
     searchClose.classList.add('search-close');
-    searchClose.addEventListener('click', () => removeSearch(dataList));
+    searchClose.addEventListener('click', () => clearSearch(dataList));
 
     const views: HTMLDivElement = options.appendChild(document.createElement('div'));
     views.classList.add('main__item_options-views');

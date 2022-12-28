@@ -2,7 +2,7 @@ import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 import { OptionsText, Product } from '../data/types';
 
-export function removeSearch(dataList: Product[]) {
+export function clearSearch(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
     if (searchInput && searchInput instanceof HTMLInputElement) {
         searchInput.value = '';
