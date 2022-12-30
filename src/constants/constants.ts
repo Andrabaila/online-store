@@ -3,6 +3,15 @@ import { getMaxPrice } from '../components/getMaxPrice';
 import { getMinStock } from '../components/getMinStock';
 import { getMaxStock } from '../components/getMaxStock';
 import { RegularExpressions } from '../data/types';
+import { getMainPage } from '../pages/getMainPage';
+import { getCartPage } from '../pages/getCartPage';
+import { getProductPage } from '../pages/getProductPage';
+
+export const routes = {
+    '/': getMainPage,
+    '/cart': getCartPage,
+    '/product/id:': getProductPage,
+};
 
 export const CHECKED_NAMES = ['Categories', 'Brands'];
 export const RANGE_NAMES = ['Price', 'In stock'];

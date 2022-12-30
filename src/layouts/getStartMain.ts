@@ -6,7 +6,13 @@ export function getStartMain() {
     const main: HTMLElement = document.body.appendChild(document.createElement('main'));
     main.classList.add('main');
 
-    const filters: HTMLDivElement = main.appendChild(document.createElement('div'));
+    const productsAndOptions: HTMLElement = main.appendChild(document.createElement('section'));
+    productsAndOptions.classList.add('products-and-options');
+
+    getProductsList(productsAndOptions);
+    getProductsOptions(productsAndOptions);
+
+    const filters: HTMLElement = main.appendChild(document.createElement('section'));
     filters.classList.add('filters');
 
     const resetCopyBtnBlock: HTMLDivElement = filters.appendChild(document.createElement('div'));
@@ -23,10 +29,4 @@ export function getStartMain() {
     copyFiltersBtn.textContent = 'Copy filters';
 
     getFilters(filters);
-
-    const productsAndOptions: HTMLDivElement = main.appendChild(document.createElement('div'));
-    productsAndOptions.classList.add('products-and-options');
-
-    getProductsList(productsAndOptions);
-    getProductsOptions(productsAndOptions);
 }

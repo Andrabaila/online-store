@@ -1,8 +1,8 @@
-export function drawRangeFilter(parent: HTMLDivElement, name: string, array: string[]) {
+export function drawRangeFilter(parent: HTMLElement, name: string, array: string[]) {
     const rangeFilter: HTMLDivElement = parent.appendChild(document.createElement('div'));
     rangeFilter.classList.add('filter');
 
-    const rangeHeader: HTMLParagraphElement = rangeFilter.appendChild(document.createElement('p'));
+    const rangeHeader: HTMLHeadingElement = rangeFilter.appendChild(document.createElement('h3'));
     rangeHeader.classList.add('filter-header');
     rangeHeader.textContent = name;
 
