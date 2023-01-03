@@ -7,12 +7,6 @@ export async function updateRangeValues() {
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
     const minRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-from');
     const maxRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-to');
-    console.log(limits[1], minRanges, maxRanges);
-    minRanges.forEach((el) => console.log(el.value));
-    /* const minPrice = getMinPrice();
-    const maxPrice = getMaxPrice();
-    const minStock = getMinStock();
-    const maxStock = getMaxStock(); */
     const [minPrice, maxPrice, minStock, maxStock] = [
         await getMinPrice(),
         await getMaxPrice(),

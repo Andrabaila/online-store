@@ -1,5 +1,3 @@
-//import { getProducts } from '../API/getProducts';
-//import { getLinkedData } from './getLinkedData';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 import { updateCheckedAmount } from './updateCheckedAmount';
@@ -8,7 +6,6 @@ import { updateRangeValues } from './updateRangeValues';
 import { showNotFound } from './showNotFound';
 
 export async function showCheckedProducts(dataList: Product[], event: Event) {
-    //const data = await getProducts();
     const parent = document.querySelector('.main__item_product-list');
     const found = document.querySelector('.main__item_options-found');
     const filters = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.input-checkbox');
@@ -18,11 +15,8 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
     }
     if (parent instanceof HTMLDivElement && found instanceof HTMLParagraphElement) {
         if (event.target instanceof HTMLInputElement) {
-            console.log(event.target);
             const checkedFilter = event.target.id;
             const checkedItems = [];
-            //if (event.target.checked) {
-            //const firstList = getLinkedData(data);
             for (let i = 0; i < dataList.length; i++) {
                 const values = [dataList[i].category, dataList[i].brand];
                 for (let j = 0; j < filtersArray.length; j++) {
@@ -44,7 +38,6 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
                 showNotFound(parent);
             }
             found.textContent = `${OptionsText.found}${checkedItems.length}`;
-            //}
             updateRangeValues();
             updateCheckedAmount();
         }
