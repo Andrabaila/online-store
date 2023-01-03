@@ -1,5 +1,5 @@
 import { getFilters } from './getFilters';
-import { getProductsOptions } from './getProductsOptions';
+import { getOptions } from './getOptions';
 import { getProductsList } from './getProductsList';
 
 export function getStartMain() {
@@ -10,7 +10,7 @@ export function getStartMain() {
     productsAndOptions.classList.add('products-and-options');
 
     getProductsList(productsAndOptions);
-    getProductsOptions(productsAndOptions);
+    getOptions(productsAndOptions);
 
     const filters: HTMLElement = main.appendChild(document.createElement('section'));
     filters.classList.add('filters');

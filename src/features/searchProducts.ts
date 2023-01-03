@@ -1,10 +1,12 @@
 import { getProducts } from '../API/getProducts';
+//import { getLinkedData } from './getLinkedData';
 import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 import { Product, OptionsText, NotInformative } from '../data/types';
 import { showNotFound } from './showNotFound';
-import { updateCheckedAmount } from '../features/updateCheckedAmount';
+import { updateRangeValues } from './updateRangeValues';
+import { updateCheckedAmount } from './updateCheckedAmount';
 
 export async function searchProducts(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -55,6 +57,6 @@ export async function searchProducts(dataList: Product[]) {
             }
         }
     }
-
+    updateRangeValues();
     updateCheckedAmount();
 }

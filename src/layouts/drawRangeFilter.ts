@@ -1,4 +1,9 @@
-export function drawRangeFilter(parent: HTMLElement, name: string, array: string[]) {
+import { controlMinRange } from '../features/controlMinRange';
+import { controlMaxRange } from '../features/controlMaxRange';
+import { getProducts } from '../API/getProducts';
+import { getLinkedData } from '../features/getLinkedData';
+
+export async function drawRangeFilter(parent: HTMLElement, name: string, array: string[]) {
     const rangeFilter: HTMLDivElement = parent.appendChild(document.createElement('div'));
     rangeFilter.classList.add('filter');
 
@@ -24,13 +29,26 @@ export function drawRangeFilter(parent: HTMLElement, name: string, array: string
     minRange.type = 'range';
     minRange.value = `${array[0]}`;
     minRange.min = `${array[0]}`;
-    minRange.max = `${array[1]}`;
 
     const maxRange: HTMLInputElement = controls.appendChild(document.createElement('input'));
     maxRange.classList.add('range');
     maxRange.classList.add('range-to');
     maxRange.type = 'range';
-    maxRange.value = `${array[1]}`;
     maxRange.min = `${array[0]}`;
+    if (name === 'Price') {
+        maxRange.step = '0.01';
+        minRange.step = '0.01';
+    } else {
+        minRange.step = '1';
+        maxRange.step = '1';
+    }
     maxRange.max = `${array[1]}`;
+    minRange.max = `${array[1]}`;
+    maxRange.value = `${array[1]}`;
+
+    const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
+    const data = await getProducts();
+    const dataList = getLinkedData(data);
+    minRange.addEventListener('input', (event) => controlMinRange(event, maxRange, limits, name, dataList));
+    maxRange.addEventListener('input', (event) => controlMaxRange(event, minRange, limits, name, dataList));
 }

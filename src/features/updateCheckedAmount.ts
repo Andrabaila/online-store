@@ -1,7 +1,7 @@
 import { CATEGORIES, BRANDS } from '../constants/constants';
 import { getCheckedAmount } from './getCheckedAmount';
 
-export function updateCheckedAmount() {
+export async function updateCheckedAmount() {
     const checkedItemCollection = document.querySelectorAll('.filter-stock');
     const checkedItemArr = [];
     const valuesArray = CATEGORIES.concat(BRANDS);
@@ -9,6 +9,6 @@ export function updateCheckedAmount() {
         checkedItemArr.push(checkedItemCollection[i]);
     }
     for (let i = 0; i < checkedItemArr.length; i++) {
-        getCheckedAmount(checkedItemArr[i], valuesArray[i]);
+        await getCheckedAmount(checkedItemArr[i], valuesArray[i]);
     }
 }
