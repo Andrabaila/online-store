@@ -1,17 +1,21 @@
+import { getProducts } from '../API/getProducts';
+import { getLinkedData } from '../features/getLinkedData';
 import { getMaxPrice } from '../components/getMaxPrice';
 import { getMaxStock } from '../components/getMaxStock';
 import { getMinPrice } from '../components/getMinPrice';
 import { getMinStock } from '../components/getMinStock';
 
 export async function updateRangeValues() {
+    const data = await getProducts();
+    const linkedData = getLinkedData(data);
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
     const minRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-from');
     const maxRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-to');
     const [minPrice, maxPrice, minStock, maxStock] = [
-        await getMinPrice(),
-        await getMaxPrice(),
-        await getMinStock(),
-        await getMaxStock(),
+        await getMinPrice(linkedData),
+        await getMaxPrice(linkedData),
+        await getMinStock(linkedData),
+        await getMaxStock(linkedData),
     ];
     const [minPriceText, maxPriceText, minStockText, maxStockText] = limits;
     const [minPriceRange, minStockRange] = minRanges;

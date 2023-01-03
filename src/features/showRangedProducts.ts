@@ -16,7 +16,7 @@ export function showRangedProducts(min: string, max: string, dataList: Product[]
                 filteredList.push(dataList[i]);
             }
         }
-        //console.log(filteredList);
+
         const parent = document.querySelector('.main__item_product-list');
         const found = document.querySelector('.main__item_options-found');
         if (parent instanceof HTMLDivElement) {

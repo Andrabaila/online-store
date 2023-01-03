@@ -1,9 +1,6 @@
-import { getProducts } from '../API/getProducts';
-import { getLinkedData } from '../features/getLinkedData';
+import { Product } from '../data/types';
 
-export async function getMinStock() {
-    const data = await getProducts();
-    const linkedData = getLinkedData(data);
+export async function getMinStock(linkedData: Product[]) {
     linkedData.sort((a, b) => (a.stock > b.stock ? 1 : -1));
     return linkedData[0].stock.toString();
 }

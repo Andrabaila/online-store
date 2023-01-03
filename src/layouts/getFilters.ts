@@ -1,3 +1,5 @@
+import { getProducts } from '../API/getProducts';
+import { getLinkedData } from '../features/getLinkedData';
 import { drawCheckFilter } from './drawCheckFilter';
 import { drawRangeFilter } from './drawRangeFilter';
 import { CHECKED_NAMES, RANGE_NAMES, CATEGORIES, BRANDS } from '../constants/constants';
@@ -7,10 +9,12 @@ import { getMinStock } from '../components/getMinStock';
 import { getMaxStock } from '../components/getMaxStock';
 
 export async function getFilters(parent: HTMLElement) {
-    const minPrice = await getMinPrice();
-    const maxPrice = await getMaxPrice();
-    const minStock = await getMinStock();
-    const maxStock = await getMaxStock();
+    const data = await getProducts();
+    const linkedData = getLinkedData(data);
+    const minPrice = await getMinPrice(linkedData);
+    const maxPrice = await getMaxPrice(linkedData);
+    const minStock = await getMinStock(linkedData);
+    const maxStock = await getMaxStock(linkedData);
     const PRICE_LIMITS = [minPrice, maxPrice];
     const STOCK_LIMITS = [minStock, maxStock];
 
