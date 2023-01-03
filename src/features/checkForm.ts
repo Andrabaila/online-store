@@ -1,5 +1,7 @@
 import { clearCheckout } from './clearCheckout';
-import { showMessage } from './showMesage';
+import { showMessageWithTimer } from './showMessageWithTimer';
+import { getHtmlElement } from '../components/getHtmlElement';
+import { UI } from '../data/UI';
 
 export function checkForm() {
     let result = true;
@@ -15,6 +17,7 @@ export function checkForm() {
 
     if (result) {
         clearCheckout();
-        showMessage();
+        const message = getHtmlElement({ parent: 'main', style: ['message'], content: UI.messageText });
+        showMessageWithTimer(message, 3000);
     }
 }
