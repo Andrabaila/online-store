@@ -4,6 +4,7 @@ import { toggleCheckout } from '../layouts/toggleCheckout';
 import { validateInput } from '../features/validateInput';
 import { showCardLogo } from '../features/showCardLogo';
 import { autoFill } from '../features/autoFill';
+import { checkForm } from '../features/checkForm';
 
 export function getCheckoutPage() {
     const shadow = getHtmlElement({ parent: 'body', style: ['shadow'] });
@@ -81,10 +82,11 @@ export function getCheckoutPage() {
     inputCardCode.addEventListener('keyup', validateInput);
     getHtmlElement({ parent: '.card-data__label', style: ['checkout__message'] });
 
-    getHtmlElement({
+    const submitButton = getHtmlElement({
         parent: '.checkout',
         tag: 'button',
         style: ['button', 'button_checkout'],
         content: UI.checkoutButton,
     });
+    submitButton.addEventListener('click', checkForm);
 }
