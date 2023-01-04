@@ -43,4 +43,7 @@ export const UI: { readonly [x: string]: string } = {
     checkoutMessage3: 'Card valid thru - error',
     checkoutMessage4: 'Card CVV - error',
     checkoutButton: 'Confirm',
+
+    //Message-----------------------
+    messageText: 'Thank you! Your order has been placed!',
 };
