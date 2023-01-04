@@ -8,8 +8,7 @@ export async function controlMinRange(
     name: string,
     dataList: Product[]
 ) {
-    const minPrice = limits[0];
-    const minStock = limits[2];
+    const [minPrice, , minStock] = limits;
     if (event.target instanceof HTMLInputElement) {
         name === 'Price'
             ? (minPrice.textContent = `$${event.target.value}`)

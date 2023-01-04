@@ -8,8 +8,7 @@ export async function controlMaxRange(
     name: string,
     dataList: Product[]
 ) {
-    const maxPrice = limits[1];
-    const maxStock = limits[3];
+    const [, maxPrice, , maxStock] = limits;
     if (event.target instanceof HTMLInputElement) {
         const minRangePosition = minRange.value;
         const maxRangePosition = event.target.value;
