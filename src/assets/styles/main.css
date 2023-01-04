@@ -289,7 +289,7 @@ body {
 .controls {
   position: relative;
   width: 100%;
-  min-height: 70px;
+  min-height: 4rem;
 }
 
 .range {

@@ -49,6 +49,7 @@ export async function drawRangeFilter(parent: HTMLElement, name: string, array: 
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
     const data = await getProducts();
     const dataList = getLinkedData(data);
+
     minRange.addEventListener('input', (event) => controlMinRange(event, maxRange, limits, name, dataList));
     maxRange.addEventListener('input', (event) => controlMaxRange(event, minRange, limits, name, dataList));
 }

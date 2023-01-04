@@ -11,6 +11,7 @@ import { getMaxStock } from '../components/getMaxStock';
 export async function getFilters(parent: HTMLElement) {
     const data = await getProducts();
     const linkedData = getLinkedData(data);
+
     const minPrice = await getMinPrice(linkedData);
     const maxPrice = await getMaxPrice(linkedData);
     const minStock = await getMinStock(linkedData);

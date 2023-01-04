@@ -1,5 +1,4 @@
 import { getProducts } from '../API/getProducts';
-//import { getLinkedData } from './getLinkedData';
 import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
