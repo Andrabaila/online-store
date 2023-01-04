@@ -3,7 +3,6 @@ import { getProductPage } from '../pages/getProductPage';
 import { Product, OptionsText } from '../data/types';
 import { showNotFound } from './showNotFound';
 import { updateCheckedAmount } from './updateCheckedAmount';
-//import { list } from '../data/state';
 
 export function showRangedProducts(min: string, max: string, dataList: Product[], name: string) {
     const filteredList: Product[] = [];
@@ -37,9 +36,5 @@ export function showRangedProducts(min: string, max: string, dataList: Product[]
             }
         }
         updateCheckedAmount();
-        /* list.splice(0, list.length);
-        for (let i = 0; i < filteredList.length; i++) {
-            list.push(filteredList[i]);
-        } */
     }
 }
