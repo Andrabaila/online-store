@@ -21,9 +21,9 @@ export const PHONE_CHARS = '+0123456789';
 export const EMAIL_REG_EXP = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 export const REGULAR_EXPRESSIONS: RegularExpressions = {
-    name: /[a-zA-Z]{3}\s[a-zA-Z]{3}/,
-    phone: /^\+[0-9]{8}/,
-    address: /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5}\s[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5}\s[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5}/,
+    name: /[a-zA-Z]{3,}\s[a-zA-Z]{3,}/,
+    phone: /^\+[0-9]{9}/,
+    address: /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,}\s[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,}\s[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,}/,
     email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
     cardNumber: /^[0-9]{16}$/,
     cardDate: /^(0?[1-9]|1[012])\/(\d\d)$/,

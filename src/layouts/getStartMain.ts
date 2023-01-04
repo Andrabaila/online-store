@@ -3,6 +3,9 @@ import { getOptions } from './getOptions';
 import { getProductsList } from './getProductsList';
 
 export function getStartMain() {
+    document.querySelector('main')?.remove();
+    document.querySelector('footer')?.remove();
+
     const main: HTMLElement = document.body.appendChild(document.createElement('main'));
     main.classList.add('main');
 
