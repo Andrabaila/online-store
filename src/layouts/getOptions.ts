@@ -8,7 +8,7 @@ import { clearSearch } from '../features/clearSearch';
 import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
-export async function getProductsOptions(parent: HTMLDivElement) {
+export async function getOptions(parent: HTMLElement) {
     const data = await getProducts();
     const dataList = getLinkedData(data);
     const initialList: Product[] = [];
