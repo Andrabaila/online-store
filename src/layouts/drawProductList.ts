@@ -1,6 +1,7 @@
 import { Product } from '../data/types';
-import { addToCart } from '../features/addToCart';
+import { toggleAddRemove } from '../features/toggleAddRemove';
 import { UI } from '../data/UI';
+import { cart } from '../data/cart';
 
 export function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
@@ -44,7 +45,16 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
         const btn = childElements[i].appendChild(document.createElement('button'));
         btn.classList.add('main__item_product-add-button');
         btn.classList.add('button');
-        btn.textContent = UI.addButtonText;
-        btn.addEventListener('click', addToCart);
+
+        setTimeout(() => {
+            const id = data[i].id;
+            const idArray = [];
+            for (let j = 0; j < cart.length; j++) {
+                idArray.push(cart[j].id);
+            }
+            idArray.includes(id) ? (btn.textContent = UI.removeButtonText) : (btn.textContent = UI.addButtonText);
+
+            btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
+        }, 200);
     }
 }

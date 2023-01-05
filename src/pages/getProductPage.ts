@@ -2,6 +2,8 @@ import { getHeader } from '../layouts/getHeader';
 import { getProducts } from '../API/getProducts';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
+import { setLocalStorage } from '../features/setLocalStorage';
+import { getLocalStorage } from '../features/getLocalStorage';
 
 export async function getProductPage(this: HTMLDivElement) {
     const data = await getProducts();
@@ -47,3 +49,7 @@ export async function getProductPage(this: HTMLDivElement) {
     }
     getFooter();
 }
+
+window.addEventListener('beforeunload', setLocalStorage);
+
+window.addEventListener('load', getLocalStorage);

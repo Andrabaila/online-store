@@ -1,6 +1,8 @@
 import { getCartPage } from '../pages/getCartPage';
+import { cart } from '../data/cart';
+import { updateCartSum } from '../features/updateCartSum';
 
-export function getHeader() {
+export async function getHeader() {
     if (document.querySelector('header')) {
         return;
     }
@@ -16,16 +18,16 @@ export function getHeader() {
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
     cartTotal.classList.add('sum-total');
-    cartTotal.textContent = 'Cart total: $';
+    setTimeout(() => updateCartSum(), 500);
 
     const cartLink: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     cartLink.classList.add('header__cart-link');
     cartLink.addEventListener('click', getCartPage);
 
-    const cart: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
-    cart.classList.add('cart');
+    const cartIcon: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
+    cartIcon.classList.add('cart');
 
-    const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
+    const productsInCart: HTMLDivElement = cartIcon.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');
-    productsInCart.textContent = '0';
+    setTimeout(() => (productsInCart.textContent = `${cart.length.toString()}`), 500);
 }
