@@ -1,6 +1,7 @@
 import { drawProductList } from '../layouts/drawProductList';
 import { OptionsText, Product } from '../data/types';
 import { setHash } from './setHash';
+import { updateCheckedAmount } from '../features/updateCheckedAmount';
 
 export function clearSearch(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -25,4 +26,5 @@ export function clearSearch(dataList: Product[]) {
     if (found instanceof HTMLParagraphElement) {
         found.textContent = `${OptionsText.found}${dataList.length}`;
     }
+    updateCheckedAmount();
 }

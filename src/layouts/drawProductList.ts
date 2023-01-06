@@ -22,7 +22,7 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
         description.textContent = `${data[i].description}`;
 
         const discount = childElements[i].appendChild(document.createElement('p'));
-        discount.innerHTML = `Discount: <b>${data[i].discountPercentage}</b>`;
+        discount.innerHTML = `Discount: <b>${data[i].discountPercentage}%</b>`;
 
         const rating = childElements[i].appendChild(document.createElement('p'));
         rating.innerHTML = `Rating: <b>${data[i].rating}</b>`;

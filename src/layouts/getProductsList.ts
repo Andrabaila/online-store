@@ -2,7 +2,7 @@ import { getProducts } from '../API/getProducts';
 import { setHash } from '../features/setHash';
 import { drawProductList } from './drawProductList';
 
-export async function getProductsList(parent: HTMLDivElement) {
+export async function getProductsList(parent: HTMLElement) {
     const data = await getProducts();
 
     const productList: HTMLDivElement = parent.appendChild(document.createElement('div'));

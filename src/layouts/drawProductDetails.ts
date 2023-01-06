@@ -7,7 +7,7 @@ export function drawProductDetails(parent: HTMLElement, data: Product) {
 
     const discount = parent.appendChild(document.createElement('p'));
     discount.classList.add('details__item');
-    discount.innerHTML = `Discount: &nbsp;<b>${data.discountPercentage}</b>`;
+    discount.innerHTML = `Discount: &nbsp;<b>${data.discountPercentage}%</b>`;
 
     const rating = parent.appendChild(document.createElement('p'));
     rating.classList.add('details__item');
