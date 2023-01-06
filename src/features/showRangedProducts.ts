@@ -1,5 +1,5 @@
 import { drawProductList } from '../layouts/drawProductList';
-import { getProductPage } from '../pages/getProductPage';
+import { setHash } from '../features/setHash';
 import { Product, OptionsText } from '../data/types';
 import { showNotFound } from './showNotFound';
 import { updateCheckedAmount } from './updateCheckedAmount';
@@ -24,7 +24,9 @@ export function showRangedProducts(min: string, max: string, dataList: Product[]
             for (let i = 0; i < filteredList.length; i += 1) {
                 const productItem: HTMLDivElement = parent.appendChild(document.createElement('div'));
                 productItem.classList.add('main__item_product');
-                productItem.addEventListener('click', getProductPage);
+                productItem.addEventListener('click', () => {
+                    setHash(`/product-${filteredList[i].id}`);
+                });
             }
             drawProductList(parent, filteredList);
             if (found instanceof HTMLParagraphElement) {

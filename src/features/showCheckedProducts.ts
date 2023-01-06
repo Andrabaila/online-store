@@ -1,5 +1,5 @@
 import { drawProductList } from '../layouts/drawProductList';
-import { getProductPage } from '../pages/getProductPage';
+import { setHash } from '../features/setHash';
 import { updateCheckedAmount } from './updateCheckedAmount';
 import { OptionsText, Product } from '../data/types';
 import { updateRangeValues } from './updateRangeValues';
@@ -9,14 +9,14 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
     const parent = document.querySelector('.main__item_product-list');
     const found = document.querySelector('.main__item_options-found');
     const filters = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.input-checkbox');
-    const filtersArray = [];
+    const filtersArray: HTMLInputElement[] = [];
     for (let i = 0; i < filters.length; i++) {
         filtersArray.push(filters[i]);
     }
     if (parent instanceof HTMLDivElement && found instanceof HTMLParagraphElement) {
         if (event.target instanceof HTMLInputElement) {
             const checkedFilter = event.target.id;
-            const checkedItems = [];
+            const checkedItems: Product[] = [];
             for (let i = 0; i < dataList.length; i++) {
                 const values = [dataList[i].category, dataList[i].brand];
                 for (let j = 0; j < filtersArray.length; j++) {
@@ -29,7 +29,9 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
             for (let i = 0; i < checkedItems.length; i += 1) {
                 const productItem = parent.appendChild(document.createElement('div'));
                 productItem.classList.add('main__item_product');
-                productItem.addEventListener('click', getProductPage);
+                productItem.addEventListener('click', () => {
+                    setHash(`/product-${checkedItems[i].id}`);
+                });
             }
             drawProductList(parent, checkedItems);
 

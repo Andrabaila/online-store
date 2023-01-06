@@ -11,7 +11,7 @@ export function toggleAddRemove(event: Event, product: Product) {
             cart.push(product);
         } else {
             event.target.textContent = UI.addButtonText;
-            const idArray = [];
+            const idArray: number[] = [];
             cart.forEach((el) => idArray.push(el.id));
             for (let i = 0; i < cart.length; i++) {
                 if (cart[i].id === product.id) {
