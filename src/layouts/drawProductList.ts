@@ -1,6 +1,8 @@
 import { Product } from '../data/types';
-import { addToCart } from '../features/addToCart';
+import { toggleAddRemove } from '../features/toggleAddRemove';
 import { UI } from '../data/UI';
+import { cart } from '../data/cart';
+import { updateCartSum } from '../features/updateCartSum';
 
 export function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
@@ -22,7 +24,7 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
         description.textContent = `${data[i].description}`;
 
         const discount = childElements[i].appendChild(document.createElement('p'));
-        discount.innerHTML = `Discount: <b>${data[i].discountPercentage}</b>`;
+        discount.innerHTML = `Discount: <b>${data[i].discountPercentage}%</b>`;
 
         const rating = childElements[i].appendChild(document.createElement('p'));
         rating.innerHTML = `Rating: <b>${data[i].rating}</b>`;
@@ -44,7 +46,17 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
         const btn = childElements[i].appendChild(document.createElement('button'));
         btn.classList.add('main__item_product-add-button');
         btn.classList.add('button');
-        btn.textContent = UI.addButtonText;
-        btn.addEventListener('click', addToCart);
+
+        const dataId = data[i].id;
+        const idArray = [];
+        for (let j = 0; j < cart.length; j++) {
+            idArray.push(cart[j].id);
+        }
+        idArray.includes(dataId) ? (btn.textContent = UI.removeButtonText) : (btn.textContent = UI.addButtonText);
+
+        btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
     }
+    updateCartSum();
+    const cartAmount = document.querySelector('.products-in-cart');
+    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
 }

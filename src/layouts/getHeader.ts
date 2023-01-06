@@ -8,21 +8,24 @@ export function getHeader() {
     header.classList.add('header');
 
     const logo: HTMLAnchorElement = header.appendChild(document.createElement('a'));
-    logo.classList.add('logo');
+    logo.classList.add('header__logo');
     logo.href = '#/';
-    logo.textContent = 'Online Store';
+    const logoHeader = logo.appendChild(document.createElement('h1'));
+    logoHeader.classList.add('logo');
+    logoHeader.textContent = 'Online Store';
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
     cartTotal.classList.add('sum-total');
-    cartTotal.textContent = 'Cart total: $0';
 
-    const cart: HTMLDivElement = header.appendChild(document.createElement('div'));
-    cart.classList.add('cart');
-    cart.addEventListener('click', () => {
+    const cartLink: HTMLAnchorElement = header.appendChild(document.createElement('a'));
+    cartLink.classList.add('header__cart-link');
+    cartLink.addEventListener('click', () => {
         setHash('/cart');
     });
 
-    const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
+    const cartIcon: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
+    cartIcon.classList.add('cart');
+
+    const productsInCart: HTMLDivElement = cartIcon.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');
-    productsInCart.textContent = '0';
 }
