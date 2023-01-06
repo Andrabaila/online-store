@@ -1,4 +1,4 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
 import { Product, OptionsText, NotInformative } from '../data/types';
@@ -14,7 +14,6 @@ export async function searchProducts(dataList: Product[]) {
         value = searchInput.value.trim();
     }
 
-    const data = await getProducts();
     const dataValuesArray = [];
     for (let i = 0; i < dataList.length; i++) {
         const array = Object.values(dataList[i]);
@@ -28,7 +27,7 @@ export async function searchProducts(dataList: Product[]) {
                 const checkedItem = dataValuesArray[i][j].toString().toLowerCase();
                 if (checkedItem.indexOf(value.toLowerCase()) > -1) {
                     const id = dataValuesArray[i][ID_INDEX];
-                    resultList.push(data[Number(id) - 1]);
+                    resultList.push((await data)[Number(id) - 1]);
                 }
             }
         }

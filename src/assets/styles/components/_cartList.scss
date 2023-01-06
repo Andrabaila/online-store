@@ -13,6 +13,47 @@
     gap: 2rem;
 }
 
+.cart-list__header-item {
+    margin-left: 0;
+}
+
+ol {
+    counter-reset: num;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.cart-list_item::before {
+    width: 2.5rem;
+    border-radius: 50%;
+    content: counter(num) ' ';
+    counter-increment: num;
+    margin: 1rem;
+
+    background-color: $color-primary;
+    box-shadow: 0 0 0.5rem 0.5rem $color-primary;
+
+    font-size: $font-size-text;
+    color: $color-text;
+    text-align: center;
+}
+
+.cart-list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid $color-blue;
+}
+
+.cart-list_item_img {
+    width: 8rem;
+    border-radius: 0.5rem;
+
+    margin: 0.5rem;
+}
+
 .cart-list__body {
     display: flex;
     justify-content: space-between;

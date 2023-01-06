@@ -1,4 +1,4 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from '../features/getLinkedData';
 import { drawCheckFilter } from './drawCheckFilter';
 import { drawRangeFilter } from './drawRangeFilter';
@@ -6,8 +6,7 @@ import { CHECKED_NAMES, RANGE_NAMES, CATEGORIES, BRANDS } from '../constants/con
 import { getRangeLimit } from '../components/getRangeLimit';
 
 export async function getFilters(parent: HTMLElement) {
-    const data = await getProducts();
-    const linkedData = getLinkedData(data);
+    const linkedData = getLinkedData(await data);
 
     const minPrice = await getRangeLimit(linkedData, 'min', 'price');
     const maxPrice = await getRangeLimit(linkedData, 'max', 'price');

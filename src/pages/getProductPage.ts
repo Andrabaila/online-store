@@ -1,15 +1,16 @@
 import { getHeader } from '../layouts/getHeader';
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
+import { setLocalStorage } from '../features/setLocalStorage';
+import { getLocalStorage } from '../features/getLocalStorage';
 
 export async function getProductPage(id: string) {
-    const data = await getProducts();
     let targetData;
 
-    for (let i = 0; i < data.length; i++) {
-        if (Number(id) === data[i].id) {
-            targetData = data[i];
+    for (let i = 0; i < (await data).length; i++) {
+        if (Number(id) === (await data)[i].id) {
+            targetData = (await data)[i];
         }
     }
 
@@ -37,3 +38,7 @@ export async function getProductPage(id: string) {
     }
     getFooter();
 }
+
+window.addEventListener('beforeunload', setLocalStorage);
+
+window.addEventListener('load', getLocalStorage);

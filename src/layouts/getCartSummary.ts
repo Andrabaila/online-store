@@ -17,7 +17,7 @@ export function getCartSummary() {
         parent: '.summary__item',
         tag: 'span',
         style: ['summary__item-text'],
-        content: UI.cartSummaryText1,
+        content: UI.cartSummaryText3,
     });
     const summaryValue1 = getHtmlElement({ parent: '.summary__item', tag: 'span', style: ['summary__item-value'] });
 
