@@ -16,16 +16,14 @@ export function getHeader() {
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
     cartTotal.classList.add('sum-total');
-    cartTotal.textContent = 'Cart total: $';
 
     const cartLink: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     cartLink.classList.add('header__cart-link');
     cartLink.addEventListener('click', getCartPage);
 
-    const cart: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
-    cart.classList.add('cart');
+    const cartIcon: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
+    cartIcon.classList.add('cart');
 
-    const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
+    const productsInCart: HTMLDivElement = cartIcon.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');
-    productsInCart.textContent = '0';
 }

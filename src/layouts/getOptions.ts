@@ -1,4 +1,4 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from '../features/getLinkedData';
 import { Product, SortOptions } from '../data/types';
 import { SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
@@ -9,8 +9,7 @@ import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
 export async function getOptions(parent: HTMLElement) {
-    const data = await getProducts();
-    const dataList = getLinkedData(data);
+    const dataList = getLinkedData(await data);
     const initialList: Product[] = [];
     for (let i = 0; i < dataList.length; i++) {
         initialList.push(dataList[i]);

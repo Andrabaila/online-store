@@ -1,10 +1,9 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { CATEGORIES } from '../constants/constants';
 import { getLinkedData } from './getLinkedData';
 
 export async function getAvailableStock(value: string) {
-    const data = await getProducts();
-    const dataList = getLinkedData(data);
+    const dataList = getLinkedData(await data);
 
     const dataChecked = [];
     for (let i = 0; i < dataList.length; i++) {

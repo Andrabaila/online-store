@@ -1,12 +1,11 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from './getLinkedData';
 import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { getProductPage } from '../pages/getProductPage';
 
 export async function sortBy(this: HTMLSelectElement) {
-    const data = await getProducts();
-    const dataList = getLinkedData(data);
+    const dataList = getLinkedData(await data);
 
     switch (this.value) {
         case SortOptions.priceAsc:

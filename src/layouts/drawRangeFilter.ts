@@ -1,6 +1,6 @@
 import { controlMinRange } from '../features/controlMinRange';
 import { controlMaxRange } from '../features/controlMaxRange';
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from '../features/getLinkedData';
 
 export async function drawRangeFilter(parent: HTMLElement, name: string, array: string[]) {
@@ -47,8 +47,7 @@ export async function drawRangeFilter(parent: HTMLElement, name: string, array: 
     maxRange.value = `${array[1]}`;
 
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
-    const data = await getProducts();
-    const dataList = getLinkedData(data);
+    const dataList = getLinkedData(await data);
 
     minRange.addEventListener('input', (event) => controlMinRange(event, maxRange, limits, name, dataList));
     maxRange.addEventListener('input', (event) => controlMaxRange(event, minRange, limits, name, dataList));
