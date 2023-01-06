@@ -1,6 +1,8 @@
 import { setHash } from '../features/setHash';
 import { data } from '../data/data';
 import { drawProductList } from './drawProductList';
+import { setRangeDependencies } from '../features/setRangeDependencies';
+import { getLinkedData } from '../features/getLinkedData';
 
 export async function getProductsList(parent: HTMLElement) {
     const productList: HTMLDivElement = parent.appendChild(document.createElement('div'));
@@ -16,4 +18,6 @@ export async function getProductsList(parent: HTMLElement) {
     }
 
     drawProductList(productList, await data);
+    const dataList = await getLinkedData();
+    setRangeDependencies(dataList);
 }

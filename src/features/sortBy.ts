@@ -1,11 +1,10 @@
-import { data } from '../data/data';
 import { getLinkedData } from './getLinkedData';
 import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { setHash } from '../features/setHash';
 
 export async function sortBy(this: HTMLSelectElement) {
-    const dataList = getLinkedData(await data);
+    const dataList = await getLinkedData();
 
     switch (this.value) {
         case SortOptions.priceAsc:

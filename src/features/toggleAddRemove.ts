@@ -21,7 +21,6 @@ export function toggleAddRemove(event: Event, product: Product) {
             }
         }
     }
-    console.log(cart);
     updateCartAmount(cart.length.toString());
     updateCartSum();
     event.stopPropagation();

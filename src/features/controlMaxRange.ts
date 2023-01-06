@@ -1,5 +1,5 @@
-import { Product } from '../data/types';
 import { showRangedProducts } from './showRangedProducts';
+import { Product } from '../data/types';
 
 export async function controlMaxRange(
     event: Event,

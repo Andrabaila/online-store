@@ -1,5 +1,5 @@
-import { Product } from '../data/types';
 import { showRangedProducts } from './showRangedProducts';
+import { Product } from '../data/types';
 
 export async function controlMinRange(
     event: Event,
@@ -28,6 +28,6 @@ export async function controlMinRange(
                 : (minStock.textContent = `${minRangePosition}`);
             event.target.value = minRangePosition;
         }
-        showRangedProducts(event.target.value, maxRange.value, dataList, name);
+        showRangedProducts(minRangePosition, maxRangePosition, dataList, name);
     }
 }
