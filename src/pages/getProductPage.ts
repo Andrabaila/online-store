@@ -5,22 +5,12 @@ import { getFooter } from '../layouts/getFooter';
 import { setLocalStorage } from '../features/setLocalStorage';
 import { getLocalStorage } from '../features/getLocalStorage';
 
-export async function getProductPage(this: HTMLDivElement) {
-    const products = document.querySelectorAll('.main__item_product');
-    let targetProduct = {};
-    for (let i = 0; i < products.length; i++) {
-        if (this === products[i]) {
-            targetProduct = <HTMLDivElement>products[i];
-        }
-    }
-
+export async function getProductPage(id: string) {
     let targetData;
-    if (targetProduct instanceof HTMLDivElement) {
-        for (let i = 0; i < (await data).length; i++) {
-            const productTitle = targetProduct.childNodes[1];
-            if (productTitle.textContent === (await data)[i].title.toUpperCase()) {
-                targetData = (await data)[i];
-            }
+
+    for (let i = 0; i < (await data).length; i++) {
+        if (Number(id) === (await data)[i].id) {
+            targetData = (await data)[i];
         }
     }
 
@@ -37,7 +27,7 @@ export async function getProductPage(this: HTMLDivElement) {
     const mainPageLink = breadCrumbs.appendChild(document.createElement('a'));
     mainPageLink.classList.add('main_product__link');
     mainPageLink.textContent = 'Store'.toUpperCase();
-    mainPageLink.href = '../index.html';
+    mainPageLink.href = '#/';
 
     if (targetData) {
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';

@@ -1,9 +1,8 @@
-import { data } from '../data/data';
 import { CATEGORIES } from '../constants/constants';
 import { getLinkedData } from './getLinkedData';
 
 export async function getAvailableStock(value: string) {
-    const dataList = getLinkedData(await data);
+    const dataList = await getLinkedData();
 
     const dataChecked = [];
     for (let i = 0; i < dataList.length; i++) {

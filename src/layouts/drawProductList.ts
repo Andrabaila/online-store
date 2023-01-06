@@ -3,8 +3,12 @@ import { toggleAddRemove } from '../features/toggleAddRemove';
 import { UI } from '../data/UI';
 import { cart } from '../data/cart';
 import { updateCartSum } from '../features/updateCartSum';
+import { showCheckedProducts } from '../features/showCheckedProducts';
+import { getLinkedData } from '../features/getLinkedData';
+import { OptionsText } from '../data/types';
+import { showNotFound } from '../features/showNotFound';
 
-export function drawProductList(parent: HTMLDivElement, data: Product[]) {
+export async function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
     for (let i = 0; i < data.length; i += 1) {
         childElements[i].innerHTML = '';
@@ -56,7 +60,21 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
 
         btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
     }
+
+    const found = document.querySelector('.main__item_options-found');
+    if (found instanceof HTMLParagraphElement) {
+        if (data.length === 0) {
+            found.textContent = `${OptionsText.found}0`;
+            showNotFound(parent);
+        }
+        found.textContent = `${OptionsText.found}${data.length}`;
+    }
+
     updateCartSum();
     const cartAmount = document.querySelector('.products-in-cart');
     if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
+
+    const dataList = await getLinkedData();
+    const checkForms = document.querySelectorAll('.form');
+    checkForms.forEach((el) => el.addEventListener('change', (event) => showCheckedProducts(dataList, event)));
 }

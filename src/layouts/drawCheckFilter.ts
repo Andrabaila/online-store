@@ -1,10 +1,6 @@
-import { data } from '../data/data';
-import { getLinkedData } from '../features/getLinkedData';
-import { showCheckedProducts } from '../features/showCheckedProducts';
 import { getCheckedAmount } from '../features/getCheckedAmount';
 
 export async function drawCheckFilter(parent: HTMLElement, name: string, array: string[]) {
-    const dataList = getLinkedData(await data);
     const checkFilter: HTMLDivElement = parent.appendChild(document.createElement('div'));
     checkFilter.classList.add('filter');
     const checkHeader: HTMLHeadingElement = checkFilter.appendChild(document.createElement('h3'));
@@ -12,7 +8,6 @@ export async function drawCheckFilter(parent: HTMLElement, name: string, array: 
     checkHeader.textContent = name;
     const checkForm: HTMLFormElement = checkFilter.appendChild(document.createElement('form'));
     checkForm.classList.add('form');
-    checkForm.addEventListener('change', (event) => showCheckedProducts(dataList, event));
 
     for (let i = 0; i < array.length; i += 1) {
         const filterContainer: HTMLDivElement = checkForm.appendChild(document.createElement('div'));

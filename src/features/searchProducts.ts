@@ -1,9 +1,9 @@
 import { data } from '../data/data';
 import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
-import { getProductPage } from '../pages/getProductPage';
 import { Product, OptionsText, NotInformative } from '../data/types';
 import { showNotFound } from './showNotFound';
+import { setHash } from './setHash';
 import { updateRangeValues } from './updateRangeValues';
 import { updateCheckedAmount } from './updateCheckedAmount';
 
@@ -43,7 +43,9 @@ export async function searchProducts(dataList: Product[]) {
             for (let i = 0; i < resultSet.length; i += 1) {
                 const productItem: HTMLDivElement = parent.appendChild(document.createElement('div'));
                 productItem.classList.add('main__item_product');
-                productItem.addEventListener('click', getProductPage);
+                productItem.addEventListener('click', () => {
+                    setHash(`/product-${resultSet[i].id}`);
+                });
             }
             drawProductList(parent, resultSet);
             if (found instanceof HTMLParagraphElement) {

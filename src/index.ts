@@ -1,10 +1,10 @@
-import { getMainPage } from './pages/getMainPage';
+import { routePages } from './features/routePages';
+import { setHash } from './features/setHash';
 import { setLocalStorage } from './features/setLocalStorage';
 import { getLocalStorage } from './features/getLocalStorage';
 
-getMainPage();
-
 window.addEventListener('beforeunload', setLocalStorage);
-
 window.addEventListener('load', getLocalStorage);
-//localStorage.clear();
+window.addEventListener('hashchange', routePages);
+
+setHash('/');
