@@ -3,7 +3,7 @@ import { ID_INDEX } from '../constants/constants';
 import { drawProductList } from '../layouts/drawProductList';
 import { Product, OptionsText, NotInformative } from '../data/types';
 import { showNotFound } from './showNotFound';
-import { setHash } from '../features/setHash';
+import { setHash } from './setHash';
 import { updateRangeValues } from './updateRangeValues';
 import { updateCheckedAmount } from './updateCheckedAmount';
 

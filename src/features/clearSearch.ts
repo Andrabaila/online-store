@@ -1,6 +1,6 @@
 import { drawProductList } from '../layouts/drawProductList';
 import { OptionsText, Product } from '../data/types';
-import { setHash } from '../features/setHash';
+import { setHash } from './setHash';
 import { updateCheckedAmount } from '../features/updateCheckedAmount';
 
 export function clearSearch(dataList: Product[]) {

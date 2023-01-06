@@ -25,6 +25,9 @@ export function getHeader() {
 
     const cartIcon: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
     cartIcon.classList.add('cart');
+    cartIcon.addEventListener('click', () => {
+        setHash('/cart');
+    });
 
     const productsInCart: HTMLDivElement = cartIcon.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');

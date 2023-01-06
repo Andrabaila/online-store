@@ -1,5 +1,5 @@
-import { data } from '../data/data';
 import { setHash } from '../features/setHash';
+import { data } from '../data/data';
 import { drawProductList } from './drawProductList';
 
 export async function getProductsList(parent: HTMLElement) {
