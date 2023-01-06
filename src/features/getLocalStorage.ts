@@ -1,14 +1,14 @@
-import { getProducts } from '../API/getProducts';
 import { cart } from '../data/cart';
+import { data } from '../data/data';
 
 export async function getLocalStorage() {
     const idArray = localStorage.getItem('idArray')?.split(',');
-    const data = await getProducts();
     if (idArray) {
-        for (let i = 0; i < data.length; i++) {
+        const len = (await data).length;
+        for (let i = 0; i < len; i++) {
             for (let j = 0; j < idArray.length; j++) {
-                if (data[i].id === Number(idArray[j])) {
-                    cart.push(data[i]);
+                if ((await data)[i].id === Number(idArray[j])) {
+                    cart.push((await data)[i]);
                 }
             }
         }

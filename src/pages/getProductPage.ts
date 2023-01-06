@@ -1,12 +1,11 @@
 import { getHeader } from '../layouts/getHeader';
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
 import { setLocalStorage } from '../features/setLocalStorage';
 import { getLocalStorage } from '../features/getLocalStorage';
 
 export async function getProductPage(this: HTMLDivElement) {
-    const data = await getProducts();
     const products = document.querySelectorAll('.main__item_product');
     let targetProduct = {};
     for (let i = 0; i < products.length; i++) {
@@ -17,10 +16,10 @@ export async function getProductPage(this: HTMLDivElement) {
 
     let targetData;
     if (targetProduct instanceof HTMLDivElement) {
-        for (let i = 0; i < data.length; i++) {
+        for (let i = 0; i < (await data).length; i++) {
             const productTitle = targetProduct.childNodes[1];
-            if (productTitle.textContent === data[i].title.toUpperCase()) {
-                targetData = data[i];
+            if (productTitle.textContent === (await data)[i].title.toUpperCase()) {
+                targetData = (await data)[i];
             }
         }
     }

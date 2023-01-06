@@ -2,6 +2,7 @@ import { Product } from '../data/types';
 import { toggleAddRemove } from '../features/toggleAddRemove';
 import { UI } from '../data/UI';
 import { cart } from '../data/cart';
+import { updateCartSum } from '../features/updateCartSum';
 
 export function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
@@ -46,15 +47,16 @@ export function drawProductList(parent: HTMLDivElement, data: Product[]) {
         btn.classList.add('main__item_product-add-button');
         btn.classList.add('button');
 
-        setTimeout(() => {
-            const id = data[i].id;
-            const idArray = [];
-            for (let j = 0; j < cart.length; j++) {
-                idArray.push(cart[j].id);
-            }
-            idArray.includes(id) ? (btn.textContent = UI.removeButtonText) : (btn.textContent = UI.addButtonText);
+        const dataId = data[i].id;
+        const idArray = [];
+        for (let j = 0; j < cart.length; j++) {
+            idArray.push(cart[j].id);
+        }
+        idArray.includes(dataId) ? (btn.textContent = UI.removeButtonText) : (btn.textContent = UI.addButtonText);
 
-            btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
-        }, 200);
+        btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
     }
+    updateCartSum();
+    const cartAmount = document.querySelector('.products-in-cart');
+    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
 }

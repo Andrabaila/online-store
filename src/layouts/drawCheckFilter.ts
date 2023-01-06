@@ -1,11 +1,10 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from '../features/getLinkedData';
 import { showCheckedProducts } from '../features/showCheckedProducts';
 import { getCheckedAmount } from '../features/getCheckedAmount';
 
 export async function drawCheckFilter(parent: HTMLElement, name: string, array: string[]) {
-    const data = await getProducts();
-    const dataList = getLinkedData(data);
+    const dataList = getLinkedData(await data);
     const checkFilter: HTMLDivElement = parent.appendChild(document.createElement('div'));
     checkFilter.classList.add('filter');
     const checkHeader: HTMLHeadingElement = checkFilter.appendChild(document.createElement('h3'));

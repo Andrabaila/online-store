@@ -1,10 +1,9 @@
-import { getProducts } from '../API/getProducts';
+import { data } from '../data/data';
 import { getLinkedData } from '../features/getLinkedData';
 import { getRangeLimit } from '../components/getRangeLimit';
 
 export async function updateRangeValues() {
-    const data = await getProducts();
-    const linkedData = getLinkedData(data);
+    const linkedData = getLinkedData(await data);
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
     const minRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-from');
     const maxRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-to');
