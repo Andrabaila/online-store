@@ -1,5 +1,5 @@
 import { getProducts } from '../API/getProducts';
-import { getProductPage } from '../pages/getProductPage';
+import { setHash } from '../features/setHash';
 import { drawProductList } from './drawProductList';
 
 export async function getProductsList(parent: HTMLDivElement) {
@@ -11,7 +11,9 @@ export async function getProductsList(parent: HTMLDivElement) {
     for (let i = 0; i < data.length; i += 1) {
         const productItem: HTMLDivElement = productList.appendChild(document.createElement('div'));
         productItem.classList.add('main__item_product');
-        productItem.addEventListener('click', getProductPage);
+        productItem.addEventListener('click', () => {
+            setHash(`/product-${data[i].id}`);
+        });
     }
 
     drawProductList(productList, data);

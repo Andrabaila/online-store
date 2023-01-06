@@ -1,6 +1,6 @@
 import { drawProductList } from '../layouts/drawProductList';
-import { getProductPage } from '../pages/getProductPage';
 import { OptionsText, Product } from '../data/types';
+import { setHash } from './setHash';
 
 export function clearSearch(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -15,7 +15,9 @@ export function clearSearch(dataList: Product[]) {
         for (let i = 0; i < dataList.length; i++) {
             const productItem: HTMLDivElement = parent.appendChild(document.createElement('div'));
             productItem.classList.add('main__item_product');
-            productItem.addEventListener('click', getProductPage);
+            productItem.addEventListener('click', () => {
+                setHash(`/product-${dataList[i].id}`);
+            });
         }
         drawProductList(parent, dataList);
     }

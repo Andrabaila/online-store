@@ -6,7 +6,6 @@ import { getCheckoutPage } from './getCheckoutPage';
 
 export function getCartPage() {
     getHeader();
-
     const header = document.querySelector('header');
     const main = document.querySelector('main');
 
@@ -16,8 +15,9 @@ export function getCartPage() {
 
     const newMain = document.createElement('main');
     newMain.classList.add('main', 'main_cart');
-    if (header) header.after(newMain);
-
+    if (header) {
+        header.after(newMain);
+    }
     getCartProductList();
     getCartSummary();
     getFooter();

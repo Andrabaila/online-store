@@ -3,23 +3,13 @@ import { getProducts } from '../API/getProducts';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
 
-export async function getProductPage(this: HTMLDivElement) {
+export async function getProductPage(id: string) {
     const data = await getProducts();
-    const products = document.querySelectorAll('.main__item_product');
-    let targetProduct = {};
-    for (let i = 0; i < products.length; i++) {
-        if (this === products[i]) {
-            targetProduct = <HTMLDivElement>products[i];
-        }
-    }
-
     let targetData;
-    if (targetProduct instanceof HTMLDivElement) {
-        for (let i = 0; i < data.length; i++) {
-            const productTitle = targetProduct.childNodes[1];
-            if (productTitle.textContent === data[i].title.toUpperCase()) {
-                targetData = data[i];
-            }
+
+    for (let i = 0; i < data.length; i++) {
+        if (Number(id) === data[i].id) {
+            targetData = data[i];
         }
     }
 
@@ -36,7 +26,7 @@ export async function getProductPage(this: HTMLDivElement) {
     const mainPageLink = breadCrumbs.appendChild(document.createElement('a'));
     mainPageLink.classList.add('main_product__link');
     mainPageLink.textContent = 'Store'.toUpperCase();
-    mainPageLink.href = '../index.html';
+    mainPageLink.href = '#/';
 
     if (targetData) {
         breadCrumbs.appendChild(document.createElement('span')).textContent = '>>';

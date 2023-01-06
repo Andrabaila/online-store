@@ -1,4 +1,4 @@
-import { getCartPage } from '../pages/getCartPage';
+import { setHash } from '../features/setHash';
 
 export function getHeader() {
     if (document.querySelector('header')) {
@@ -9,7 +9,7 @@ export function getHeader() {
 
     const logo: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     logo.classList.add('logo');
-    logo.href = '../index.html';
+    logo.href = '#/';
     logo.textContent = 'Online Store';
 
     const cartTotal: HTMLDivElement = header.appendChild(document.createElement('div'));
@@ -18,7 +18,9 @@ export function getHeader() {
 
     const cart: HTMLDivElement = header.appendChild(document.createElement('div'));
     cart.classList.add('cart');
-    cart.addEventListener('click', getCartPage);
+    cart.addEventListener('click', () => {
+        setHash('/cart');
+    });
 
     const productsInCart: HTMLDivElement = cart.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');

@@ -2,7 +2,7 @@ import { getProducts } from '../API/getProducts';
 import { getLinkedData } from './getLinkedData';
 import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
-import { getProductPage } from '../pages/getProductPage';
+import { setHash } from '../features/setHash';
 
 export async function sortBy(this: HTMLSelectElement) {
     const data = await getProducts();
@@ -29,7 +29,9 @@ export async function sortBy(this: HTMLSelectElement) {
         for (let i = 0; i < dataList.length; i += 1) {
             const productItem: HTMLDivElement = parent.appendChild(document.createElement('div'));
             productItem.classList.add('main__item_product');
-            productItem.addEventListener('click', getProductPage);
+            productItem.addEventListener('click', () => {
+                setHash(`/product-${dataList[i].id}`);
+            });
         }
         drawProductList(parent, dataList);
     }
