@@ -1,5 +1,6 @@
 import { cart } from '../data/cart';
 import { data } from '../data/data';
+import { PROMO_CODES } from '../constants/constants';
 
 export async function getLocalStorage() {
     const idArray = localStorage.getItem('idArray')?.split(',');
@@ -13,4 +14,16 @@ export async function getLocalStorage() {
             }
         }
     }
+    //TODO
+    const promo = localStorage.getItem('promo-code-andrabaila')?.split(',');
+    promo?.forEach((el) => PROMO_CODES.push(Number(el)));
+    //console.log(PROMO_CODES);
+    const applied = localStorage.getItem('promo-code-applied-andrabaila');
+    const appliedDiv = document.querySelector('.promo__applied');
+    if (applied) {
+        //console.log(applied);
+        //appliedDiv.classList.add('applied-visible');
+        //appliedDiv.innerHTML = applied;
+    }
+    appliedDiv?.classList.add('applied-visible');
 }

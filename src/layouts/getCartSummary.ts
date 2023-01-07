@@ -6,8 +6,10 @@ import { getSummaryTotalAmount } from '../features/getSummaryTotalAmount';
 import { getSummaryTotalPriceBeforePromo } from '../features/getSummaryTotalPriceBeforePromo';
 import { showPromo } from '../features/showPromo';
 import { addPromo } from '../features/addPromo';
+import { PROMO_CODES } from '../constants/constants';
 
 export function getCartSummary() {
+    PROMO_CODES.splice(0, PROMO_CODES.length);
     const summary = getHtmlElement({ parent: 'main', tag: 'div', style: ['summary'] });
 
     const summaryTitle = getHtmlElement({

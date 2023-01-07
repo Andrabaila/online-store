@@ -2,7 +2,6 @@ export function showPromo(event: Event) {
     const rsPromo = document.querySelector('.summary__rs-promo');
     const mgPromo = document.querySelector('.summary__mg-promo');
     if (event.target instanceof HTMLInputElement) {
-        console.log(event.target.value);
         const value = event.target.value.trim().toLowerCase();
         if (value === 'rs') {
             rsPromo?.classList.add('promo-visible');

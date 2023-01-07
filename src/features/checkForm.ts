@@ -2,6 +2,7 @@ import { clearCheckout } from './clearCheckout';
 import { showMessageWithTimer } from './showMessageWithTimer';
 import { getHtmlElement } from '../components/getHtmlElement';
 import { UI } from '../data/UI';
+import { cart } from '../data/cart';
 
 export function checkForm() {
     let result = true;
@@ -19,5 +20,6 @@ export function checkForm() {
         clearCheckout();
         const message = getHtmlElement({ parent: 'main', style: ['message'], content: UI.messageText });
         showMessageWithTimer(message, 3000);
+        cart.splice(0, cart.length);
     }
 }
