@@ -9,7 +9,7 @@ export function getHeader() {
 
     const logo: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     logo.classList.add('header__logo');
-    logo.href = '#/';
+    logo.href = '../';
     const logoHeader = logo.appendChild(document.createElement('h1'));
     logoHeader.classList.add('logo');
     logoHeader.textContent = 'Online Store';
@@ -19,15 +19,10 @@ export function getHeader() {
 
     const cartLink: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     cartLink.classList.add('header__cart-link');
-    cartLink.addEventListener('click', () => {
-        setHash('/cart');
-    });
+    cartLink.href = '../#/cart';
 
     const cartIcon: HTMLDivElement = cartLink.appendChild(document.createElement('div'));
     cartIcon.classList.add('cart');
-    cartIcon.addEventListener('click', () => {
-        setHash('/cart');
-    });
 
     const productsInCart: HTMLDivElement = cartIcon.appendChild(document.createElement('div'));
     productsInCart.classList.add('products-in-cart');
