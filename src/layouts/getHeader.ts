@@ -1,5 +1,3 @@
-import { setHash } from '../features/setHash';
-
 export function getHeader() {
     if (document.querySelector('header')) {
         return;
