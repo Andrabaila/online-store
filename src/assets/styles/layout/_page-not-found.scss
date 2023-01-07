@@ -1,0 +1,25 @@
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    color: $color-text;
+}
+
+.page-not-found__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: 3.2rem;
+}
+
+.page-not-found__text {
+    width: 100%;
+
+    font-size: 2rem;
+    text-align: center;
+}
