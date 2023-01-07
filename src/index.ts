@@ -9,4 +9,3 @@ window.addEventListener('hashchange', routePages);
 window.addEventListener('load', getLocalStorage);
 
 routePages();
-
