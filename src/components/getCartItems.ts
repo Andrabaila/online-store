@@ -7,6 +7,7 @@ import { updateCartSum } from '../features/updateCartSum';
 
 export function getCartItems() {
     const list = document.createElement('ol');
+    list.classList.add('cart-list');
     const cartSet = Array.from(new Set(cart));
     cartSet.forEach((el) => {
         const cartItem = document.createElement('li');

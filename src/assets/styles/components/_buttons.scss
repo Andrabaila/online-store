@@ -31,10 +31,6 @@
     padding: 0;
 }
 
-.button_promo {
-    width: 100%;
-}
-
 .product-block__purchase_add-button,
 .product-block__purchase_buy-button {
     width: 100%;
@@ -62,6 +58,18 @@
 .button_checkout {
     width: calc(50% - 2.7rem);
     margin-right: 2.7rem;
+}
+
+.summary__rs-promo_button,
+.summary__mg-promo_button,
+.applied__item_button {
+    margin-left: 1rem;
+
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 1200px) {

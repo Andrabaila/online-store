@@ -17,7 +17,8 @@
     margin-left: 0;
 }
 
-ol {
+.cart-list {
+    width: 100%;
     counter-reset: num;
     padding: 0;
 
@@ -52,6 +53,10 @@ ol {
     border-radius: 0.5rem;
 
     margin: 0.5rem;
+}
+
+.cart-list_item_info {
+    width: 60%;
 }
 
 .cart-list__body {
