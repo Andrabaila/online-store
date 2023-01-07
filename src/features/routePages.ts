@@ -1,9 +1,14 @@
 import { getMainPage } from '../pages/getMainPage';
 import { getCartPage } from '../pages/getCartPage';
 import { getProductPage } from '../pages/getProductPage';
+import { get404Page } from '../pages/get404Page';
 
 export function routePages() {
-    const { hash } = window.location;
+    const { hash, pathname } = window.location;
+
+    if (pathname !== '/') {
+        get404Page();
+    }
     const page = hash.split('-')[0];
     const id = hash.split('-')[1];
     switch (page) {
