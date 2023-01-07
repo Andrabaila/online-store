@@ -51,4 +51,8 @@ export const UI: { readonly [x: string]: string } = {
 
     //Message-----------------------
     messageText: 'Thank you! Your order has been placed!',
+
+    //404 page-----------------------
+    pageNotFoundTitle: '404',
+    pageNotFoundText: 'Sorry, this page is not available in our online-store',
 };

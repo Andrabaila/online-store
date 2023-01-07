@@ -357,6 +357,17 @@ body {
   color: #2a1267;
 }
 
+.main_page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  color: #2a1267;
+}
+
 .products {
   padding: 2rem;
   border: 2px solid #e8e9e9;
@@ -889,6 +900,29 @@ body {
     gap: 1rem;
   }
 }
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #2a1267;
+}
+
+.page-not-found__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 3.2rem;
+}
+
+.page-not-found__text {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .button {
   padding: 0.5rem;
   border: 1px solid #e8e9e9;

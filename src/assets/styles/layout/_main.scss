@@ -31,6 +31,18 @@
     color: $color-text;
 }
 
+.main_page-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+
+    color: $color-text;
+}
+
 .products {
     padding: 2rem;
 
