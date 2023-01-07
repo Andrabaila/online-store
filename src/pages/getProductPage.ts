@@ -2,6 +2,9 @@ import { getHeader } from '../layouts/getHeader';
 import { data } from '../data/data';
 import { getProductDescription } from '../layouts/getProductDescription';
 import { getFooter } from '../layouts/getFooter';
+import { cart } from '../data/cart';
+import { updateCartSum } from '../features/updateCartSum';
+import { getCheckoutPage } from './getCheckoutPage';
 import { setLocalStorage } from '../features/setLocalStorage';
 import { getLocalStorage } from '../features/getLocalStorage';
 
@@ -37,6 +40,12 @@ export async function getProductPage(id: string) {
         getProductDescription(main, targetData);
     }
     getFooter();
+
+    updateCartSum();
+    const cartAmount = document.querySelector('.products-in-cart');
+    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
+
+    getCheckoutPage();
 }
 
 window.addEventListener('beforeunload', setLocalStorage);

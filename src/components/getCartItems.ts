@@ -3,6 +3,7 @@ import { getSameItemsInCart } from '../features/getSameItemsInCart';
 import { getHtmlElement } from './getHtmlElement';
 import { decreaseAmount } from '../features/decreaseAmount';
 import { increaseAmount } from '../features/increaseAmount';
+import { updateCartSum } from '../features/updateCartSum';
 
 export function getCartItems() {
     const list = document.createElement('ol');
@@ -71,6 +72,10 @@ export function getCartItems() {
         const price = cartItemControl.appendChild(document.createElement('p'));
         price.innerHTML = `<b>$${el.price.toString()}<b>`;
     });
+
+    updateCartSum();
+    const cartAmount = document.querySelector('.products-in-cart');
+    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
 
     return list;
 }

@@ -1,8 +1,8 @@
 import { Product } from '../data/types';
 import { toggleAddRemove } from '../features/toggleAddRemove';
-import { buyNow } from '../features/buyNow';
 import { UI } from '../data/UI';
 import { cart } from '../data/cart';
+import { toggleCheckout } from './toggleCheckout';
 
 export function drawPurchaseSection(parent: HTMLElement, data: Product) {
     const price = parent.appendChild(document.createElement('p'));
@@ -25,5 +25,5 @@ export function drawPurchaseSection(parent: HTMLElement, data: Product) {
     buyBtn.classList.add('product-block__purchase_buy-button');
     buyBtn.classList.add('button');
     buyBtn.textContent = UI.buyNowButtonText;
-    buyBtn.addEventListener('click', buyNow);
+    buyBtn.addEventListener('click', toggleCheckout);
 }

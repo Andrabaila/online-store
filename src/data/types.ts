@@ -1,6 +1,7 @@
 export enum OptionsText {
     found = 'Found: ',
     search = 'Search product',
+    promo = 'Enter promo code',
 }
 
 export type AppendPoint = string | Element;

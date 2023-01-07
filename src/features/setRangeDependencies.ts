@@ -2,6 +2,8 @@ import { getRangeLimit } from '../components/getRangeLimit';
 import { controlMinRange } from '../features/controlMinRange';
 import { controlMaxRange } from '../features/controlMaxRange';
 import { Product } from '../data/types';
+import { cart } from '../data/cart';
+import { updateCartSum } from '../features/updateCartSum';
 
 export async function setRangeDependencies(dataList: Product[]) {
     const limits = document.querySelectorAll('.limit');
@@ -48,4 +50,8 @@ export async function setRangeDependencies(dataList: Product[]) {
     stockToRange.addEventListener('input', (event) =>
         controlMaxRange(event, stockFromRange, limitArr, 'Stock', dataList)
     );
+
+    updateCartSum();
+    const cartAmount = document.querySelector('.products-in-cart');
+    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
 }

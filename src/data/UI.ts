@@ -16,6 +16,7 @@ export const UI: { readonly [x: string]: string } = {
     cartSummaryText2: 'Discount:',
     cartSummaryText3: 'Products:',
     cartSummaryText4: 'Buy now',
+    cartSummaryPromo: 'Promo for test: "RS", "MG"',
 
     promoTitle: 'Promo code:',
     promoButton: 'Apply',
