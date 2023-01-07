@@ -5,8 +5,6 @@ import { getFooter } from '../layouts/getFooter';
 import { cart } from '../data/cart';
 import { updateCartSum } from '../features/updateCartSum';
 import { getCheckoutPage } from './getCheckoutPage';
-import { setLocalStorage } from '../features/setLocalStorage';
-import { getLocalStorage } from '../features/getLocalStorage';
 
 export async function getProductPage(id: string) {
     let targetData;
@@ -47,7 +45,3 @@ export async function getProductPage(id: string) {
 
     getCheckoutPage();
 }
-
-window.addEventListener('beforeunload', setLocalStorage);
-
-window.addEventListener('load', getLocalStorage);

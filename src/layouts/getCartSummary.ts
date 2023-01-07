@@ -13,7 +13,8 @@ export function getCartSummary() {
     PROMO_CODES.splice(0, PROMO_CODES.length);
     const summary = getHtmlElement({ parent: 'main', tag: 'div', style: ['summary'] });
 
-    if (localStorage.getItem('summary-andrabaila')) {
+    const savedSummary = localStorage.getItem('summary-andrabaila');
+    if (savedSummary) {
         summary.innerHTML = <string>localStorage.getItem('summary-andrabaila');
         document.querySelector('.summary__mg-promo_button')?.addEventListener('click', addPromo);
         document.querySelector('.summary__rs-promo_button')?.addEventListener('click', addPromo);
@@ -30,15 +31,15 @@ export function getCartSummary() {
         document.querySelector('.button_cart')?.addEventListener('click', toggleCheckout);
         document.querySelectorAll('.applied__item_button').forEach((el) => el.addEventListener('click', dropPromo));
     } else {
-        const summaryTitle = getHtmlElement({
+        getHtmlElement({
             parent: '.summary',
             tag: 'h3',
             style: ['summary__title'],
             content: UI.cartSummaryTitle,
         });
 
-        const summaryAmount = getHtmlElement({ parent: '.summary', tag: 'p', style: ['summary__item'] });
-        const summaryAmountText = getHtmlElement({
+        getHtmlElement({ parent: '.summary', tag: 'p', style: ['summary__item'] });
+        getHtmlElement({
             parent: '.summary__item',
             tag: 'span',
             style: ['summary__item-text'],
@@ -51,12 +52,12 @@ export function getCartSummary() {
         });
         summaryAmountValue.textContent = `${getSummaryTotalAmount()}`;
 
-        const priceBeforePromo = getHtmlElement({
+        getHtmlElement({
             parent: '.summary',
             tag: 'p',
             style: ['summary__item', 'summary__item_price-before'],
         });
-        const priceBeforePromoText = getHtmlElement({
+        getHtmlElement({
             parent: '.summary__item',
             tag: 'span',
             style: ['summary__item-text'],
@@ -65,25 +66,25 @@ export function getCartSummary() {
         const priceBeforePromoValue = getHtmlElement({
             parent: '.summary__item',
             tag: 'span',
-            style: ['summary__item-value'],
+            style: ['summary__item-value', 'summary__price-before'],
         });
         priceBeforePromoValue.textContent = `$${getSummaryTotalPriceBeforePromo().toString()}`;
 
-        const promo = getHtmlElement({ parent: '.summary', tag: 'div', style: ['promo'] });
-        const promoTitle = getHtmlElement({
+        getHtmlElement({ parent: '.summary', tag: 'div', style: ['promo'] });
+        getHtmlElement({
             parent: '.promo',
             tag: 'h3',
             style: ['promo__title'],
             content: UI.promoTitle,
         });
 
-        const promoApplied = getHtmlElement({
+        getHtmlElement({
             parent: '.promo',
             tag: 'ul',
             style: ['promo__applied'],
         });
 
-        const promoAppliedHeader = getHtmlElement({
+        getHtmlElement({
             parent: '.promo__applied',
             tag: 'h3',
             style: ['promo__applied_header'],
@@ -93,8 +94,8 @@ export function getCartSummary() {
         const promoInput = getHtmlElement({ parent: '.promo', tag: 'input', style: ['promo__input'] });
         if (promoInput instanceof HTMLInputElement) promoInput.placeholder = OptionsText.promo;
 
-        const rsPromo = getHtmlElement({ parent: '.promo', tag: 'div', style: ['summary__rs-promo', 'promo__item'] });
-        const rsPromoText = getHtmlElement({
+        getHtmlElement({ parent: '.promo', tag: 'div', style: ['summary__rs-promo', 'promo__item'] });
+        getHtmlElement({
             parent: '.summary__rs-promo',
             tag: 'p',
             style: ['summary__rs-promo_text'],
@@ -107,8 +108,8 @@ export function getCartSummary() {
             content: UI.cartSummaryPromoAddButton,
         });
 
-        const mgPromo = getHtmlElement({ parent: '.promo', tag: 'div', style: ['summary__mg-promo', 'promo__item'] });
-        const mgPromoText = getHtmlElement({
+        getHtmlElement({ parent: '.promo', tag: 'div', style: ['summary__mg-promo', 'promo__item'] });
+        getHtmlElement({
             parent: '.summary__mg-promo',
             tag: 'p',
             style: ['summary__mg-promo_text'],
@@ -123,7 +124,7 @@ export function getCartSummary() {
         mgPromoBtn.addEventListener('click', addPromo);
         rsPromoBtn.addEventListener('click', addPromo);
 
-        const promoComment = getHtmlElement({
+        getHtmlElement({
             parent: '.promo',
             tag: 'p',
             style: ['summary__item-text_comment'],
@@ -132,18 +133,18 @@ export function getCartSummary() {
 
         promoInput.addEventListener('input', showPromo);
 
-        const priceAfterPromo = getHtmlElement({
+        getHtmlElement({
             parent: '.summary',
             tag: 'p',
             style: ['summary__item', 'summary__item_price-after'],
         });
-        const priceAfterPromoText = getHtmlElement({
+        getHtmlElement({
             parent: '.summary__item',
             tag: 'span',
             style: ['summary__item-text'],
             content: UI.cartSummaryText1,
         });
-        const priceAfterPromoValue = getHtmlElement({
+        getHtmlElement({
             parent: '.summary__item',
             tag: 'span',
             style: ['summary__item-value'],

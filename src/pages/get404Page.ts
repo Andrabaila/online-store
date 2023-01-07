@@ -1,8 +1,6 @@
 import { getHeader } from '../layouts/getHeader';
 import { getFooter } from '../layouts/getFooter';
 import { get404Content } from '../layouts/get404Content';
-import { setLocalStorage } from '../features/setLocalStorage';
-import { getLocalStorage } from '../features/getLocalStorage';
 
 export function get404Page() {
     getHeader();
@@ -21,7 +19,3 @@ export function get404Page() {
     get404Content();
     getFooter();
 }
-
-window.addEventListener('beforeunload', setLocalStorage);
-
-window.addEventListener('load', getLocalStorage);

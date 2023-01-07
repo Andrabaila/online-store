@@ -24,4 +24,5 @@ export async function toggleAddRemove(event: Event, product: Product) {
     updateCartAmount(cart.length.toString());
     updateCartSum();
     event.stopPropagation();
+    localStorage.removeItem('summary-andrabaila');
 }

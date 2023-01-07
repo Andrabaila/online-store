@@ -3,6 +3,7 @@ import { UI } from '../data/UI';
 import { getSummaryTotalPriceAfterPromo } from '../features/getSummaryTotalPriceAfterPromo';
 import { PROMO_CODES, PROMO_DISCOUNT } from '../constants/constants';
 import { dropPromo } from './dropPromo';
+import { setLocalStorage } from './setLocalStorage';
 
 export function addPromo(event: Event) {
     const input = document.querySelector('.promo__input');
@@ -41,4 +42,5 @@ export function addPromo(event: Event) {
 
         primaryPrice?.classList.add('crossed');
     }
+    setLocalStorage();
 }

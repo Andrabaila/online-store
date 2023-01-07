@@ -5,7 +5,8 @@ import { getLocalStorage } from './features/getLocalStorage';
 window.addEventListener('beforeunload', setLocalStorage);
 
 window.addEventListener('hashchange', routePages);
-
-window.addEventListener('load', getLocalStorage);
-
-routePages();
+//localStorage.clear();
+//setLocalStorage();
+getLocalStorage().then(() => {
+    routePages();
+});

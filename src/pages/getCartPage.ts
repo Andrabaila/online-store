@@ -3,8 +3,6 @@ import { getFooter } from '../layouts/getFooter';
 import { getCartProductList } from '../layouts/getCartProductList';
 import { getCartSummary } from '../layouts/getCartSummary';
 import { getCheckoutPage } from './getCheckoutPage';
-import { setLocalStorage } from '../features/setLocalStorage';
-import { getLocalStorage } from '../features/getLocalStorage';
 
 export function getCartPage() {
     getHeader();
@@ -25,7 +23,3 @@ export function getCartPage() {
     getFooter();
     getCheckoutPage();
 }
-
-window.addEventListener('beforeunload', setLocalStorage);
-
-window.addEventListener('load', getLocalStorage);

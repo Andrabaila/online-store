@@ -76,7 +76,9 @@ export function getCartItems() {
 
     updateCartSum();
     const cartAmount = document.querySelector('.products-in-cart');
-    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
+    if (cartAmount) {
+        cartAmount.textContent = `${cart.length.toString()}`;
+    }
 
     return list;
 }
