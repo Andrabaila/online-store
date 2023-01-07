@@ -1,5 +1,4 @@
 import { cart } from '../data/cart';
-import { PROMO_CODES } from '../constants/constants';
 
 export function setLocalStorage() {
     const idArray: number[] = [];
@@ -7,11 +6,8 @@ export function setLocalStorage() {
     if (cart.length) cart.forEach((el) => idArray.push(el.id));
     localStorage.setItem('idArray', idArray.join(','));
 
-    localStorage.setItem('promo-code-andrabaila', PROMO_CODES.join(','));
-    const applied = document.querySelector('.promo__applied');
-
-    if (applied) {
-        //console.log(applied.classList.contains('applied-visible'));
-        localStorage.setItem('promo-code-applied-andrabaila', applied.innerHTML);
+    const summary = document.querySelector('.summary');
+    if (summary) {
+        localStorage.setItem('summary-andrabaila', summary.innerHTML);
     }
 }
