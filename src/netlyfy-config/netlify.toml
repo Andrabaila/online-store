@@ -1,5 +1,20 @@
 [[redirects]]
-  from = "*"
+  from = "/*"
   to = "/index.html"
   status = 404
-  force = true
+
+  from = "/*/*"
+  to = "/index.html"
+  status = 404
+
+    from = "/*/*/*"
+  to = "/index.html"
+  status = 404
+
+    from = "/*/*/*/*"
+  to = "/index.html"
+  status = 404
+
+    from = "/*/*/*/*/*"
+  to = "/index.html"
+  status = 404
