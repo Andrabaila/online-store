@@ -9,7 +9,7 @@ export function routePages() {
     const page = hash.split('-')[0];
     const id = hash.split('-')[1];
 
-    if (pathname !== '/' && !hash) {
+    if (!(pathname === '/' && hash.slice(0, 1) === '#')) {
         get404Page();
         return;
     }
