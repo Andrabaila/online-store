@@ -5,11 +5,10 @@ import { get404Page } from '../pages/get404Page';
 
 export function routePages() {
     const { hash, pathname } = window.location;
-    console.log(pathname);
     const page = hash.split('-')[0];
     const id = hash.split('-')[1];
 
-    if (!(pathname === '/' && hash.slice(0, 1) === '#')) {
+    if (!window.location.pathname.startsWith('/#')) {
         get404Page();
         return;
     }
