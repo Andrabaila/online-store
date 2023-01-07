@@ -27,5 +27,7 @@ export function routePages() {
         case '#/product':
             getProductPage(id);
             break;
+        default:
+            get404Page();
     }
 }
