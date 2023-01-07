@@ -8,7 +8,7 @@ export function routePages() {
     const page = hash.split('-')[0];
     const id = hash.split('-')[1];
 
-    if (!window.location.pathname.startsWith('/#')) {
+    if (pathname.length > 1) {
         get404Page();
         return;
     }
