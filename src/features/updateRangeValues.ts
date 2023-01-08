@@ -1,8 +1,6 @@
-//import { getLinkedData } from '../features/getLinkedData';
 import { getRangeLimit } from '../components/getRangeLimit';
 
 export async function updateRangeValues() {
-    //const linkedData = getLinkedData();
     const limits = <NodeListOf<HTMLParagraphElement>>document.querySelectorAll('.limit');
     const minRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-from');
     const maxRanges = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.range-to');

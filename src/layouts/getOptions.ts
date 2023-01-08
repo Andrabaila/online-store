@@ -1,18 +1,12 @@
 import { getLinkedData } from '../features/getLinkedData';
-import { Product, SortOptions } from '../data/types';
+import { SortOptions } from '../data/types';
 import { SMALL_VIEW_CELLS, LARGE_VIEW_CELLS } from '../constants/constants';
 import { sortBy } from '../features/sortBy';
-import { searchProducts } from '../features/searchProducts';
-import { clearSearch } from '../features/clearSearch';
 import { changeCellsSize } from './changeCellsSize';
 import { OptionsText } from '../data/types';
 
 export async function getOptions(parent: HTMLElement) {
     const dataList = await getLinkedData();
-    const initialList: Product[] = [];
-    for (let i = 0; i < dataList.length; i++) {
-        initialList.push(dataList[i]);
-    }
 
     const options = parent.appendChild(document.createElement('div'));
     options.classList.add('main__item_options');
@@ -42,11 +36,9 @@ export async function getOptions(parent: HTMLElement) {
     searchField.classList.add('search-input');
     searchField.type = 'search';
     searchField.placeholder = OptionsText.search;
-    searchField.addEventListener('input', () => searchProducts(dataList));
 
     const searchClose: HTMLDivElement = searchWrapper.appendChild(document.createElement('div'));
     searchClose.classList.add('search-close');
-    searchClose.addEventListener('click', () => clearSearch(dataList));
 
     const views: HTMLDivElement = options.appendChild(document.createElement('div'));
     views.classList.add('main__item_options-views');

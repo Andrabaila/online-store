@@ -2,13 +2,10 @@ import { Product } from '../data/types';
 import { toggleAddRemove } from '../features/toggleAddRemove';
 import { UI } from '../data/UI';
 import { cart } from '../data/cart';
-import { updateCartSum } from '../features/updateCartSum';
-import { showCheckedProducts } from '../features/showCheckedProducts';
-import { getLinkedData } from '../features/getLinkedData';
 import { OptionsText } from '../data/types';
 import { showNotFound } from '../features/showNotFound';
 
-export async function drawProductList(parent: HTMLDivElement, data: Product[]) {
+export function drawProductList(parent: HTMLDivElement, data: Product[]) {
     const childElements = <HTMLDivElement[]>Object.values(parent.childNodes);
     for (let i = 0; i < data.length; i += 1) {
         childElements[i].innerHTML = '';
@@ -51,14 +48,14 @@ export async function drawProductList(parent: HTMLDivElement, data: Product[]) {
         btn.classList.add('main__item_product-add-button');
         btn.classList.add('button');
 
+        btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
+
         const dataId = data[i].id;
         const idArray = [];
         for (let j = 0; j < cart.length; j++) {
             idArray.push(cart[j].id);
         }
         idArray.includes(dataId) ? (btn.textContent = UI.removeButtonText) : (btn.textContent = UI.addButtonText);
-
-        btn.addEventListener('click', (event) => toggleAddRemove(event, data[i]));
     }
 
     const found = document.querySelector('.main__item_options-found');
@@ -69,12 +66,4 @@ export async function drawProductList(parent: HTMLDivElement, data: Product[]) {
         }
         found.textContent = `${OptionsText.found}${data.length}`;
     }
-
-    updateCartSum();
-    const cartAmount = document.querySelector('.products-in-cart');
-    if (cartAmount) cartAmount.textContent = `${cart.length.toString()}`;
-
-    const dataList = await getLinkedData();
-    const checkForms = document.querySelectorAll('.form');
-    checkForms.forEach((el) => el.addEventListener('change', (event) => showCheckedProducts(dataList, event)));
 }

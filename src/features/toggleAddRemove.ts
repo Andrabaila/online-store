@@ -4,7 +4,7 @@ import { cart } from '../data/cart';
 import { updateCartAmount } from './updateCartAmount';
 import { updateCartSum } from './updateCartSum';
 
-export function toggleAddRemove(event: Event, product: Product) {
+export async function toggleAddRemove(event: Event, product: Product) {
     if (event.target instanceof HTMLButtonElement) {
         if (event.target.textContent === UI.addButtonText) {
             event.target.textContent = UI.removeButtonText;
@@ -24,4 +24,5 @@ export function toggleAddRemove(event: Event, product: Product) {
     updateCartAmount(cart.length.toString());
     updateCartSum();
     event.stopPropagation();
+    localStorage.removeItem('summary-andrabaila');
 }
