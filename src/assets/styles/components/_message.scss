@@ -4,12 +4,14 @@
     top: auto;
     z-index: 1000;
 
-    text-align: center;
     width: 30%;
     padding: 2rem;
     gap: 1rem;
+    margin-top: 2rem;
 
+    text-align: center;
     font-size: 30px;
+    color: $color-text;
     background: linear-gradient(270.75deg, rgb(151, 216, 247) 100.06%, $color-primary 100.95%, #3b3bfb 106.36%);
     border-radius: 10px;
 
