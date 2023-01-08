@@ -2,6 +2,9 @@ import { drawProductList } from '../layouts/drawProductList';
 import { OptionsText, Product } from '../data/types';
 import { setHash } from './setHash';
 import { updateCheckedAmount } from '../features/updateCheckedAmount';
+import { setRangeDependencies } from './setRangeDependencies';
+import { query } from '../data/query';
+import { controlQueryParams } from './controlQueryParams';
 
 export function clearSearch(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -27,4 +30,7 @@ export function clearSearch(dataList: Product[]) {
         found.textContent = `${OptionsText.found}${dataList.length}`;
     }
     updateCheckedAmount();
+    setRangeDependencies(dataList);
+
+    controlQueryParams('search', '');
 }

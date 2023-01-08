@@ -44,7 +44,6 @@ const baseConfig = {
                 { from: 'src/layouts', to: './layouts' },
                 { from: 'src/pages', to: './pages' },
                 { from: 'src/services', to: './services' },
-                { from: 'src/utils', to: './utils' },
                 { from: 'src/netlyfy-config', to: './' },
             ],
         }),

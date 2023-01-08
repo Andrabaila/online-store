@@ -6,6 +6,7 @@ import { showNotFound } from './showNotFound';
 import { setHash } from './setHash';
 import { updateRangeValues } from './updateRangeValues';
 import { updateCheckedAmount } from './updateCheckedAmount';
+import { controlQueryParams } from './controlQueryParams';
 
 export async function searchProducts(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -31,9 +32,14 @@ export async function searchProducts(dataList: Product[]) {
                 }
             }
         }
+        controlQueryParams('search', value);
     }
 
-    const resultSet = Array.from(new Set(resultList));
+    let resultSet = Array.from(new Set(resultList));
+    if (value === '') {
+        resultSet = dataList;
+        controlQueryParams('search', '');
+    }
     const parent = document.querySelector('.main__item_product-list');
     const found = document.querySelector('.main__item_options-found');
     if (parent instanceof HTMLDivElement) {
@@ -59,4 +65,19 @@ export async function searchProducts(dataList: Product[]) {
     }
     updateRangeValues();
     updateCheckedAmount();
+
+    /* if (value) {
+        console.log(window.location.hash);
+        setQueryParams(value);
+    } */
+
+    //window.location.search = `${params}`;
+
+    /* window.history.pushState({ search: value }, '', '/?');
+    console.log(window.history.state);
+    query.push(window.history.state); */
+    /* const state = { page_id: 1, user_id: 5 };
+    const title = '';
+    const url = '/?';
+    history.pushState(state, title, url); */
 }

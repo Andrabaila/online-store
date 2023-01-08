@@ -4,6 +4,8 @@ import { updateCheckedAmount } from './updateCheckedAmount';
 import { OptionsText, Product } from '../data/types';
 import { updateRangeValues } from './updateRangeValues';
 import { showNotFound } from './showNotFound';
+import { CATEGORIES } from '../constants/constants';
+import { controlQueryParams } from './controlQueryParams';
 
 export async function showCheckedProducts(dataList: Product[], event: Event) {
     const parent = document.querySelector('.main__item_product-list');
@@ -16,6 +18,7 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
     if (parent instanceof HTMLDivElement && found instanceof HTMLParagraphElement) {
         if (event.target instanceof HTMLInputElement) {
             const checkedFilter = event.target.id;
+            console.log(checkedFilter);
             const checkedItems: Product[] = [];
             for (let i = 0; i < dataList.length; i++) {
                 const values = [dataList[i].category, dataList[i].brand];
@@ -42,6 +45,9 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
             found.textContent = `${OptionsText.found}${checkedItems.length}`;
             updateRangeValues();
             updateCheckedAmount();
+
+            const key = CATEGORIES.includes(checkedFilter) ? 'category' : 'brand';
+            controlQueryParams(key, checkedFilter);
         }
     }
 }
