@@ -1,8 +1,5 @@
 import { RegularExpressions } from '../data/types';
 
-export const PROMO_CODES: number[] = [];
-export const PROMO_DISCOUNT = 10;
-
 export const CHECKED_NAMES = ['Categories', 'Brands'];
 export const RANGE_NAMES = ['Price', 'In stock'];
 export const CATEGORIES = ['shampoos', 'shower gels'];

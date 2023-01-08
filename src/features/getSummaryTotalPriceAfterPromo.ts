@@ -1,4 +1,4 @@
-import { PROMO_CODES } from '../constants/constants';
+import { PROMO_CODES } from '../data/promo';
 import { getSummaryTotalPriceBeforePromo } from './getSummaryTotalPriceBeforePromo';
 
 export function getSummaryTotalPriceAfterPromo() {

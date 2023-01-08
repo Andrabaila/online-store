@@ -6,7 +6,7 @@ import { getSummaryTotalAmount } from '../features/getSummaryTotalAmount';
 import { getSummaryTotalPriceBeforePromo } from '../features/getSummaryTotalPriceBeforePromo';
 import { showPromo } from '../features/showPromo';
 import { addPromo } from '../features/addPromo';
-import { PROMO_CODES } from '../constants/constants';
+import { PROMO_CODES } from '../data/promo';
 import { dropPromo } from '../features/dropPromo';
 
 export function getCartSummary() {

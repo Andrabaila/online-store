@@ -1,5 +1,5 @@
 import { getSummaryTotalPriceAfterPromo } from '../features/getSummaryTotalPriceAfterPromo';
-import { PROMO_CODES } from '../constants/constants';
+import { PROMO_CODES } from '../data/promo';
 
 export function dropPromo(event: Event) {
     const applied = document.querySelector('.promo__applied');

@@ -1,7 +1,7 @@
 import { getHtmlElement } from '../components/getHtmlElement';
 import { UI } from '../data/UI';
 import { getSummaryTotalPriceAfterPromo } from '../features/getSummaryTotalPriceAfterPromo';
-import { PROMO_CODES, PROMO_DISCOUNT } from '../constants/constants';
+import { PROMO_CODES, PROMO_DISCOUNT } from '../data/promo';
 import { dropPromo } from './dropPromo';
 import { setLocalStorage } from './setLocalStorage';
 
