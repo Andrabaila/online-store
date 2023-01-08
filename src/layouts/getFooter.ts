@@ -30,7 +30,7 @@ export function getFooter() {
 
     const rsSchoolLink = document.createElement('a');
     rsSchoolLink.classList.add('footer__item', 'footer__item_rsschool-link');
-    rsSchoolLink.href = 'https://rs.school/images/rs_school_js.svg';
+    rsSchoolLink.href = 'https://rs.school/js/';
 
     footerWrapper.append(githubLink1, githubLink2, creationDate, rsSchoolLink);
 }
