@@ -1,3 +1,5 @@
+import { copyFilters } from '../features/copyFilters';
+import { setHash } from '../features/setHash';
 import { getFilters } from './getFilters';
 import { getOptions } from './getOptions';
 import { getProductsList } from './getProductsList';
@@ -21,15 +23,17 @@ export function getStartMain() {
     const resetCopyBtnBlock: HTMLDivElement = filters.appendChild(document.createElement('div'));
     resetCopyBtnBlock.classList.add('reset-copy');
 
-    const resetBtn: HTMLButtonElement = resetCopyBtnBlock.appendChild(document.createElement('button'));
+    const resetBtn = resetCopyBtnBlock.appendChild(document.createElement('a'));
     resetBtn.classList.add('reset-button');
     resetBtn.classList.add('button');
     resetBtn.textContent = 'Reset filters';
+    resetBtn.href = '../';
 
     const copyFiltersBtn: HTMLButtonElement = resetCopyBtnBlock.appendChild(document.createElement('button'));
     copyFiltersBtn.classList.add('copy-filters-button');
     copyFiltersBtn.classList.add('button');
     copyFiltersBtn.textContent = 'Copy filters';
+    copyFiltersBtn.addEventListener('click', (event) => copyFilters(event, 1000));
 
     getFilters(filters);
 }
