@@ -14,23 +14,26 @@ export function getFooter() {
     footer.append(footerWrapper);
     body?.append(footer);
 
-    const githubLink1 = document.createElement('a');
-    githubLink1.classList.add('footer__item', 'footer__item_github-link');
-    githubLink1.href = 'https://github.com/Andrabaila';
-    githubLink1.textContent = UI.footerText1;
+    const githubLinkFirstTeammate = document.createElement('a');
+    githubLinkFirstTeammate.classList.add('footer__item', 'footer__item_github-link');
+    githubLinkFirstTeammate.href = 'https://github.com/Andrabaila';
+    githubLinkFirstTeammate.target = '_blank';
+    githubLinkFirstTeammate.textContent = UI.footerText1;
 
-    const githubLink2 = document.createElement('a');
-    githubLink2.classList.add('footer__item', 'footer__item_github-link');
-    githubLink2.href = 'https://github.com/Katsiaryna-Andrabaila';
-    githubLink2.textContent = UI.footerText2;
+    const githubLinkSecondTeammate = document.createElement('a');
+    githubLinkSecondTeammate.classList.add('footer__item', 'footer__item_github-link');
+    githubLinkSecondTeammate.href = 'https://github.com/Katsiaryna-Andrabaila';
+    githubLinkSecondTeammate.target = '_blank';
+    githubLinkSecondTeammate.textContent = UI.footerText2;
 
-    const creationDate = document.createElement('span');
-    creationDate.classList.add('footer__item');
-    creationDate.textContent = UI.footerText3;
+    const applicationCreationDate = document.createElement('span');
+    applicationCreationDate.classList.add('footer__item');
+    applicationCreationDate.textContent = UI.footerText3;
 
     const rsSchoolLink = document.createElement('a');
     rsSchoolLink.classList.add('footer__item', 'footer__item_rsschool-link');
-    rsSchoolLink.href = 'https://rs.school/images/rs_school_js.svg';
+    rsSchoolLink.href = 'https://rs.school/js/';
+    rsSchoolLink.target = '_blank';
 
-    footerWrapper.append(githubLink1, githubLink2, creationDate, rsSchoolLink);
+    footerWrapper.append(githubLinkFirstTeammate, githubLinkSecondTeammate, applicationCreationDate, rsSchoolLink);
 }
