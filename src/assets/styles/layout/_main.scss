@@ -31,6 +31,11 @@
     color: $color-text;
 }
 
+.main_cart-column {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .main_page-not-found {
     display: flex;
     flex-direction: column;
@@ -41,6 +46,11 @@
     width: 100%;
 
     color: $color-text;
+}
+
+.page-not-found__text {
+    color: $color-text;
+    font-size: 2rem;
 }
 
 .products {

@@ -362,6 +362,11 @@ body {
   color: #2a1267;
 }
 
+.main_cart-column {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .main_page-not-found {
   display: flex;
   flex-direction: column;
@@ -371,6 +376,11 @@ body {
   padding: 2rem;
   width: 100%;
   color: #2a1267;
+}
+
+.page-not-found__text {
+  color: #2a1267;
+  font-size: 2rem;
 }
 
 .products {

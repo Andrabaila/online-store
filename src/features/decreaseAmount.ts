@@ -7,6 +7,7 @@ import { getSummaryTotalAmount } from '../features/getSummaryTotalAmount';
 import { getSummaryTotalPriceBeforePromo } from './getSummaryTotalPriceBeforePromo';
 import { getCartSummary } from '../layouts/getCartSummary';
 import { setLocalStorage } from './setLocalStorage';
+import { getCartPage } from '../pages/getCartPage';
 
 export function decreaseAmount(amount: HTMLParagraphElement, item: Product) {
     const idArray: number[] = [];
@@ -36,4 +37,7 @@ export function decreaseAmount(amount: HTMLParagraphElement, item: Product) {
     summary?.remove();
     getCartSummary();
     setLocalStorage();
+    if (cart.length === 0) {
+        getCartPage();
+    }
 }

@@ -20,7 +20,9 @@ export function getCartProductList() {
         style: ['cart-list__header-item', 'cart-list__text'],
         content: UI.cartListHeaderText,
     });
-    listHeader.append(getInputCount('1'));
+    const itemsInputCount = getInputCount(UI.cartListStartCount);
+    itemsInputCount.classList.add('input-count_cart-list');
+    listHeader.append(itemsInputCount);
 
     const listBody = getCartItems();
     cartList.append(listBody);
