@@ -26,3 +26,6 @@ export const REGULAR_EXPRESSIONS: RegularExpressions = {
 };
 
 export const ID_INDEX = 0;
+
+export const maxItemsInCartList = 30;
+export const minItemsInInputCount = 1;

@@ -8,7 +8,9 @@ export const UI: { readonly [x: string]: string } = {
 
     //cart--------------------------------------------------
     cartListTitle: 'Products in cart',
+    cartTitleEmpty: 'Cart',
     cartListHeaderText: 'items per page',
+    cartListStartCount: '30',
     cartListFooterText: 'page',
 
     cartSummaryTitle: 'Summary',
@@ -30,6 +32,8 @@ export const UI: { readonly [x: string]: string } = {
     addButtonText: 'Add to cart',
     removeButtonText: 'Remove from cart',
     buyNowButtonText: 'Buy now',
+
+    emptyCartMessage: 'Your cart is empty',
 
     //checkout--------------------------------------
     checkoutTitle1: 'Personal details',

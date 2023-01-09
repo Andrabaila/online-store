@@ -3,6 +3,9 @@ import { getFooter } from '../layouts/getFooter';
 import { getCartProductList } from '../layouts/getCartProductList';
 import { getCartSummary } from '../layouts/getCartSummary';
 import { getCheckoutPage } from './getCheckoutPage';
+import { getCartEmptyMain } from '../layouts/getCartEmptyMain';
+import { cart } from '../data/cart';
+import { updateCartAmount } from '../features/updateCartAmount';
 
 export function getCartPage() {
     getHeader();
@@ -18,8 +21,15 @@ export function getCartPage() {
     if (header) {
         header.after(newMain);
     }
-    getCartProductList();
-    getCartSummary();
+
+    if (cart.length === 0) {
+        getCartEmptyMain();
+        updateCartAmount('0');
+    } else {
+        getCartProductList();
+        getCartSummary();
+        getCheckoutPage();
+    }
+
     getFooter();
-    getCheckoutPage();
 }
