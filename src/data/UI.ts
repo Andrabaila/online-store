@@ -12,6 +12,7 @@ export const UI: { readonly [x: string]: string } = {
     cartListHeaderText: 'items per page',
     cartListStartCount: '30',
     cartListFooterText: 'page',
+    cartListFooterText2: 'from',
 
     cartSummaryTitle: 'Summary',
     cartSummaryText1: 'Total:',

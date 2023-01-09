@@ -1,11 +1,11 @@
 import { maxItemsInCartList, minItemsInInputCount } from '../constants/constants';
 import { setCartItemsPerPage } from '../components/setCartItemsPerPage';
-import { setCartPageNumber } from '../components/setCartPageNumber';
 
 export function setInputCount(event: MouseEvent) {
     if (event.target instanceof HTMLButtonElement) {
         const action = event.target.textContent;
         const inputField = event.target.parentNode?.childNodes[1];
+        const pagesCount = document.querySelector('.pagination__text_pages-count')?.textContent;
         if (event.target.parentNode instanceof HTMLDivElement) {
             let maxItemsInInputCount: number;
             let nextFunction: () => void;
@@ -13,8 +13,8 @@ export function setInputCount(event: MouseEvent) {
                 maxItemsInInputCount = maxItemsInCartList;
                 nextFunction = setCartItemsPerPage;
             } else {
-                maxItemsInInputCount = 1;
-                nextFunction = setCartPageNumber;
+                maxItemsInInputCount = Number(pagesCount) || 1;
+                nextFunction = setCartItemsPerPage;
             }
             if (inputField instanceof HTMLParagraphElement) {
                 let count = Number(event.target.parentNode?.childNodes[1].textContent);

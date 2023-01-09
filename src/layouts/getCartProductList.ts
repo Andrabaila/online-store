@@ -5,9 +5,9 @@ import { getHtmlElement } from '../components/getHtmlElement';
 import { getInputCount } from '../components/getInputCount';
 
 export function getCartProductList() {
-    const cartList = getHtmlElement({ parent: 'main', tag: 'div', style: ['cart-list'] });
+    getHtmlElement({ parent: 'main', tag: 'div', style: ['cart-list__wrapper'] });
 
-    const listHeader = getHtmlElement({ parent: '.cart-list', tag: 'div', style: ['cart-list__header'] });
+    const listHeader = getHtmlElement({ parent: '.cart-list__wrapper', tag: 'div', style: ['cart-list__header'] });
     getHtmlElement({
         parent: '.cart-list__header',
         tag: 'h3',
@@ -24,9 +24,9 @@ export function getCartProductList() {
     itemsInputCount.classList.add('input-count_cart-list');
     listHeader.append(itemsInputCount);
 
-    const listBody = getCartItems();
-    cartList.append(listBody);
-
-    const listFooter = getHtmlElement({ parent: '.cart-list', tag: 'div', style: ['cart-list__footer'] });
+    const listFooter = getHtmlElement({ parent: '.cart-list__wrapper', tag: 'div', style: ['cart-list__footer'] });
     listFooter.append(getPagination());
+
+    const listBody = getCartItems();
+    listHeader.after(listBody);
 }

@@ -8,6 +8,7 @@ import { getSummaryTotalPriceBeforePromo } from './getSummaryTotalPriceBeforePro
 import { getCartSummary } from '../layouts/getCartSummary';
 import { setLocalStorage } from './setLocalStorage';
 import { getCartPage } from '../pages/getCartPage';
+import { setCartItemsPerPage } from '../components/setCartItemsPerPage';
 
 export function decreaseAmount(amount: HTMLParagraphElement, item: Product) {
     const idArray: number[] = [];
@@ -19,6 +20,7 @@ export function decreaseAmount(amount: HTMLParagraphElement, item: Product) {
     const itemsAmount = getSameItemsInCart(item);
     if (!Number(itemsAmount)) {
         amount.closest('li')?.remove();
+        setCartItemsPerPage();
     }
     amount.textContent = itemsAmount;
     updateCartAmount(cart.length.toString());

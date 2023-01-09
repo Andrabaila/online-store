@@ -1,4 +1,5 @@
-.cart-list {
+.cart-list,
+.cart-list__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,19 +18,15 @@
     margin-left: 0;
 }
 
-.cart-list {
+.cart-list,
+.cart-list__wrapper {
     width: 100%;
-    counter-reset: num;
     padding: 0;
-
-    list-style-type: none;
 }
 
-.cart-list_item::before {
+.cart-list_item-number {
     width: 2.5rem;
     border-radius: 50%;
-    content: counter(num) ' ';
-    counter-increment: num;
     margin: 1rem;
 
     background-color: $color-primary;
@@ -44,6 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 
     border: 1px solid $color-blue;
 }

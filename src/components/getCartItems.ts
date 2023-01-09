@@ -4,16 +4,29 @@ import { getHtmlElement } from './getHtmlElement';
 import { decreaseAmount } from '../features/decreaseAmount';
 import { increaseAmount } from '../features/increaseAmount';
 import { updateCartSum } from '../features/updateCartSum';
+import { Product } from '../data/types';
+import { getStartListNumber } from '../components/getStartListNumber';
 
-export function getCartItems() {
+export function getCartItems(page?: Product[]) {
     const list = document.createElement('ol');
+    let startNumber = getStartListNumber();
     list.classList.add('cart-list');
-    const cartSet = Array.from(new Set(cart));
+    let cartSet: Product[];
+    if (page) {
+        cartSet = page;
+    } else {
+        cartSet = Array.from(new Set(cart));
+    }
     cartSet.forEach((el) => {
         const cartItem = document.createElement('li');
         cartItem.classList.add('cart-list_item');
-        list.append(cartItem);
 
+        list.append(cartItem);
+        getHtmlElement({
+            parentNode: cartItem,
+            style: ['cart-list_item-number'],
+            content: String(startNumber++),
+        });
         const cartItemImg = cartItem.appendChild(document.createElement('img'));
         cartItemImg.classList.add('cart-list_item_img');
         cartItemImg.src = el.thumbnail;
@@ -79,6 +92,5 @@ export function getCartItems() {
     if (cartAmount) {
         cartAmount.textContent = `${cart.length.toString()}`;
     }
-
     return list;
 }
