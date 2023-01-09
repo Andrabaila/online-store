@@ -4,11 +4,17 @@ import { getHtmlElement } from './getHtmlElement';
 import { decreaseAmount } from '../features/decreaseAmount';
 import { increaseAmount } from '../features/increaseAmount';
 import { updateCartSum } from '../features/updateCartSum';
+import { Product } from '../data/types';
 
-export function getCartItems() {
+export function getCartItems(page?: Product[]) {
     const list = document.createElement('ol');
     list.classList.add('cart-list');
-    const cartSet = Array.from(new Set(cart));
+    let cartSet: Product[];
+    if (page) {
+        cartSet = page;
+    } else {
+        cartSet = Array.from(new Set(cart));
+    }
     cartSet.forEach((el) => {
         const cartItem = document.createElement('li');
         cartItem.classList.add('cart-list_item');

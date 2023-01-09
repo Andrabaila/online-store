@@ -440,15 +440,13 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+  }
 }
-}
-
 @media (max-width: 550px) {
   .main_cart {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
   }
 }
 .main__item_options {
@@ -1141,7 +1139,8 @@ body {
     font-size: 2.4rem;
   }
 }
-.cart-list {
+.cart-list,
+.cart-list__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1159,7 +1158,8 @@ body {
   margin-left: 0;
 }
 
-.cart-list {
+.cart-list,
+.cart-list__wrapper {
   width: 100%;
   counter-reset: num;
   padding: 0;
