@@ -6,9 +6,22 @@
     flex-wrap: nowrap;
     padding: 1rem;
 
-    font-size: 1.8rem;
+    font-size: $font-size-text;
 }
 
 .input-count__field {
     padding: 3px;
+}
+
+@media (max-width: 600px) {
+    .input-count {
+        gap: 0.5rem;
+        padding: 0.5rem;
+
+        font-size: $font-size-text_small;
+    }
+
+    .input-count__field {
+        padding: 3px;
+    }
 }
