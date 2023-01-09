@@ -31,3 +31,9 @@ a {
 a:visited {
     text-decoration: none;
 }
+
+@media (max-width: 550px) {
+    html {
+        font-size: 8px;
+    }
+}
