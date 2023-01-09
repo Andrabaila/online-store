@@ -745,7 +745,7 @@ body {
   grid-template-rows: repeat(9, 1fr);
   align-items: center;
   min-height: 40rem;
-  max-height: 60rem;
+  max-height: 50rem;
   border: 1px solid #e8e9e9;
   border-radius: 2px;
   padding: 0.5rem 2rem;

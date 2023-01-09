@@ -43,14 +43,20 @@ export async function setSavedDependencies(parent: HTMLElement) {
 
     const sortField = document.querySelector('.main__item_options-sort');
     const sort = query.find((el) => el['sort']);
-    if (sort && sortField instanceof HTMLSelectElement) {
-        const sortActive = query[query.indexOf(sort)].sort;
-        sortField.childNodes.forEach((el) => {
-            if (el.textContent === sortActive && el instanceof HTMLOptionElement) {
-                el.selected = true;
-            }
-        });
+    if (sortField && sortField instanceof HTMLSelectElement) {
         sortField.addEventListener('change', sortBy);
+        if (!sort) {
+            if (sortField.firstChild instanceof HTMLOptionElement) {
+                sortField.firstChild.setAttribute('disabled', 'disabled');
+            }
+        } else {
+            const sortActive = query[query.indexOf(sort)].sort;
+            sortField.childNodes.forEach((el) => {
+                if (el.textContent === sortActive && el instanceof HTMLOptionElement) {
+                    el.selected = true;
+                }
+            });
+        }
     }
 
     const smallView = document.querySelector('.main__item_options-small');
@@ -79,6 +85,25 @@ export async function setSavedDependencies(parent: HTMLElement) {
 
     const checkForms = document.querySelectorAll('.form');
     checkForms.forEach((el) => el.addEventListener('change', (event) => showCheckedProducts(dataList, event)));
+    const filters = <NodeListOf<HTMLInputElement>>document.querySelectorAll('.input-checkbox');
+    const checked: string[] = [];
+    query.forEach((el) => {
+        if (el['brand']) {
+            checked.push(el['brand']);
+        }
+        if (el['category']) {
+            checked.push(el['category']);
+        }
+    });
+    checked.forEach((el) => {
+        filters.forEach((item) => {
+            if (item instanceof HTMLInputElement) {
+                if (item.id === el) {
+                    item.checked = true;
+                }
+            }
+        });
+    });
 
     setRangeDependencies(dataList);
 }

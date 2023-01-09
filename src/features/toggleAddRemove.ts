@@ -3,6 +3,7 @@ import { UI } from '../data/UI';
 import { cart } from '../data/cart';
 import { updateCartAmount } from './updateCartAmount';
 import { updateCartSum } from './updateCartSum';
+import { setLocalStorage } from './setLocalStorage';
 
 export async function toggleAddRemove(event: Event, product: Product) {
     if (event.target instanceof HTMLButtonElement) {
@@ -25,4 +26,5 @@ export async function toggleAddRemove(event: Event, product: Product) {
     updateCartSum();
     event.stopPropagation();
     localStorage.removeItem('summary-andrabaila');
+    setLocalStorage();
 }

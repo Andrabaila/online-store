@@ -3,6 +3,7 @@ import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { setHash } from '../features/setHash';
 import { controlQueryParams } from './controlQueryParams';
+import { setLocalStorage } from './setLocalStorage';
 
 export async function sortBy(this: HTMLSelectElement) {
     const dataList = await getLinkedData();
@@ -36,4 +37,5 @@ export async function sortBy(this: HTMLSelectElement) {
     }
 
     controlQueryParams('sort', this.value);
+    setLocalStorage();
 }
