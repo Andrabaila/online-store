@@ -6,6 +6,8 @@ import { showNotFound } from './showNotFound';
 import { setHash } from './setHash';
 import { updateRangeValues } from './updateRangeValues';
 import { updateCheckedAmount } from './updateCheckedAmount';
+import { controlQueryParams } from './controlQueryParams';
+import { clearSearch } from '../features/clearSearch';
 
 export async function searchProducts(dataList: Product[]) {
     const searchInput = document.querySelector('.search-input');
@@ -31,9 +33,17 @@ export async function searchProducts(dataList: Product[]) {
                 }
             }
         }
+        controlQueryParams('search', value);
     }
 
-    const resultSet = Array.from(new Set(resultList));
+    let resultSet = Array.from(new Set(resultList));
+    if (searchInput instanceof HTMLInputElement) {
+        if (value === '') {
+            resultSet = Array.from(new Set(dataList));
+            controlQueryParams('search', '');
+        }
+    }
+
     const parent = document.querySelector('.main__item_product-list');
     const found = document.querySelector('.main__item_options-found');
     if (parent instanceof HTMLDivElement) {
@@ -59,4 +69,7 @@ export async function searchProducts(dataList: Product[]) {
     }
     updateRangeValues();
     updateCheckedAmount();
+
+    const searchClose = document.querySelector('.search-close');
+    if (searchClose) searchClose.addEventListener('click', () => clearSearch(resultSet));
 }

@@ -2,6 +2,7 @@ import { getLinkedData } from './getLinkedData';
 import { SortOptions } from '../data/types';
 import { drawProductList } from '../layouts/drawProductList';
 import { setHash } from '../features/setHash';
+import { controlQueryParams } from './controlQueryParams';
 
 export async function sortBy(this: HTMLSelectElement) {
     const dataList = await getLinkedData();
@@ -33,4 +34,6 @@ export async function sortBy(this: HTMLSelectElement) {
         }
         drawProductList(parent, dataList);
     }
+
+    controlQueryParams('sort', this.value);
 }

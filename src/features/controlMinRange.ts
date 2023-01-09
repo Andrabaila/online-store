@@ -1,5 +1,6 @@
 import { showRangedProducts } from './showRangedProducts';
 import { Product } from '../data/types';
+import { controlQueryParams } from './controlQueryParams';
 
 export async function controlMinRange(
     event: Event,
@@ -29,5 +30,8 @@ export async function controlMinRange(
             event.target.value = minRangePosition;
         }
         showRangedProducts(minRangePosition, maxRangePosition, dataList, name);
+        name === 'Price'
+            ? controlQueryParams('price', `${event.target.value}↕${maxRange.value}`)
+            : controlQueryParams('stock', `${event.target.value}↕${maxRange.value}`);
     }
 }
