@@ -1,6 +1,6 @@
 .checkout {
     position: absolute;
-    top: -100%;
+    top: -200%;
     left: 25%;
 
     display: flex;
@@ -44,7 +44,7 @@
 
 .checkout__input-container {
     display: flex;
-    width: 50%;
+    width: 60%;
     height: $font-size-text * 1.5;
 
     font-size: $font-size-text;
@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 50%;
+    width: 60%;
 }
 
 .checkout__card-logo {
@@ -99,7 +99,7 @@
 .card-data__container {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .card-data__label {
@@ -128,13 +128,17 @@
     color: $color-active;
 }
 
-@media (max-width: 1200px) {
-    .checkout__input {
-        width: 70%;
+@media (max-width: 1100px) {
+    .card-data__container {
+        flex-direction: column;
+
+        .checkout__input-container {
+            width: 100%;
+        }
     }
 
-    .card-data {
-        width: 70%;
+    .card-data__label {
+        width: 100%;
     }
 
     .card-data__input {

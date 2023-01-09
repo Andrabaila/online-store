@@ -32,3 +32,9 @@ a:visited {
     text-decoration: none;
     color: #f1f3f2;
 }
+
+@media (max-width: 550px) {
+    html {
+        font-size: 8px;
+    }
+}
