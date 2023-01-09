@@ -15,7 +15,7 @@
 }
 
 .double-column-list .main__item_product {
-    height: 60rem;
+    max-height: 60rem;
 
     font-size: 1.5rem;
 }
@@ -29,7 +29,8 @@
     grid-template-rows: repeat(9, 1fr);
     align-items: center;
 
-    height: 40rem;
+    min-height: 40rem;
+    max-height: 60rem;
 
     border: 1px solid $color-gray_light;
     border-radius: 2px;
@@ -70,4 +71,24 @@
 
 .amount {
     display: none;
+}
+
+@media (max-width: 900px) {
+    .main__item_product-list {
+        grid-template-columns: repeat(2, 1fr);
+
+        font-size: $font-size-title3;
+    }
+}
+
+@media (max-width: 600px) {
+    .main__item_product-list {
+        grid-template-columns: 1fr;
+
+        font-size: $font-size-title3;
+    }
+
+    .main__item_product {
+        height: 50rem;
+    }
 }

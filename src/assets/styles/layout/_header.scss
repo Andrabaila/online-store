@@ -36,3 +36,22 @@
 
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    .header {
+        gap: 1rem;
+    }
+
+    .sum-total {
+        font-size: 1.8rem;
+    }
+
+    .cart {
+        width: 3rem;
+        height: 3rem;
+
+        background: url(../icons/cart_small.svg) center center no-repeat;
+
+        font-size: 1.4rem;
+    }
+}

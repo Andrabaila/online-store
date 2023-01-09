@@ -1,6 +1,6 @@
 export enum OptionsText {
     found = 'Found: ',
-    search = 'Search product',
+    search = 'Search',
     promo = 'Enter promo code',
 }
 
