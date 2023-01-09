@@ -1,6 +1,7 @@
 import { query } from '../data/query';
 import { Query } from '../data/types';
 import { getParams } from './getParams';
+import { setLocalStorage } from './setLocalStorage';
 
 export function controlQueryParams(key: keyof Query, value: string) {
     query.forEach((el) => {
@@ -20,4 +21,5 @@ export function controlQueryParams(key: keyof Query, value: string) {
     query.push(obj);
     const params = getParams();
     window.history.replaceState({}, '', `${path}${params}`);
+    setLocalStorage();
 }

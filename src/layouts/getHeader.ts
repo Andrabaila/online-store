@@ -1,3 +1,5 @@
+import { query } from '../data/query';
+
 export function getHeader() {
     if (document.querySelector('header')) {
         return;
@@ -8,6 +10,16 @@ export function getHeader() {
     const logo: HTMLAnchorElement = header.appendChild(document.createElement('a'));
     logo.classList.add('header__logo');
     logo.href = '../';
+    logo.addEventListener('click', () => {
+        query.splice(0, query.length);
+        localStorage.removeItem('query-andrabaila');
+        const sortField = document.querySelector('.main__item_options-sort');
+        if (sortField) {
+            if (sortField.firstChild instanceof HTMLOptionElement) {
+                sortField.firstChild.selected = true;
+            }
+        }
+    });
     const logoHeader = logo.appendChild(document.createElement('h1'));
     logoHeader.classList.add('logo');
     logoHeader.textContent = 'Online Store';
