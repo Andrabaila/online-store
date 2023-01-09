@@ -40,5 +40,11 @@
 @media (max-width: 600px) {
     .footer__wrapper {
         flex-direction: column;
+
+        font-size: 1.4rem;
+    }
+
+    .footer__item {
+        font-size: 1.4rem;
     }
 }

@@ -1,5 +1,6 @@
 import { cart } from '../data/cart';
 import { data } from '../data/data';
+import { query } from '../data/query';
 
 export async function getLocalStorage() {
     const idArray = localStorage.getItem('idArray')?.split(',');
@@ -17,5 +18,17 @@ export async function getLocalStorage() {
     const summaryDiv = document.querySelector('.summary');
     if (summary && summaryDiv) {
         summaryDiv.innerHTML = summary;
+    }
+
+    /* const main = localStorage.getItem('main-andrabaila');
+    const mainNode = document.querySelector('.main_start');
+    if (main && mainNode) {
+        mainNode.innerHTML = main;
+    } */
+
+    const queryJson = localStorage.getItem('query-andrabaila');
+    if (queryJson) {
+        const queryArray = queryJson.split(',').map((el) => JSON.parse(el));
+        queryArray.forEach((el) => query.push(el));
     }
 }

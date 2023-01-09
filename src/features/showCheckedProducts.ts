@@ -4,6 +4,10 @@ import { updateCheckedAmount } from './updateCheckedAmount';
 import { OptionsText, Product } from '../data/types';
 import { updateRangeValues } from './updateRangeValues';
 import { showNotFound } from './showNotFound';
+import { CATEGORIES } from '../constants/constants';
+import { controlQueryParams } from './controlQueryParams';
+import { currentList } from '../data/data';
+import { setRangeDependencies } from './setRangeDependencies';
 
 export async function showCheckedProducts(dataList: Product[], event: Event) {
     const parent = document.querySelector('.main__item_product-list');
@@ -16,15 +20,20 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
     if (parent instanceof HTMLDivElement && found instanceof HTMLParagraphElement) {
         if (event.target instanceof HTMLInputElement) {
             const checkedFilter = event.target.id;
-            const checkedItems: Product[] = [];
-            for (let i = 0; i < dataList.length; i++) {
-                const values = [dataList[i].category, dataList[i].brand];
-                for (let j = 0; j < filtersArray.length; j++) {
-                    if (values.includes(checkedFilter) && filtersArray[j] === event.target) {
-                        checkedItems.push(dataList[i]);
+            let checkedItems: Product[] = [];
+            if (event.target.checked) {
+                for (let i = 0; i < dataList.length; i++) {
+                    const values = [dataList[i].category, dataList[i].brand];
+                    for (let j = 0; j < filtersArray.length; j++) {
+                        if (values.includes(checkedFilter) && filtersArray[j] === event.target) {
+                            checkedItems.push(dataList[i]);
+                        }
                     }
                 }
+            } else {
+                checkedItems = Array.from(new Set(dataList));
             }
+
             parent.innerHTML = '';
             for (let i = 0; i < checkedItems.length; i += 1) {
                 const productItem = parent.appendChild(document.createElement('div'));
@@ -42,6 +51,14 @@ export async function showCheckedProducts(dataList: Product[], event: Event) {
             found.textContent = `${OptionsText.found}${checkedItems.length}`;
             updateRangeValues();
             updateCheckedAmount();
+
+            const key = CATEGORIES.includes(checkedFilter) ? 'category' : 'brand';
+            controlQueryParams(key, checkedFilter);
+
+            currentList.splice(0, currentList.length);
+            checkedItems.forEach((el) => currentList.push(el));
+
+            setRangeDependencies(checkedItems);
         }
     }
 }
