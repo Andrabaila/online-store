@@ -3,7 +3,6 @@ import { OptionsText, Product } from '../data/types';
 import { setHash } from './setHash';
 import { updateCheckedAmount } from '../features/updateCheckedAmount';
 import { setRangeDependencies } from './setRangeDependencies';
-import { query } from '../data/query';
 import { controlQueryParams } from './controlQueryParams';
 
 export function clearSearch(dataList: Product[]) {

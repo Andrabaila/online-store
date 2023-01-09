@@ -1,5 +1,5 @@
+import { query } from '../data/query';
 import { copyFilters } from '../features/copyFilters';
-import { setHash } from '../features/setHash';
 import { getFilters } from './getFilters';
 import { getOptions } from './getOptions';
 import { getProductsList } from './getProductsList';
@@ -9,7 +9,7 @@ export function getStartMain() {
     document.querySelector('footer')?.remove();
 
     const main: HTMLElement = document.body.appendChild(document.createElement('main'));
-    main.classList.add('main');
+    main.classList.add('main', 'main_start');
 
     const productsAndOptions: HTMLElement = main.appendChild(document.createElement('section'));
     productsAndOptions.classList.add('products-and-options');
@@ -28,6 +28,16 @@ export function getStartMain() {
     resetBtn.classList.add('button');
     resetBtn.textContent = 'Reset filters';
     resetBtn.href = '../';
+    resetBtn.addEventListener('click', () => {
+        query.splice(0, query.length);
+        localStorage.removeItem('query-andrabaila');
+        const sortField = document.querySelector('.main__item_options-sort');
+        if (sortField) {
+            if (sortField.firstChild instanceof HTMLOptionElement) {
+                sortField.firstChild.selected = true;
+            }
+        }
+    });
 
     const copyFiltersBtn: HTMLButtonElement = resetCopyBtnBlock.appendChild(document.createElement('button'));
     copyFiltersBtn.classList.add('copy-filters-button');

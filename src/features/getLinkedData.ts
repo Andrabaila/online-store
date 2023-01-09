@@ -1,4 +1,5 @@
 import { data } from '../data/data';
+import { currentList } from '../data/data';
 
 export async function getLinkedData() {
     const productList = document.querySelectorAll('.main__item_product');
@@ -8,5 +9,6 @@ export async function getLinkedData() {
         const id = idField.textContent;
         dataList.push((await data)[Number(id) - 1]);
     }
+    dataList.forEach((el) => currentList.push(el));
     return dataList;
 }

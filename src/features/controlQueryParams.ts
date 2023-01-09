@@ -3,6 +3,11 @@ import { Query } from '../data/types';
 import { getParams } from './getParams';
 
 export function controlQueryParams(key: keyof Query, value: string) {
+    query.forEach((el) => {
+        if (!Object.keys(el).length) {
+            query.splice(query.indexOf(el), 1);
+        }
+    });
     const queryParam = query.find((el) => el[key]);
     if (queryParam) {
         query.splice(query.indexOf(queryParam), 1);
