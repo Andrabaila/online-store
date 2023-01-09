@@ -20,12 +20,6 @@ export async function getLocalStorage() {
         summaryDiv.innerHTML = summary;
     }
 
-    /* const main = localStorage.getItem('main-andrabaila');
-    const mainNode = document.querySelector('.main_start');
-    if (main && mainNode) {
-        mainNode.innerHTML = main;
-    } */
-
     const queryJson = localStorage.getItem('query-andrabaila');
     if (queryJson) {
         const queryArray = queryJson.split(',').map((el) => JSON.parse(el));

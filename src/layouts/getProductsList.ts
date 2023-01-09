@@ -22,10 +22,7 @@ export async function getProductsList(parent: HTMLElement) {
     drawProductList(productList, await data);
 
     const dataList = await getLinkedData();
-    //currentList.splice(0, currentList.length);
     dataList.forEach((el) => currentList.push(el));
-    /*const currentString = currentList.map((el) => JSON.stringify(el)).join(',');
-    const primaryList = currentString.split(',').map((el) => JSON.parse(el)); */
 
     const checkForms = document.querySelectorAll('.form');
     checkForms.forEach((el) => el.addEventListener('change', (event) => showCheckedProducts(dataList, event)));

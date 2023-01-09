@@ -89,11 +89,37 @@
     text-align: center;
 }
 
+@media (max-width: 900px) {
+    .main__bread-crumbs {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0 0.5rem;
+
+        font-size: 1.6rem;
+    }
+
+    .main_product__link {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 600px) {
-    .main {
+    .main_start {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .main__bread-crumbs {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0 0.5rem;
+
+        font-size: 1.3rem;
+    }
+
+    .main_product__link {
+        font-size: 1.3rem;
     }
 }
 
@@ -102,6 +128,5 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-
     }
 }

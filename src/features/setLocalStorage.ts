@@ -14,10 +14,10 @@ export function setLocalStorage() {
         }
     }
 
-    /* const main = document.querySelector('.main_start');
+    const main = document.querySelector('.main_start');
     if (main) {
         localStorage.setItem('main-andrabaila', main.innerHTML);
-    } */
+    }
 
     if (query.length) {
         const queryJson = query.map((el) => JSON.stringify(el));

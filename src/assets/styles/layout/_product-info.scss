@@ -104,3 +104,23 @@
     font-weight: 700;
     color: $color-blue;
 }
+
+@media (max-width: 900px) {
+    .product-block__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .product-block__title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .active-photo {
+        max-width: 20vh;
+    }
+}
