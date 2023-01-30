@@ -12,7 +12,6 @@ import { showCheckedProducts } from '../features/showCheckedProducts';
 import { currentList } from '../data/data';
 
 export async function setSavedDependencies(parent: HTMLElement) {
-    console.log(query, cart, currentList);
     const currentArr = Array.from(new Set(currentList));
     const dataList = await getLinkedData();
     parent.innerHTML = <string>localStorage.getItem('main-andrabaila');
