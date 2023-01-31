@@ -1,0 +1,27 @@
+.input-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    padding: 1rem;
+
+    font-size: $font-size-text;
+}
+
+.input-count__field {
+    padding: 3px;
+}
+
+@media (max-width: 600px) {
+    .input-count {
+        gap: 0.5rem;
+        padding: 0.5rem;
+
+        font-size: $font-size-text_small;
+    }
+
+    .input-count__field {
+        padding: 3px;
+    }
+}

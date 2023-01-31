@@ -1,0 +1,19 @@
+.message {
+    position: absolute;
+    left: 27%;
+    top: auto;
+    z-index: 1000;
+
+    width: 45%;
+    padding: 2rem;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    text-align: center;
+    font-size: 30px;
+    color: $color-text;
+    background: linear-gradient(270.75deg, rgb(151, 216, 247) 100.06%, $color-primary 100.95%, #3b3bfb 106.36%);
+    border-radius: 10px;
+
+    transition: all 0.3s;
+}

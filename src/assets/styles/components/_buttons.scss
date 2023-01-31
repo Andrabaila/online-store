@@ -1,0 +1,87 @@
+.button {
+    padding: 0.5rem;
+    border: 1px solid $color-gray_light;
+    border-radius: 5px;
+
+    background-color: $color-blue;
+    cursor: pointer;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-size-text_small;
+    color: $color-gray_light;
+    text-decoration: none;
+    line-height: 140%;
+}
+
+.button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from($color-blue), to($color-dark_blue));
+    background: gradient(top, $color-blue, $color-dark_blue);
+    box-shadow: inset 1px 1px 0 $color-gray_light;
+}
+
+.button_cart {
+    display: block;
+    width: 100%;
+}
+
+.button_input-count {
+    @include size(3rem);
+    line-height: 2.8rem;
+    padding: 0;
+}
+
+.product-block__purchase_add-button,
+.product-block__purchase_buy-button {
+    width: 100%;
+}
+
+.button_x {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    display: block;
+    @include size(30px);
+
+    padding: 2px;
+
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.button_x:hover {
+    padding: 3px 0 0 3px;
+}
+
+.button_checkout {
+    width: calc(60% - 2.7rem);
+    margin-right: 2.7rem;
+}
+
+.summary__rs-promo_button,
+.summary__mg-promo_button,
+.applied__item_button {
+    margin-left: 1rem;
+
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .button_input-count {
+        @include size(2rem);
+        line-height: 1.8rem;
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .button_checkout {
+        width: 90%;
+    }
+}
