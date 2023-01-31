@@ -1,5 +1,5 @@
 import { getLinkedData } from './getLinkedData';
-import { SortOptions } from '../data/types';
+import { getSortedList } from './getSortedList';
 import { drawProductList } from '../layouts/drawProductList';
 import { setHash } from '../features/setHash';
 import { controlQueryParams } from './controlQueryParams';
@@ -8,19 +8,7 @@ import { setLocalStorage } from './setLocalStorage';
 export async function sortBy(this: HTMLSelectElement) {
     const dataList = await getLinkedData();
 
-    switch (this.value) {
-        case SortOptions.priceAsc:
-            dataList.sort((a, b) => (a.price > b.price ? 1 : -1));
-            break;
-        case SortOptions.priceDesc:
-            dataList.sort((a, b) => (a.price < b.price ? 1 : -1));
-            break;
-        case SortOptions.stockAsc:
-            dataList.sort((a, b) => (a.stock > b.stock ? 1 : -1));
-            break;
-        case SortOptions.stockDesc:
-            dataList.sort((a, b) => (a.stock < b.stock ? 1 : -1));
-    }
+    getSortedList(this.value, dataList);
 
     const parent = document.querySelector('.main__item_product-list');
 

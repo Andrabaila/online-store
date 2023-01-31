@@ -7,7 +7,8 @@
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts",
-        "lint:write": "eslint --debug src/ --fix"
+        "lint:write": "eslint --debug src/ --fix",
+        "test": "jest"
     },
     "husky": {
         "hooks": {
@@ -29,8 +30,13 @@
     "license": "ISC",
     "homepage": "",
     "devDependencies": {
-        "@babel/core": "^7.20.5",
+        "@babel/cli": "^7.20.7",
+        "@babel/core": "^7.20.12",
+        "@babel/node": "^7.20.7",
+        "@babel/plugin-transform-runtime": "^7.1.0",
         "@babel/preset-env": "^7.20.2",
+        "@jest/globals": "^29.3.1",
+        "@types/jest": "^29.4.0",
         "@typescript-eslint/eslint-plugin": "^5.45.1",
         "@typescript-eslint/parser": "^5.45.1",
         "babel-loader": "^9.1.0",
@@ -44,8 +50,10 @@
         "eslint-webpack-plugin": "^3.2.0",
         "html-webpack-plugin": "^5.2.0",
         "husky": "^8.0.2",
+        "jest": "^28.1.0",
         "prettier": "2.2.1",
         "style-loader": "^2.0.0",
+        "ts-jest": "^29.0.3",
         "ts-loader": "^9.4.2",
         "typescript": "^4.9.3",
         "webpack": "^5.75.0",
